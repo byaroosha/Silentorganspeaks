@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact &amp; Newsletter — Silent Organ Speaks</title>
+  <meta name="description" content="Get in touch with Silent Organ Speaks — invite a liver health advocate to speak, ask a question, or join the newsletter for stories, recipes, and events." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%AB%80%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <header class="nav" id="nav">
+    <div class="wrap nav__inner">
+      <a class="brand" href="index.html" aria-label="Silent Organ Speaks home">
+        <svg class="brand__mark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M8 18c0-5 4-9 10-9 5 0 8 2 12 2 6 0 10 3 10 9 0 9-8 18-16 18-9 0-16-7-16-20z" fill="#C97B3C"/><path d="M13 24h6l2-5 4 11 3-6h6" stroke="#FFFDF8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Silent Organ Speaks<small>Liver Health Advocacy</small></span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="story.html">My Story</a>
+        <a href="mash.html">Understanding MASH</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="speaking.html">Speaking</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+      <div class="nav__cta"><a href="speaking.html" class="btn btn--amber">Invite me to speak</a></div>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="blob blob--1" style="opacity:.35;"></div>
+      <div class="wrap page-hero__inner">
+        <span class="eyebrow reveal">Let's connect</span>
+        <h1 class="display reveal" data-delay="1">I'd love to hear from you.</h1>
+        <p class="lede reveal" data-delay="2">Whether you're planning an event, newly diagnosed and looking for a friendly voice, or simply want to say hello — your message is welcome here.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT GRID -->
+    <section class="section section--tight">
+      <div class="wrap">
+        <div class="split" style="align-items:flex-start;">
+          <!-- Form -->
+          <div class="reveal">
+            <div class="panel panel--cream">
+              <h2 style="font-size: clamp(1.6rem,3vw,2.2rem); margin-bottom: 1.5rem;">Send a message</h2>
+              <form class="form" data-demo>
+                <div class="grid two" style="gap: 1.1rem;">
+                  <div class="field"><label for="name">Your name</label><input id="name" name="name" type="text" placeholder="Jane Doe" required /></div>
+                  <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="you@example.com" required /></div>
+                </div>
+                <div class="field">
+                  <label for="reason">I'm reaching out about</label>
+                  <select id="reason" name="reason">
+                    <option>A speaking invitation</option>
+                    <option>A media or interview request</option>
+                    <option>A patient / support question</option>
+                    <option>Partnership or collaboration</option>
+                    <option>Just saying hello</option>
+                  </select>
+                </div>
+                <div class="field"><label for="org">Organization / event (optional)</label><input id="org" name="org" type="text" placeholder="Event name, hospital, group…" /></div>
+                <div class="field"><label for="message">Your message</label><textarea id="message" name="message" placeholder="Tell me a little about what you have in mind…" required></textarea></div>
+                <button class="btn btn--primary" type="submit" style="justify-content:center;">Send message <span class="arrow">→</span></button>
+                <p class="form-status form__note"></p>
+                <p class="form__note">This form is ready for a service like <strong>Formspree</strong>, <strong>Netlify Forms</strong>, or <strong>Getform</strong> — see the README for a one-line setup.</p>
+              </form>
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <div class="stack reveal" data-delay="1">
+            <div class="fact">
+              <div class="fact__badge">✎</div>
+              <h3>Speaking inquiries</h3>
+              <p>Planning a conference, hospital event, or support group? Share your date, audience, and topic and I'll follow up personally. See <a href="speaking.html" class="link-arrow" style="display:inline;">speaking topics →</a></p>
+            </div>
+            <div class="fact">
+              <div class="fact__badge">✉</div>
+              <h3>Prefer email?</h3>
+              <p>Reach me directly at <a href="mailto:hello@silentorganspeaks.org" class="link-arrow" style="display:inline;">hello@silentorganspeaks.org</a> <br /><span class="form__note">(Replace with your real address.)</span></p>
+            </div>
+            <div class="fact">
+              <div class="fact__badge">♥</div>
+              <h3>Find me online</h3>
+              <p style="margin-bottom: 0.75rem;">Follow along for stories, recipes, and event news.</p>
+              <div class="socials" style="margin-top:0;">
+                <a href="#" aria-label="Instagram" style="border-color: rgba(42,35,32,0.2); color: var(--ink);"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></a>
+                <a href="#" aria-label="LinkedIn" style="border-color: rgba(42,35,32,0.2); color: var(--ink);"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M7 10v7M7 7v.01M11 17v-4a2 2 0 014 0v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a>
+                <a href="#" aria-label="YouTube" style="border-color: rgba(42,35,32,0.2); color: var(--ink);"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M11 9.5l4 2.5-4 2.5v-5z" fill="currentColor"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="section section--tight">
+      <div class="wrap">
+        <div class="panel panel--sage cta-band reveal">
+          <span class="eyebrow" style="color:#fff; justify-content:center;">Newsletter</span>
+          <h2 style="margin-top:0.75rem;">Stories, recipes &amp; hope — in your inbox</h2>
+          <p style="color: rgba(255,255,255,0.85); max-width: 46ch; margin: 0.75rem auto 0;">A gentle, occasional note. No spam, ever — just care for the liver community.</p>
+          <form class="cta-form" data-demo>
+            <input type="email" name="email" placeholder="Your email address" aria-label="Email address" required />
+            <button class="btn btn--primary" type="submit">Subscribe</button>
+          </form>
+          <p class="form-status" style="margin-top: 1rem; font-size: 0.9rem; color: rgba(255,255,255,0.9);"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div>
+          <a class="brand" href="index.html"><svg class="brand__mark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M8 18c0-5 4-9 10-9 5 0 8 2 12 2 6 0 10 3 10 9 0 9-8 18-16 18-9 0-16-7-16-20z" fill="#C97B3C"/><path d="M13 24h6l2-5 4 11 3-6h6" stroke="#FFFDF8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Silent Organ Speaks</span></a>
+          <p>Giving voice to liver health — through story, science made simple, and food that heals.</p>
+        </div>
+        <div><h4>Explore</h4><ul class="footer__links"><li><a href="story.html">My Story</a></li><li><a href="mash.html">Understanding MASH</a></li><li><a href="recipes.html">Recipes</a></li><li><a href="speaking.html">Speaking</a></li></ul></div>
+        <div><h4>Connect</h4><ul class="footer__links"><li><a href="contact.html">Contact</a></li><li><a href="speaking.html">Book a talk</a></li><li><a href="contact.html">Newsletter</a></li></ul></div>
+        <div><h4>Resources</h4><ul class="footer__links"><li><a href="https://liverfoundation.org" target="_blank" rel="noopener">American Liver Foundation ↗</a></li><li><a href="mash.html#faq">MASH FAQ</a></li></ul></div>
+      </div>
+      <div class="footer__base"><span>© <span data-year>2026</span> Silent Organ Speaks.</span><span>Educational content only — not a substitute for medical advice.</span></div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
