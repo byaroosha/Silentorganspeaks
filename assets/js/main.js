@@ -65,6 +65,24 @@
     });
   });
 
+  /* ---- Buttery scroll parallax on hero blobs ---- */
+  var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var blobs = document.querySelectorAll(".blob");
+  if (!reduceMotion && blobs.length) {
+    var ticking = false;
+    function parallax() {
+      var y = window.scrollY;
+      for (var i = 0; i < blobs.length; i++) {
+        blobs[i].style.setProperty("--py", (y * (0.08 + i * 0.05)) + "px");
+      }
+      ticking = false;
+    }
+    window.addEventListener("scroll", function () {
+      if (!ticking) { window.requestAnimationFrame(parallax); ticking = true; }
+    }, { passive: true });
+    parallax();
+  }
+
   /* ---- Footer year ---- */
   var y = document.querySelector("[data-year]");
   if (y) y.textContent = new Date().getFullYear();
