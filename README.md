@@ -21,9 +21,9 @@ static host.
 
 ## Design system
 
-- **Typography:** [Fraunces](https://fonts.google.com/specimen/Fraunces) (editorial serif headings) + [Inter](https://fonts.google.com/specimen/Inter) (body), loaded from Google Fonts with system fallbacks.
-- **Palette:** warm cream backgrounds, amber/terracotta, sage green (health/food), and a quiet warm-plum accent — all defined as CSS variables at the top of `assets/css/styles.css`.
-- **Motion:** subtle scroll-reveal, floating organic "blobs," and a nav that solidifies on scroll. Respects `prefers-reduced-motion`.
+- **Typography:** [Inter](https://fonts.google.com/specimen/Inter) for bold, confident display + body type, with [Fraunces](https://fonts.google.com/specimen/Fraunces) reserved for expressive serif-italic accent words. Loaded from Google Fonts with system fallbacks.
+- **Palette:** a bold, high-contrast system — Rich Mahogany `#2C0000` (text / dark panels), Dust Grey `#E6DED9` and White `#FFFFFF` (backgrounds), with Lime Green `#41CE00` and Inferno Red `#A80505` used **sparingly** as accent pops. All defined as CSS variables at the top of `assets/css/styles.css`.
+- **Motion:** buttery scroll-reveal, floating organic "blobs" with scroll parallax, a nav that solidifies on scroll, and a subtle film-grain texture. Respects `prefers-reduced-motion`.
 
 Everything lives in two shared files:
 
