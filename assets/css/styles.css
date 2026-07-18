@@ -45,8 +45,8 @@
   --ink-faint:    #9C8E8E;
 
   /* Type */
-  --serif: "Fraunces", "Georgia", "Times New Roman", serif;
-  --sans:  "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --serif: "Georgia", "Times New Roman", serif;
+  --sans:  "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
 
   /* Rhythm */
   --maxw: 1200px;
