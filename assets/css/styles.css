@@ -185,6 +185,11 @@ h3 { font-size: clamp(1.35rem, 2.5vw, 1.85rem); }
 .nav__inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
 .brand { display: flex; align-items: center; gap: 0.65rem; font-family: var(--sans); font-size: 1.18rem; font-weight: 800; letter-spacing: -0.02em; white-space: nowrap; flex: none; line-height: 1.05; }
 .brand__mark { width: 42px; height: auto; flex: none; }
+/* Real logo image (nav + footer) */
+.brand-logo { height: 50px; width: auto; display: block; transition: height .4s var(--ease); }
+.nav.scrolled .brand-logo { height: 42px; }
+/* Footer sits on dark mahogany — put the logo on a white chip so it reads */
+.footer .brand-logo { height: 38px; background: #fff; padding: 9px 13px; border-radius: 12px; box-sizing: content-box; }
 /* Logo mark colors — themeable for light/dark backgrounds */
 .lg-bubble { stroke: var(--inferno); fill: none; }
 .lg-leaf { fill: var(--lime); }
