@@ -188,8 +188,8 @@ h3 { font-size: clamp(1.35rem, 2.5vw, 1.85rem); }
 /* Real logo image (nav + footer) */
 .brand-logo { height: 50px; width: auto; display: block; transition: height .4s var(--ease); }
 .nav.scrolled .brand-logo { height: 42px; }
-/* Footer sits on dark mahogany — put the logo on a white chip so it reads */
-.footer .brand-logo { height: 38px; background: #fff; padding: 9px 13px; border-radius: 12px; box-sizing: content-box; }
+/* Footer uses the white logo variant — sits directly on the dark background */
+.footer .brand-logo { height: 44px; }
 /* Logo mark colors — themeable for light/dark backgrounds */
 .lg-bubble { stroke: var(--inferno); fill: none; }
 .lg-leaf { fill: var(--lime); }
