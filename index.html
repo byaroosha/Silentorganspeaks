@@ -18,7 +18,6 @@
     <div class="wrap nav__inner">
       <a class="brand" href="index.html" aria-label="Silent Organ Speaks home">
         <img class="brand-logo" src="assets/img/SOSORG.png" alt="Silent Organ Speaks — Liver Health Advocacy" />
-        
       </a>
       <nav class="nav__links" aria-label="Primary">
         <a href="index.html" aria-current="page">Home</a>
@@ -36,28 +35,46 @@
   </header>
 
   <main>
-    <!-- ===================== HERO ===================== -->
+    <!-- ===================== HERO (split) ===================== -->
     <section class="hero">
       <div class="blob blob--1"></div>
-      <div class="blob blob--2"></div>
-      <div class="wrap hero__inner">
-        <span class="eyebrow reveal">A patient advocate's mission</span>
-        <h1 class="display reveal" data-delay="1">The liver is a <span class="serif-em">silent</span> organ.<br />It's time it had a voice.</h1>
-        <p class="lede reveal" data-delay="2" style="max-width: 60ch;">I'm living with liver disease — and I speak, cook, and advocate so no one else has to navigate it alone. This is a place for real stories, clear answers about MASH, and food that loves your liver back.</p>
-        <div class="hero__actions reveal" data-delay="3">
-          <a href="story.html" class="btn btn--primary">Read my story <span class="arrow">→</span></a>
-          <a href="mash.html" class="btn btn--ghost">Learn about MASH</a>
-        </div>
-        <div class="hero__scroll reveal" data-delay="4">
-          <span class="dot" aria-hidden="true">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M6 13l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-          Explore
+      <div class="wrap">
+        <div class="hero-grid">
+          <div class="hero__inner" style="max-width: none;">
+            <span class="eyebrow reveal">A patient advocate's mission</span>
+            <h1 class="display reveal" data-delay="1" style="font-size: clamp(2.8rem, 6vw, 5rem);">The liver is a <span class="serif-em">silent</span> organ. It's time it had a voice.</h1>
+            <p class="lede reveal" data-delay="2">I'm Aroosha — living with liver disease, and speaking, cooking, and advocating so no one else has to navigate it alone. Real stories, clear answers about MASH, and food that loves your liver back.</p>
+            <div class="hero__actions reveal" data-delay="3">
+              <a href="story.html" class="btn btn--primary">Read my story <span class="arrow">→</span></a>
+              <a href="mash.html" class="btn btn--ghost">Learn about MASH</a>
+            </div>
+          </div>
+          <div class="hero-media reveal" data-delay="2">
+            <div class="ph ph--plum">
+              <div class="stack center" style="padding:2rem;">
+                <svg class="ph__ico" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                <span class="ph__label">Add a hero photo of you</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ===================== THREE PILLARS ===================== -->
+    <!-- ===================== TRUST STRIP ===================== -->
+    <section class="section--tight">
+      <div class="wrap">
+        <div class="trust-strip reveal">
+          <div class="trust-item"><b>~1 in 3</b><span>adults live with metabolic-associated fatty liver disease (MASLD)</span></div>
+          <div class="trust-divider"></div>
+          <div class="trust-item"><b>Often 0</b><span>obvious symptoms in the early stages — that's why it's "silent"</span></div>
+          <div class="trust-divider"></div>
+          <div class="trust-item"><b>Reversible</b><span>early liver damage can often improve with timely care</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PILLARS ===================== -->
     <section class="section" id="explore">
       <div class="wrap">
         <div class="center stack reveal" style="max-width: 640px; margin-inline: auto;">
@@ -65,17 +82,15 @@
           <h2>Where would you like to begin?</h2>
           <p class="lede">Whether you're newly diagnosed, caring for someone you love, or a clinician looking to listen — there's a doorway here for you.</p>
         </div>
-
         <div class="pillars" style="margin-top: clamp(2.5rem,5vw,4rem);">
           <article class="pillar reveal" data-delay="1">
             <div class="pillar__ico" style="background: var(--plum);">
               <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.6-9.3-9.2C1.2 8.6 3 5 6.4 5c2 0 3.4 1.2 4.2 2.4C11.4 6.2 12.8 5 14.8 5c3.4 0 5.2 3.6 3.7 6.8C16.2 16.4 12 21 12 21z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
             </div>
             <h3>My Story</h3>
-            <p>Diagnosis, fear, and the choice to turn a private battle into public advocacy. The unfiltered version — and why I keep telling it.</p>
+            <p>From a diagnosis I never saw coming to a mission to help others. The honest version — and why I keep telling it.</p>
             <a href="story.html" class="link-arrow">Read the journey →</a>
           </article>
-
           <article class="pillar reveal" data-delay="2">
             <div class="pillar__ico" style="background: var(--amber);">
               <svg viewBox="0 0 24 24" fill="none"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z" stroke="currentColor" stroke-width="1.7"/><path d="M12 8v4l3 2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -84,7 +99,6 @@
             <p>What MASH and MASLD actually are, who's at risk, and the questions worth asking your doctor — in plain, human language.</p>
             <a href="mash.html" class="link-arrow">Get the facts →</a>
           </article>
-
           <article class="pillar reveal" data-delay="3">
             <div class="pillar__ico" style="background: var(--sage);">
               <svg viewBox="0 0 24 24" fill="none"><path d="M4 13c0 4 3.6 7 8 7s8-3 8-7H4z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M8 13c0-3 1.8-6 4-8 2.2 2 4 5 4 8" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
@@ -97,133 +111,117 @@
       </div>
     </section>
 
-    <!-- ===================== STORY PREVIEW ===================== -->
-    <section class="section section--tight">
+    <!-- ===================== FEATURE 1 — MY STORY ===================== -->
+    <section class="section">
       <div class="wrap">
-        <div class="split">
-          <div class="split__media reveal">
-            <div class="ph ph--plum" style="min-height: 440px; border-radius: var(--radius-lg);">
-              <div class="stack center" style="padding: 2rem;">
-                <svg class="ph__ico" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-                <span class="ph__label">Add your portrait here</span>
-              </div>
-            </div>
+        <div class="feature">
+          <div class="feature__media reveal">
+            <div class="ph ph--plum"><span class="ph__label">Add a photo of you</span></div>
           </div>
           <div class="stack reveal" data-delay="1">
-            <span class="eyebrow">My story</span>
-            <h2>I didn't feel sick. That's the terrifying part.</h2>
-            <p class="lede">For years my liver quietly carried the weight — no pain, no warning. By the time I had answers, the disease had a name most people had never heard: MASH.</p>
-            <p style="color: var(--ink-soft);">What started as one frightening diagnosis became a decision: to learn everything, to change how I live, and to stand on stages telling the truth so the next person catches it sooner. This is that story — and it's still being written.</p>
-            <div style="margin-top: 0.75rem;"><a href="story.html" class="btn btn--primary">Read my full story <span class="arrow">→</span></a></div>
+            <span class="feature__num">01 — My Story</span>
+            <h2>"Fatty liver" sounded manageable. It wasn't.</h2>
+            <p class="lede">I didn't feel sick — that's the terrifying part. By the time I had answers, my condition had progressed to liver fibrosis stage 3, and I was facing advanced scarring, an uncertain future, and a deep sense of isolation.</p>
+            <p style="color: var(--ink-soft);">I turned that fear into a mission: to learn everything, change how I live, and stand up so the next person catches it sooner.</p>
+            <div style="margin-top:0.5rem;"><a href="story.html" class="btn btn--primary">Read my full story <span class="arrow">→</span></a></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===================== MASH STATS BAND ===================== -->
+    <!-- ===================== FEATURE 2 — MASH ===================== -->
+    <section class="section">
+      <div class="wrap">
+        <div class="feature feature--flip">
+          <div class="feature__media reveal">
+            <div class="ph ph--sage"><span class="ph__label">Optional illustration</span></div>
+          </div>
+          <div class="stack reveal" data-delay="1">
+            <span class="feature__num">02 — Understanding MASH</span>
+            <h2>A silent condition, explained in plain language.</h2>
+            <p class="lede">MASH — metabolic dysfunction–associated steatohepatitis — is one of the fastest-growing liver conditions in the world, and most people who have it don't know yet.</p>
+            <div class="grid two" style="gap:1rem; margin-top:0.5rem;">
+              <div class="fact"><h3 style="font-size:1.1rem;">What it is</h3><p>Fat in the liver, plus inflammation and cell damage.</p></div>
+              <div class="fact" style="border-color: rgba(168,5,5,0.25);"><h3 style="font-size:1.1rem;">Why it matters</h3><p>Left unchecked it can progress — caught early, the liver can heal.</p></div>
+            </div>
+            <div style="margin-top:0.5rem;"><a href="mash.html" class="btn btn--primary">Understand MASH <span class="arrow">→</span></a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FEATURE 3 — RECIPES ===================== -->
+    <section class="section">
+      <div class="wrap">
+        <div class="feature">
+          <div class="feature__media reveal">
+            <div class="ph ph--sage"><span class="ph__label">Recipe photo</span></div>
+          </div>
+          <div class="stack reveal" data-delay="1">
+            <span class="feature__num">03 — Recipes</span>
+            <h2>Food that loves your liver back.</h2>
+            <p class="lede">Simple, colorful, Mediterranean-leaning dishes — lower in added sugar and refined carbs, rich in fiber, healthy fats, and flavor.</p>
+            <div class="recipe__tags" style="margin-top:0.25rem;">
+              <span class="tag">High fiber</span><span class="tag tag--amber">Omega-3</span><span class="tag">No added sugar</span><span class="tag tag--amber">Plant-forward</span>
+            </div>
+            <div style="margin-top:0.75rem;"><a href="recipes.html" class="btn btn--primary">Browse recipes <span class="arrow">→</span></a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== STATS ===================== -->
     <section class="section">
       <div class="wrap">
         <div class="panel panel--cream reveal">
-          <div class="center stack" style="max-width: 620px; margin: 0 auto 2.5rem;">
-            <span class="eyebrow" style="justify-content:center;">Why it matters</span>
-            <h2>A silent condition, hiding in plain sight</h2>
-            <p style="color: var(--ink-soft);">Metabolic dysfunction–associated steatohepatitis (MASH) is one of the fastest-growing liver conditions in the world — and most people who have it don't know yet.</p>
-          </div>
           <div class="stats">
-            <div class="reveal center" data-delay="1">
-              <div class="stat__num">~1 in 3</div>
-              <p class="stat__lbl" style="margin-inline:auto;">adults worldwide are estimated to live with metabolic-associated fatty liver disease (MASLD).</p>
-            </div>
-            <div class="reveal center" data-delay="2">
-              <div class="stat__num">Often 0</div>
-              <p class="stat__lbl" style="margin-inline:auto;">obvious symptoms in the early stages — which is why it earns the name "silent."</p>
-            </div>
-            <div class="reveal center" data-delay="3">
-              <div class="stat__num">Reversible</div>
-              <p class="stat__lbl" style="margin-inline:auto;">early liver damage can often be improved through timely care and lifestyle change.</p>
-            </div>
+            <div class="center"><div class="stat__num">50+</div><p class="stat__lbl" style="margin-inline:auto;">talks shared with patients, caregivers, and clinicians</p></div>
+            <div class="center"><div class="stat__num">1 goal</div><p class="stat__lbl" style="margin-inline:auto;">to help even one person catch liver disease sooner</p></div>
+            <div class="center"><div class="stat__num">You</div><p class="stat__lbl" style="margin-inline:auto;">are not alone in this — that's the whole point of this space</p></div>
           </div>
-          <p class="center" style="margin-top: 2.5rem;"><a href="mash.html" class="link-arrow">Understand MASH in plain language →</a></p>
         </div>
       </div>
     </section>
 
-    <!-- ===================== RECIPES PREVIEW ===================== -->
+    <!-- ===================== TESTIMONIAL ===================== -->
     <section class="section section--tight">
       <div class="wrap">
-        <div class="split" style="align-items: flex-end; margin-bottom: 2.5rem;">
-          <div class="stack reveal">
-            <span class="eyebrow">From the kitchen</span>
-            <h2>Food that loves your liver back</h2>
-          </div>
-          <div class="reveal" data-delay="1" style="text-align: right;">
-            <p style="color: var(--ink-soft); margin-bottom: 1rem;">Simple, colorful, Mediterranean-leaning dishes — lower in added sugar and refined carbs, rich in fiber, healthy fats, and flavor.</p>
-            <a href="recipes.html" class="btn btn--ghost">Browse all recipes <span class="arrow">→</span></a>
-          </div>
-        </div>
-
-        <div class="recipe-grid">
-          <article class="recipe reveal">
-            <div class="ph ph--sage"><span class="ph__label">Recipe photo</span></div>
-            <div class="recipe__body">
-              <div class="recipe__tags"><span class="tag">High fiber</span><span class="tag tag--amber">30 min</span></div>
-              <h3>Mediterranean Lentil &amp; Herb Bowl</h3>
-              <p style="color: var(--ink-soft); font-size: 0.95rem;">Warm lentils, lemon, olive oil, and a garden of herbs — hearty comfort without the blood-sugar spike.</p>
-              <div class="recipe__meta"><span>🌿 Plant-forward</span><span>⏱ 30 min</span></div>
-            </div>
-          </article>
-          <article class="recipe reveal" data-delay="1">
-            <div class="ph ph--amber"><span class="ph__label">Recipe photo</span></div>
-            <div class="recipe__body">
-              <div class="recipe__tags"><span class="tag">Omega-3</span><span class="tag tag--amber">25 min</span></div>
-              <h3>Baked Salmon with Greens</h3>
-              <p style="color: var(--ink-soft); font-size: 0.95rem;">Omega-3 rich salmon over garlicky greens — a liver-friendly plate that feels like a treat.</p>
-              <div class="recipe__meta"><span>🐟 Anti-inflammatory</span><span>⏱ 25 min</span></div>
-            </div>
-          </article>
-          <article class="recipe reveal" data-delay="2">
-            <div class="ph"><span class="ph__label">Recipe photo</span></div>
-            <div class="recipe__body">
-              <div class="recipe__tags"><span class="tag">No added sugar</span><span class="tag tag--amber">10 min</span></div>
-              <h3>Berry &amp; Walnut Breakfast Jars</h3>
-              <p style="color: var(--ink-soft); font-size: 0.95rem;">Overnight oats layered with berries and walnuts — antioxidants and good fats to start the day right.</p>
-              <div class="recipe__meta"><span>🫐 Antioxidant</span><span>⏱ 10 min</span></div>
-            </div>
-          </article>
+        <div class="center reveal" style="max-width: 900px; margin-inline:auto;">
+          <blockquote class="quote">
+            <span class="quote__mark">“</span>She made an entire auditorium understand what a lab result never could.
+            <cite class="cite">— Event organizer, patient summit</cite>
+          </blockquote>
         </div>
       </div>
     </section>
 
     <!-- ===================== SPEAKING ===================== -->
-    <section class="section">
+    <section class="section section--tight">
       <div class="wrap">
         <div class="panel panel--plum reveal">
           <div class="split">
             <div class="stack">
-              <span class="eyebrow" style="color: var(--gold);">Speaking &amp; events</span>
+              <span class="eyebrow" style="color: var(--lime);">Speaking &amp; events</span>
               <h2>Bringing the patient voice into the room</h2>
-              <p style="color: rgba(250,245,236,0.8);">I speak to patients, caregivers, clinicians, and communities — turning lived experience into understanding. From conference keynotes to intimate support groups, I help audiences see the human being behind the diagnosis.</p>
+              <p style="color: rgba(230,222,217,0.85);">I speak to patients, caregivers, clinicians, and communities — turning lived experience into understanding, from conference keynotes to intimate support groups.</p>
               <div style="margin-top: 1rem; display:flex; gap: 1rem; flex-wrap: wrap;">
                 <a href="speaking.html" class="btn btn--amber">See speaking topics <span class="arrow">→</span></a>
-                <a href="contact.html" class="btn btn--ghost" style="border-color: rgba(250,245,236,0.4); color: var(--cream);">Invite me</a>
+                <a href="contact.html" class="btn btn--ghost" style="border-color: rgba(230,222,217,0.4); color: var(--dust);">Invite me</a>
               </div>
             </div>
-            <div class="stack" style="justify-content: center;">
-              <blockquote class="quote" style="color: var(--cream); font-size: clamp(1.4rem,2.6vw,2rem);">
-                <span class="quote__mark">“</span>She made an entire auditorium understand what a lab result never could.
-                <cite class="cite" style="color: var(--gold);">— Event organizer, patient summit</cite>
-              </blockquote>
+            <div class="stack" style="justify-content:center;">
+              <div class="ph ph--sage" style="min-height: 260px;"><span class="ph__label">Speaking photo</span></div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===================== NEWSLETTER CTA ===================== -->
+    <!-- ===================== CLOSING CTA ===================== -->
     <section class="section section--tight">
       <div class="wrap">
         <div class="panel panel--sage cta-band reveal">
-          <span class="eyebrow" style="color: #fff; justify-content:center;">Stay connected</span>
+          <span class="eyebrow" style="color:#fff; justify-content:center;">Stay connected</span>
           <h2 style="margin-top: 0.75rem;">Stories, recipes &amp; hope — in your inbox</h2>
           <p style="color: rgba(255,255,255,0.85); max-width: 46ch; margin: 0.75rem auto 0;">A gentle, occasional note with new recipes, upcoming talks, and honest reflections on living well with liver disease.</p>
           <form class="cta-form" data-demo>
@@ -241,10 +239,7 @@
     <div class="wrap">
       <div class="footer__grid">
         <div>
-          <a class="brand" href="index.html">
-            <img class="brand-logo" src="assets/img/SOSWhite.png" alt="Silent Organ Speaks — Liver Health Advocacy" />
-            
-          </a>
+          <a class="brand" href="index.html"><img class="brand-logo" src="assets/img/SOSWhite.png" alt="Silent Organ Speaks — Liver Health Advocacy" /></a>
           <p>Giving voice to liver health — through story, science made simple, and food that heals. You are not alone in this.</p>
           <div class="socials">
             <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></a>
