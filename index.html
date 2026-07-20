@@ -42,14 +42,43 @@
       <div class="wrap">
         <div class="hero-grid">
           <div class="hero__inner" style="max-width: none;">
-            <span class="eyebrow reveal">A patient advocate's mission</span>
-            <h1 class="display reveal" data-delay="1" style="font-size: clamp(2.8rem, 6vw, 5rem);">The liver is a <span class="serif-em">silent</span> organ. It's time it had a voice.</h1>
-            <p class="lede reveal" data-delay="2">I'm Aroosha, living with liver disease, and speaking, cooking, and advocating so no one else has to navigate it alone. Real stories, clear answers about MASH, and food that loves your liver back.</p>
-            <div class="hero__actions reveal" data-delay="3">
+            <span class="eyebrow reveal">Breaking the silence</span>
+            <h1 class="display reveal" id="hero-headline" data-delay="1" style="font-size: clamp(2.4rem, 5vw, 4.2rem);">The Silent Organ Speaks. It's Time to Listen.</h1>
+            <p class="lede reveal" id="hero-subhead" data-delay="2">Liver disease and MASH often develop without a single symptom. We're here to break the silence, raise awareness, and save lives.</p>
+            <p class="reveal" id="hero-intro" data-delay="3" style="color: var(--ink-soft); max-width: 62ch;">The liver works tirelessly behind the scenes, often giving no warning signs when something is wrong. Because liver disease and Metabolic Dysfunction-Associated Steatohepatitis (MASH) rarely show early symptoms, millions of people remain unaware until significant damage has occurred. Silent Organ Speaks was created to give a voice to a silent condition, bringing critical education, early detection resources, and patient advocacy into the light.</p>
+            <div class="hero__actions reveal" data-delay="4">
               <a href="story.html" class="btn btn--primary">Read my story <span class="arrow">→</span></a>
               <a href="mash.html" class="btn btn--ghost">Learn about MASH</a>
             </div>
           </div>
+          <script>
+          (function () {
+            var opts = [
+              {
+                h: "The Silent Organ Speaks. It's Time to Listen.",
+                s: "Liver disease and MASH often develop without a single symptom. We're here to break the silence, raise awareness, and save lives.",
+                i: "The liver works tirelessly behind the scenes, often giving no warning signs when something is wrong. Because liver disease and Metabolic Dysfunction-Associated Steatohepatitis (MASH) rarely show early symptoms, millions of people remain unaware until significant damage has occurred. Silent Organ Speaks was created to give a voice to a silent condition, bringing critical education, early detection resources, and patient advocacy into the light."
+              },
+              {
+                h: "Giving Voice to a Silent Condition",
+                s: "Connecting patients, advocates, and answers in the fight against silent liver disease and MASH.",
+                i: "When a disease doesn't speak through symptoms, we have to speak for it. For millions living with or at risk of MASH and liver disease, the journey begins with awareness. Here, you'll find empowered patient stories, practical resources, and a community dedicated to ensuring no one has to navigate a quiet diagnosis alone."
+              },
+              {
+                h: "No Symptoms Doesn't Mean No Action",
+                s: "Uncovering MASH and liver disease before it's too late.",
+                i: "Liver disease doesn't make noise until it reaches advanced stages. That's why proactive awareness and early screening are our best tools. Silent Organ Speaks is dedicated to turning silence into action by advocating for early detection, sharing life-saving facts, and empowering you to take charge of your liver health today."
+              }
+            ];
+            var o = opts[Math.floor(Math.random() * opts.length)];
+            var H = document.getElementById('hero-headline');
+            var S = document.getElementById('hero-subhead');
+            var I = document.getElementById('hero-intro');
+            if (H) H.textContent = o.h;
+            if (S) S.textContent = o.s;
+            if (I) I.textContent = o.i;
+          })();
+          </script>
           <div class="hero-media reveal" data-delay="2">
             <div class="ph ph--plum">
               <div class="stack center" style="padding:2rem;">
