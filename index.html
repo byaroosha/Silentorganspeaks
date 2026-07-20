@@ -98,24 +98,33 @@
           <span class="eyebrow" style="justify-content:center;">By the numbers</span>
           <h2>The silent scale of liver disease</h2>
         </div>
-        <div class="grid three">
-          <div class="fact reveal">
-            <span class="eyebrow">MASH prevalence &amp; impact</span>
-            <div class="stat__num" style="font-size: clamp(1.9rem,3.2vw,2.4rem); margin: 0.7rem 0 0.15rem;">1 in 3</div>
-            <h3 style="font-size:1.05rem; margin-bottom:0.5rem;">Adults affected globally</h3>
-            <p style="color: var(--ink-soft); font-size:0.95rem;">Approximately 33% to 38% of adults live with metabolic dysfunction-associated steatotic liver disease (MASLD), with about 5.8% of U.S. adults (~15 million people) having progressed to MASH, the more severe, inflammatory form.</p>
+        <div class="stat-cards">
+          <div class="stat-card reveal ring--red">
+            <div class="ring">
+              <svg viewBox="0 0 120 120"><circle class="ring__track" cx="60" cy="60" r="52"/><circle class="ring__fill" cx="60" cy="60" r="52" style="--pct:33"/></svg>
+              <div class="ring__label"><b>1 in 3</b></div>
+            </div>
+            <span class="eyebrow">MASH prevalence</span>
+            <h3>Adults affected globally</h3>
+            <p>Around 33 to 38% of adults live with MASLD, and roughly 15 million U.S. adults have progressed to MASH, its more severe form.</p>
           </div>
-          <div class="fact reveal" data-delay="1">
-            <span class="eyebrow">Testing &amp; noninvasive diagnostics</span>
-            <div class="stat__num" style="font-size: clamp(1.9rem,3.2vw,2.4rem); margin: 0.7rem 0 0.15rem;">~10%</div>
-            <h3 style="font-size:1.05rem; margin-bottom:0.5rem;">Undergo a liver biopsy</h3>
-            <p style="color: var(--ink-soft); font-size:0.95rem;">In real-world care pathways, standard blood tests (like FIB-4) and noninvasive imaging such as ultrasound (62%) account for most evaluations, while only about 10% of diagnosed MASH patients undergo a liver biopsy. It shows how much early detection now relies on noninvasive tests (NITs) and risk stratification.</p>
+          <div class="stat-card reveal ring--lime" data-delay="1">
+            <div class="ring">
+              <svg viewBox="0 0 120 120"><circle class="ring__track" cx="60" cy="60" r="52"/><circle class="ring__fill" cx="60" cy="60" r="52" style="--pct:10"/></svg>
+              <div class="ring__label"><b>~10%</b></div>
+            </div>
+            <span class="eyebrow">Testing &amp; diagnostics</span>
+            <h3>Undergo a liver biopsy</h3>
+            <p>Most MASH is now assessed with blood tests like FIB-4 and ultrasound. Only about 10% need a biopsy, so early detection leans on noninvasive tests.</p>
           </div>
-          <div class="fact reveal" data-delay="2">
-            <span class="eyebrow">Patient &amp; provider engagement</span>
-            <div class="stat__num" style="font-size: clamp(1.9rem,3.2vw,2.4rem); margin: 0.7rem 0 0.15rem;">49%</div>
-            <h3 style="font-size:1.05rem; margin-bottom:0.5rem;">Diagnosed in primary care</h3>
-            <p style="color: var(--ink-soft); font-size:0.95rem;">Nearly half of all MASH cases are diagnosed by primary care physicians. Yet despite more than 40% of patients having metabolic risk factors (like high blood pressure, elevated lipids, or type 2 diabetes), fewer than 5% receive a formal metabolic screening before liver identification, underlining the need for earlier patient-doctor conversations about liver health.</p>
+          <div class="stat-card reveal ring--mahog" data-delay="2">
+            <div class="ring">
+              <svg viewBox="0 0 120 120"><circle class="ring__track" cx="60" cy="60" r="52"/><circle class="ring__fill" cx="60" cy="60" r="52" style="--pct:49"/></svg>
+              <div class="ring__label"><b>49%</b></div>
+            </div>
+            <span class="eyebrow">Provider engagement</span>
+            <h3>Diagnosed in primary care</h3>
+            <p>Nearly half of cases are caught in primary care. Yet fewer than 5% of at-risk patients get metabolic screening first, so earlier conversations matter.</p>
           </div>
         </div>
         <p class="center form__note reveal" style="margin-top: 1.5rem;">Figures are approximate and drawn from published liver-health research, shared for awareness, not diagnosis.</p>
@@ -262,6 +271,55 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ===================== RESOURCES ===================== -->
+    <section class="section" id="resources">
+      <div class="wrap">
+        <div class="split" style="align-items:flex-end; margin-bottom: 2.5rem;">
+          <div class="stack reveal"><span class="eyebrow">Resources</span><h2>Trusted places to learn more</h2></div>
+          <p class="reveal" data-delay="1" style="color:var(--ink-soft); text-align:right; max-width:42ch;">A starting point of reputable organizations and guides for liver health, MASH, and living well.</p>
+        </div>
+        <div class="grid three">
+          <a class="fact reveal" href="https://liverfoundation.org" target="_blank" rel="noopener" style="text-decoration:none; display:flex; flex-direction:column; gap:0.5rem;">
+            <span class="tag" style="align-self:flex-start;">Organization</span>
+            <h3>American Liver Foundation</h3>
+            <p>Patient education, support, and community for all liver conditions.</p>
+            <span class="link-arrow" style="margin-top:auto;">Visit ↗</span>
+          </a>
+          <a class="fact reveal" data-delay="1" href="https://globalliver.org" target="_blank" rel="noopener" style="text-decoration:none; display:flex; flex-direction:column; gap:0.5rem;">
+            <span class="tag" style="align-self:flex-start;">Advocacy</span>
+            <h3>Global Liver Institute</h3>
+            <p>Advancing liver health awareness, policy, and patient advocacy worldwide.</p>
+            <span class="link-arrow" style="margin-top:auto;">Visit ↗</span>
+          </a>
+          <a class="fact reveal" data-delay="2" href="https://www.fattyliverfoundation.org" target="_blank" rel="noopener" style="text-decoration:none; display:flex; flex-direction:column; gap:0.5rem;">
+            <span class="tag" style="align-self:flex-start;">Organization</span>
+            <h3>Fatty Liver Foundation</h3>
+            <p>Focused on early detection and awareness of MASLD and MASH.</p>
+            <span class="link-arrow" style="margin-top:auto;">Visit ↗</span>
+          </a>
+          <a class="fact reveal" href="mash.html" style="text-decoration:none; display:flex; flex-direction:column; gap:0.5rem;">
+            <span class="tag tag--amber" style="align-self:flex-start;">Guide</span>
+            <h3>Understanding MASH</h3>
+            <p>A plain-language explainer of MASH and MASLD, risk factors, and FAQs.</p>
+            <span class="link-arrow" style="margin-top:auto;">Read the guide →</span>
+          </a>
+          <a class="fact reveal" data-delay="1" href="livingwell.html" style="text-decoration:none; display:flex; flex-direction:column; gap:0.5rem;">
+            <span class="tag tag--amber" style="align-self:flex-start;">Guide</span>
+            <h3>Living Well</h3>
+            <p>Plant-based living, knowing your liver tests, and talking with your care team.</p>
+            <span class="link-arrow" style="margin-top:auto;">Explore →</span>
+          </a>
+          <a class="fact reveal" data-delay="2" href="recipes.html" style="text-decoration:none; display:flex; flex-direction:column; gap:0.5rem;">
+            <span class="tag tag--amber" style="align-self:flex-start;">Recipes</span>
+            <h3>Plant-Based Recipes</h3>
+            <p>Nourishing, liver-friendly dishes to make eating well feel easy.</p>
+            <span class="link-arrow" style="margin-top:auto;">Start cooking →</span>
+          </a>
+        </div>
+        <p class="center form__note reveal" style="margin-top: 1.5rem;">External links are provided for information only and are not endorsements. Always confirm guidance with your own care team.</p>
       </div>
     </section>
 

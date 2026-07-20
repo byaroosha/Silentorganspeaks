@@ -272,6 +272,34 @@ body.menu-open .nav__toggle span:nth-child(3) { transform: translateY(-7px) rota
   .hero-media, .hero-media .ph { min-height: 320px; }
 }
 
+/* Stat cards with animated donut rings */
+.stat-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.25rem, 3vw, 2rem); }
+.stat-card {
+  background: var(--ivory); border: 1px solid rgba(44,0,0,0.10); border-radius: var(--radius-lg);
+  padding: clamp(1.75rem, 3vw, 2.5rem); text-align: center; box-shadow: var(--shadow-sm);
+  display: flex; flex-direction: column; align-items: center; gap: 0.4rem;
+  transition: transform .5s var(--ease), box-shadow .5s var(--ease);
+}
+.stat-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+.ring { position: relative; width: 148px; height: 148px; margin-bottom: 0.9rem; }
+.ring svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+.ring__track { fill: none; stroke: var(--dust); stroke-width: 11; }
+.ring__fill {
+  fill: none; stroke-width: 11; stroke-linecap: round;
+  stroke-dasharray: 326.7; stroke-dashoffset: 326.7;
+  transition: stroke-dashoffset 1.3s var(--ease);
+}
+.stat-card.in .ring__fill { stroke-dashoffset: calc(326.7 - (326.7 * var(--pct) / 100)); }
+.ring--red .ring__fill { stroke: var(--inferno); }
+.ring--lime .ring__fill { stroke: var(--lime); }
+.ring--mahog .ring__fill { stroke: var(--mahogany); }
+.ring__label { position: absolute; inset: 0; display: grid; place-items: center; line-height: 1; }
+.ring__label b { font-family: var(--sans); font-weight: 800; font-size: clamp(1.5rem, 2.6vw, 1.95rem); color: var(--mahogany); letter-spacing: -0.02em; }
+.stat-card .eyebrow { justify-content: center; }
+.stat-card h3 { font-size: 1.15rem; margin-top: 0.15rem; }
+.stat-card p { color: var(--ink-soft); font-size: 0.94rem; }
+@media (max-width: 820px) { .stat-cards { grid-template-columns: 1fr; max-width: 460px; margin-inline: auto; } }
+
 /* ==========================================================================
    Sections & cards
    ========================================================================== */
