@@ -58,6 +58,7 @@
   --gutter: clamp(1.5rem, 6vw, 5rem);
   --radius: 0px;
   --radius-lg: 0px;
+  --radius-btn: 16px;   /* all buttons */
 
   /* Shadows removed for a flat, minimal surface treatment */
   --shadow-sm: none;
@@ -165,7 +166,7 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.55rem); font-weight: 500; }
 .btn {
   display: inline-flex; align-items: center; gap: 0.6rem;
   padding: 0.95rem 1.7rem;
-  border-radius: var(--radius);
+  border-radius: var(--radius-btn);
   font-weight: 500; font-size: 0.92rem; letter-spacing: 0.01em;
   border: 1px solid transparent;
   transition: background .3s var(--ease), color .3s var(--ease), border-color .3s var(--ease);
@@ -564,7 +565,7 @@ body.menu-open .nav__toggle span:nth-child(3) { transform: translateY(-7px) rota
 .intro__cta {
   margin-left: auto; margin-bottom: 0.4rem; flex: none;
   display: inline-flex; align-items: center; justify-content: center;
-  padding: 0.8rem 1.6rem; border-radius: 100px;
+  padding: 0.8rem 1.6rem; border-radius: var(--radius-btn);
   border: 1.5px solid var(--lime); background: rgba(255,255,255,0.55);
   color: var(--ink); font-weight: 500; font-size: 0.94rem; white-space: nowrap;
   transition: background .3s var(--ease), color .3s var(--ease), border-color .3s var(--ease);
