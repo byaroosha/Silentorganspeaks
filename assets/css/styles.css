@@ -50,8 +50,8 @@
   --line-soft:    rgba(44, 0, 0, 0.08);
 
   /* Type */
-  --serif: "Georgia", "Times New Roman", serif;
-  --mono:  ui-monospace, "SF Mono", "Roboto Mono", "Courier New", monospace;
+  --serif: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; /* all type is Roboto */
+  --mono:  "Roboto Mono", ui-monospace, "SF Mono", "Courier New", monospace;
   --sans:  "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
 
   /* Rhythm */
@@ -119,14 +119,14 @@ h1, h2, h3, h4 {
   color: var(--ink);
 }
 .display {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: clamp(2.9rem, 8vw, 6.75rem);
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.02;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
   text-transform: none;
 }
-h2 { font-family: var(--serif); font-size: clamp(2rem, 4.6vw, 3.4rem); font-weight: 400; letter-spacing: -0.015em; line-height: 1.1; }
+h2 { font-family: var(--sans); font-size: clamp(2rem, 4.6vw, 3.4rem); font-weight: 500; letter-spacing: -0.025em; line-height: 1.1; }
 /* Expressive serif-italic accent for a single emphasized word */
 .serif-em, .italic-accent { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spacing: 0; }
 h3 { font-size: clamp(1.2rem, 2vw, 1.55rem); font-weight: 500; }
