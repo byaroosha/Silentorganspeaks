@@ -95,13 +95,14 @@ h1, h2, h3, h4 {
   color: var(--ink);
 }
 .display {
+  font-family: var(--serif);
   font-size: clamp(2.9rem, 8vw, 6.75rem);
-  font-weight: 500;
-  line-height: 0.98;
-  letter-spacing: -0.035em;
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
   text-transform: none;
 }
-h2 { font-size: clamp(2rem, 4.6vw, 3.4rem); font-weight: 500; letter-spacing: -0.025em; line-height: 1.06; }
+h2 { font-family: var(--serif); font-size: clamp(2rem, 4.6vw, 3.4rem); font-weight: 400; letter-spacing: -0.015em; line-height: 1.1; }
 /* Expressive serif-italic accent for a single emphasized word */
 .serif-em, .italic-accent { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spacing: 0; }
 h3 { font-size: clamp(1.2rem, 2vw, 1.55rem); font-weight: 500; }
@@ -205,6 +206,9 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.55rem); font-weight: 500; }
 }
 .nav__links a:hover::after, .nav__links a[aria-current="page"]::after { width: 100%; }
 .nav__cta { display: flex; align-items: center; gap: 1rem; }
+/* Soften the persistent nav CTA to a subtle outline (keeps lime sparing) */
+.nav__cta .btn--amber { background: transparent; color: var(--mahogany); border-color: var(--line); }
+.nav__cta .btn--amber:hover { background: var(--mahogany); color: var(--white); border-color: var(--mahogany); }
 .nav__toggle { display: none; background: none; border: 0; width: 44px; height: 44px; position: relative; }
 .nav__toggle span { position: absolute; left: 10px; right: 10px; height: 1.5px; background: var(--ink); transition: transform .3s var(--ease), opacity .3s var(--ease); }
 .nav__toggle span:nth-child(1) { top: 15px; }
