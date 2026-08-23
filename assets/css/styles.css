@@ -226,7 +226,7 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.55rem); font-weight: 500; }
 .brand { display: flex; align-items: center; gap: 0.65rem; font-family: var(--sans); font-size: 1.18rem; font-weight: 600; letter-spacing: -0.01em; white-space: nowrap; flex: none; line-height: 1.05; }
 .brand__mark { width: 42px; height: auto; flex: none; }
 /* Real logo image (nav + footer) */
-.brand-logo { height: 44px; width: auto; max-width: none; object-fit: contain; display: block; }
+.brand-logo { height: 100px; width: auto; max-width: none; object-fit: contain; display: block; }
 /* Footer uses the white logo variant — sits directly on the dark background */
 .footer .brand-logo { height: 44px; }
 .lg-bubble { stroke: var(--inferno); fill: none; }
