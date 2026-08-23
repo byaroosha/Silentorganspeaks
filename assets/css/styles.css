@@ -86,6 +86,28 @@ a { color: inherit; text-decoration: none; }
 button { font: inherit; cursor: pointer; }
 ul { list-style: none; padding: 0; }
 
+/* Animated soft aurora background (subtle, brand-toned, sits behind all content) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: -25%;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(44% 52% at 14% 16%, rgba(224, 214, 208, 1), transparent 72%),
+    radial-gradient(40% 48% at 88% 10%, rgba(44, 0, 0, 0.10), transparent 72%),
+    radial-gradient(56% 62% at 84% 82%, rgba(65, 206, 0, 0.20), transparent 72%),
+    radial-gradient(48% 54% at 20% 90%, rgba(168, 5, 5, 0.06), transparent 74%);
+  filter: blur(22px);
+  will-change: transform;
+  animation: bgdrift 28s ease-in-out infinite alternate;
+}
+@keyframes bgdrift {
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  50%  { transform: translate3d(2.2%, -1.6%, 0) scale(1.08); }
+  100% { transform: translate3d(-2.2%, 1.6%, 0) scale(1.05); }
+}
+
 /* ---- Typography ---- */
 h1, h2, h3, h4 {
   font-family: var(--sans);
