@@ -51,6 +51,7 @@
 
   /* Type */
   --serif: "Georgia", "Times New Roman", serif;
+  --mono:  ui-monospace, "SF Mono", "Roboto Mono", "Courier New", monospace;
   --sans:  "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
 
   /* Rhythm */
@@ -133,7 +134,7 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.55rem); font-weight: 500; }
 .serif-em { font-family: var(--serif); font-style: italic; font-weight: 400; }
 
 .eyebrow {
-  font-family: var(--sans);
+  font-family: var(--mono);
   font-size: 0.74rem;
   font-weight: 600;
   letter-spacing: 0.24em;
@@ -161,6 +162,17 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.55rem); font-weight: 500; }
 .two { grid-template-columns: repeat(2, 1fr); }
 .three { grid-template-columns: repeat(3, 1fr); }
 .four { grid-template-columns: repeat(4, 1fr); }
+
+/* ---- Soft capsule info boxes (neumorphic, like the reference pill) ---- */
+.soft, .stat-cell, .pillar, .fact, .recipe, .disclaimer, .panel--cream {
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: clamp(28px, 3.5vw, 44px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    0 1px 2px rgba(44, 0, 0, 0.03),
+    0 16px 36px rgba(44, 0, 0, 0.06);
+}
 
 /* ---- Buttons ---- */
 .btn {
@@ -292,7 +304,7 @@ body.menu-open .nav__toggle span:nth-child(3) { transform: translateY(-7px) rota
 /* Minimal numbered stat row (replaces donut rings) */
 .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(2.5rem, 6vw, 5rem); }
 .stat-cell {
-  padding: 0;
+  padding: clamp(1.75rem, 3vw, 2.5rem);
   display: flex; flex-direction: column; gap: 0.4rem;
 }
 .stat-cell__num { font-family: var(--sans); font-weight: 500; font-size: clamp(2.8rem, 6vw, 4.5rem); line-height: 1; letter-spacing: -0.03em; color: var(--mahogany); }
@@ -329,7 +341,7 @@ body.menu-open .nav__toggle span:nth-child(3) { transform: translateY(-7px) rota
    ========================================================================== */
 .pillars { display: grid; gap: clamp(2.5rem, 6vw, 5rem); grid-template-columns: repeat(3,1fr); }
 .pillar {
-  background: transparent; border-radius: 0; padding: 0;
+  padding: clamp(1.75rem, 3vw, 2.5rem);
   display: flex; flex-direction: column; gap: 0.9rem; min-height: 100%;
 }
 .pillar__ico { width: auto; height: auto; border-radius: 0; display: block; color: var(--mahogany) !important; background: transparent !important; flex: none; margin-bottom: 0.25rem; }
@@ -357,13 +369,13 @@ body.menu-open .nav__toggle span:nth-child(3) { transform: translateY(-7px) rota
 /* Recipe cards */
 .recipe-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: clamp(1.75rem,3.5vw,2.75rem); }
 .recipe {
-  background: transparent; border-radius: 0;
   display: flex; flex-direction: column;
+  padding: clamp(1.5rem, 2.5vw, 2rem);
 }
 .recipe .ph { border-radius: 0; min-height: 210px; border: 0; border-bottom: 1px solid var(--line); }
 .recipe__body { padding: 0; display: flex; flex-direction: column; gap: 0.8rem; flex: 1; }
 .recipe__tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-.tag { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; padding: 0; border-radius: 0; background: transparent; border: 0; color: var(--ink-faint); }
+.tag { font-family: var(--mono); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; padding: 0.4rem 0.95rem; border-radius: 100px; background: rgba(255,255,255,0.65); border: 1px solid rgba(255,255,255,0.9); box-shadow: 0 2px 8px rgba(44,0,0,0.05), inset 0 1px 0 rgba(255,255,255,0.95); color: var(--ink-soft); }
 .tag--amber { background: transparent; color: var(--mahogany); }
 .recipe h3 { font-size: 1.25rem; font-weight: 500; }
 .recipe__meta { display: flex; gap: 1.25rem; margin-top: auto; padding-top: 0.75rem; font-size: 0.82rem; color: var(--ink-faint); font-weight: 400; }
@@ -371,7 +383,7 @@ body.menu-open .nav__toggle span:nth-child(3) { transform: translateY(-7px) rota
 
 /* Info / fact cards */
 .fact {
-  background: transparent; border-radius: 0; padding: 0; height: 100%;
+  padding: clamp(1.5rem, 2.5vw, 2rem); height: 100%;
 }
 .fact h3 { font-size: 1.2rem; margin-bottom: 0.6rem; font-weight: 500; }
 .fact p { color: var(--ink-soft); font-size: 0.96rem; }
@@ -406,7 +418,7 @@ body.menu-open .nav__toggle span:nth-child(3) { transform: translateY(-7px) rota
 .panel { border-radius: 0; padding: 0; position: relative; }
 .panel--plum, .panel--sage { background: transparent; color: var(--ink-soft); border: 0; }
 .panel--plum h2, .panel--plum h3, .panel--sage h2, .panel--sage h3 { color: var(--ink); }
-.panel--cream { background: transparent; border: 0; }
+.panel--cream { padding: clamp(2rem, 4vw, 3.25rem); }
 /* Neutralize any legacy light-on-dark inline colors inside these now-light panels */
 .panel--plum .eyebrow, .panel--sage .eyebrow { color: var(--ink-faint) !important; }
 .panel--plum p, .panel--sage p { color: var(--ink-soft) !important; }
@@ -449,7 +461,7 @@ body.menu-open .nav__toggle span:nth-child(3) { transform: translateY(-7px) rota
 .acc__body p { padding-bottom: 1.5rem; color: var(--ink-soft); }
 
 /* Disclaimer */
-.disclaimer { background: transparent; border-radius: 0; border: 0; padding: 0; font-size: 0.9rem; color: var(--ink-soft); display: flex; gap: 1rem; align-items: flex-start; }
+.disclaimer { padding: 1.5rem 1.75rem; font-size: 0.9rem; color: var(--ink-soft); display: flex; gap: 1rem; align-items: flex-start; }
 .disclaimer svg { flex: none; width: 24px; height: 24px; color: var(--inferno); margin-top: 2px; }
 
 /* ==========================================================================
