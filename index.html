@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 55 46'%3E%3Cpath d='M12 4H34A6.5 6.5 0 0 1 40.5 10.5V21A6.5 6.5 0 0 1 34 27.5H20L10 36.5 12.2 27.5H12A6.5 6.5 0 0 1 5.5 21V10.5A6.5 6.5 0 0 1 12 4Z' fill='none' stroke='%23A80505' stroke-width='4.6' stroke-linejoin='round' stroke-linecap='round'/%3E%3Cpath d='M38 23.2C36.6 14 40.6 5 48 4 51.4 3.5 53.6 6.3 53 9.9 51.5 18.4 45.4 24.2 39.2 24.2 38.8 24.2 38.4 23.8 38 23.2Z' fill='%2341CE00'/%3E%3C/svg%3E" />
 </head>
-<body>
+<body class="has-intro">
 
   <!-- ===================== NAV ===================== -->
   <header class="nav" id="nav">
@@ -35,6 +35,27 @@
   </header>
 
   <main>
+    <!-- ===================== INTRO CURTAIN ===================== -->
+    <section class="intro" id="intro">
+      <span class="intro__glow intro__glow--a" aria-hidden="true"></span>
+      <span class="intro__glow intro__glow--b" aria-hidden="true"></span>
+      <div class="wrap intro__inner">
+        <a class="intro__brand" href="index.html" aria-label="Silent Organ Speaks home">
+          <img src="assets/img/SOSORG.png" alt="Silent Organ Speaks" />
+        </a>
+        <nav class="intro__links" aria-label="Primary">
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="story.html">My Story</a>
+          <a href="mash.html">Understanding MASH</a>
+          <a href="livingwell.html">Living Well</a>
+          <a href="recipes.html">Recipes</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <a href="contact.html" class="intro__cta">Get in touch</a>
+      </div>
+      <a class="intro__scroll" href="#explore" aria-label="Scroll to content"><span></span></a>
+    </section>
+
     <!-- ===================== HERO (split) ===================== -->
     <section class="hero">
       <div class="wrap">
