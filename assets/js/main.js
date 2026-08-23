@@ -2,15 +2,11 @@
 (function () {
   "use strict";
 
-  /* ---- Nav: solidify on scroll (waits out the intro curtain, if present) ---- */
+  /* ---- Nav: solidify on scroll ---- */
   var nav = document.querySelector(".nav");
-  var intro = document.querySelector(".intro");
-  function navThreshold() {
-    return intro ? Math.max(120, intro.offsetHeight * 0.5) : 24;
-  }
   function onScroll() {
     if (!nav) return;
-    if (window.scrollY > navThreshold()) nav.classList.add("scrolled");
+    if (window.scrollY > 24) nav.classList.add("scrolled");
     else nav.classList.remove("scrolled");
   }
   window.addEventListener("scroll", onScroll, { passive: true });
@@ -85,29 +81,6 @@
       if (!ticking) { window.requestAnimationFrame(parallax); ticking = true; }
     }, { passive: true });
     parallax();
-  }
-
-  /* ---- Intro curtain: lift the lockup away as the page scrolls ---- */
-  var introInner = intro && intro.querySelector(".intro__inner");
-  var introCue = intro && intro.querySelector(".intro__scroll");
-  if (introInner && !reduceMotion) {
-    var introTicking = false;
-    function introShift() {
-      var y = window.scrollY;
-      var h = intro.offsetHeight || window.innerHeight;
-      if (y <= h) {
-        var p = y / h;
-        introInner.style.transform = "translate3d(0," + (-y * 0.34) + "px,0)";
-        var fade = String(Math.max(0, 1 - p * 1.5));
-        introInner.style.opacity = fade;
-        if (introCue) introCue.style.opacity = String(Math.max(0, 1 - p * 3));
-      }
-      introTicking = false;
-    }
-    window.addEventListener("scroll", function () {
-      if (!introTicking) { window.requestAnimationFrame(introShift); introTicking = true; }
-    }, { passive: true });
-    introShift();
   }
 
   /* ---- Footer year ---- */
