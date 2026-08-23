@@ -387,16 +387,18 @@ body.menu-open .nav__toggle span:nth-child(3) { transform: translateY(-7px) rota
 .event h3 { font-size: 1.15rem; font-weight: 500; }
 .event p { color: var(--ink-soft); font-size: 0.92rem; margin-top: 0.2rem; }
 
-/* Feature panels */
+/* Feature panels — light, hairline-framed (stripped-back treatment) */
 .panel { border-radius: 0; padding: clamp(2.75rem, 6vw, 5.5rem); position: relative; overflow: hidden; }
-.panel--plum { background: var(--mahogany); color: var(--dust); }
-.panel--plum h2, .panel--plum h3 { color: var(--white); }
-.panel--sage { background: var(--mahogany); color: var(--dust); }
-.panel--sage h2, .panel--sage h3 { color: var(--white); }
+.panel--plum, .panel--sage { background: var(--dust-2); color: var(--ink-soft); border: 1px solid var(--line); }
+.panel--plum h2, .panel--plum h3, .panel--sage h2, .panel--sage h3 { color: var(--ink); }
 .panel--cream { background: var(--white); border: 1px solid var(--line); }
-/* Buttons on dark panels */
-.panel--plum .btn--primary, .panel--sage .btn--primary { background: var(--lime); color: var(--lime-ink); border-color: var(--lime); }
-.panel--plum .btn--primary:hover, .panel--sage .btn--primary:hover { background: var(--white); color: var(--mahogany); border-color: var(--white); }
+/* Neutralize any legacy light-on-dark inline colors inside these now-light panels */
+.panel--plum .eyebrow, .panel--sage .eyebrow { color: var(--ink-faint) !important; }
+.panel--plum p, .panel--sage p { color: var(--ink-soft) !important; }
+.panel--plum .quote, .panel--sage .quote { color: var(--ink) !important; }
+.panel--plum .cite, .panel--sage .cite { color: var(--ink-faint) !important; }
+.panel--plum .btn--ghost, .panel--sage .btn--ghost { color: var(--mahogany) !important; border-color: var(--line) !important; }
+.panel--plum .btn--ghost:hover, .panel--sage .btn--ghost:hover { background: var(--mahogany) !important; color: var(--white) !important; border-color: var(--mahogany) !important; }
 
 /* CTA band */
 .cta-band { text-align: center; }
@@ -434,20 +436,19 @@ body.menu-open .nav__toggle span:nth-child(3) { transform: translateY(-7px) rota
 /* ==========================================================================
    Footer
    ========================================================================== */
-.footer { background: var(--mahogany); color: var(--dust); padding-block: clamp(4rem, 8vw, 7rem) 2.5rem; }
-.footer a { color: rgba(230,222,217,0.72); transition: color .25s var(--ease); }
-.footer a:hover { color: var(--lime); }
+.footer { background: var(--cream); color: var(--ink-soft); padding-block: clamp(4rem, 8vw, 7rem) 2.5rem; border-top: 1px solid var(--line); }
+.footer a { color: var(--ink-soft); transition: color .25s var(--ease); }
+.footer a:hover { color: var(--mahogany); }
 .footer__grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 2.5rem; }
-.footer .brand { color: var(--white); margin-bottom: 1rem; }
-.footer .lg-bubble { stroke: var(--dust); }
-.footer p { color: rgba(230,222,217,0.6); max-width: 34ch; font-size: 0.94rem; }
-.footer h4 { font-family: var(--sans); font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(230,222,217,0.5); margin-bottom: 1.2rem; font-weight: 600; }
+.footer .brand { color: var(--ink); margin-bottom: 1rem; }
+.footer p { color: var(--ink-faint); max-width: 34ch; font-size: 0.94rem; }
+.footer h4 { font-family: var(--sans); font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 1.2rem; font-weight: 600; }
 .footer__links li { margin-bottom: 0.65rem; font-size: 0.94rem; }
 .socials { display: flex; gap: 0.75rem; margin-top: 1.5rem; }
-.socials a { width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(230,222,217,0.25); display: grid; place-items: center; }
-.socials a:hover { border-color: var(--lime); }
+.socials a { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); display: grid; place-items: center; color: var(--mahogany); }
+.socials a:hover { border-color: var(--mahogany); }
 .socials svg { width: 17px; height: 17px; }
-.footer__base { margin-top: 3.5rem; padding-top: 1.75rem; border-top: 1px solid rgba(230,222,217,0.16); display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; font-size: 0.82rem; color: rgba(230,222,217,0.5); }
+.footer__base { margin-top: 3.5rem; padding-top: 1.75rem; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; font-size: 0.82rem; color: var(--ink-faint); }
 
 /* ==========================================================================
    Reveal animation (subtle)
