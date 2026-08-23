@@ -190,8 +190,8 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.55rem); font-weight: 500; }
 .brand { display: flex; align-items: center; gap: 0.65rem; font-family: var(--sans); font-size: 1.18rem; font-weight: 600; letter-spacing: -0.01em; white-space: nowrap; flex: none; line-height: 1.05; }
 .brand__mark { width: 42px; height: auto; flex: none; }
 /* Real logo image (nav + footer) */
-.brand-logo { height: 48px; width: auto; display: block; transition: height .4s var(--ease); }
-.nav.scrolled .brand-logo { height: 40px; }
+.brand-logo { height: clamp(84px, 9.5vw, 132px); width: auto; display: block; transition: height .4s var(--ease); }
+.nav.scrolled .brand-logo { height: 44px; }
 /* Footer uses the white logo variant — sits directly on the dark background */
 .footer .brand-logo { height: 44px; }
 .lg-bubble { stroke: var(--inferno); fill: none; }
