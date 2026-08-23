@@ -212,7 +212,7 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.55rem); font-weight: 500; }
 .brand { display: flex; align-items: center; gap: 0.65rem; font-family: var(--sans); font-size: 1.18rem; font-weight: 600; letter-spacing: -0.01em; white-space: nowrap; flex: none; line-height: 1.05; }
 .brand__mark { width: 42px; height: auto; flex: none; }
 /* Real logo image (nav + footer) */
-.brand-logo { height: clamp(84px, 9.5vw, 132px); width: auto; display: block; transition: height .4s var(--ease); }
+.brand-logo { height: clamp(84px, 9.5vw, 132px); width: auto; max-width: none; object-fit: contain; display: block; transition: height .4s var(--ease); }
 .nav.scrolled .brand-logo { height: 44px; }
 /* Footer uses the white logo variant — sits directly on the dark background */
 .footer .brand-logo { height: 44px; }
@@ -547,12 +547,14 @@ body.menu-open .nav__toggle span:nth-child(3) { transform: translateY(-7px) rota
   z-index: 2;
   display: flex;
   align-items: flex-end;
-  gap: clamp(1.25rem, 3vw, 3rem);
+  gap: clamp(1rem, 2vw, 2.1rem);
   width: 100%;
   will-change: transform, opacity;
 }
-.intro__brand img { height: clamp(76px, 12vw, 178px); width: auto; }
-.intro__links { display: flex; align-items: center; flex-wrap: nowrap; flex-shrink: 0; gap: clamp(0.85rem, 1.6vw, 1.75rem); padding-bottom: 0.85rem; }
+.intro .wrap { max-width: 1340px; }
+.intro__brand { flex: none; }
+.intro__brand img { height: clamp(76px, 10.5vw, 164px); width: auto; max-width: none; object-fit: contain; }
+.intro__links { display: flex; align-items: center; flex-wrap: wrap; row-gap: 0.6rem; gap: clamp(0.8rem, 1.35vw, 1.55rem); padding-bottom: 0.85rem; }
 .intro__links a { position: relative; white-space: nowrap; font-size: clamp(0.88rem, 1.05vw, 1rem); font-weight: 400; color: var(--ink); padding-bottom: 5px; }
 .intro__links a::after {
   content: ""; position: absolute; left: 0; bottom: 0; height: 2px; width: 0;
