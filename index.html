@@ -59,12 +59,12 @@
     <!-- ===================== HERO (split) ===================== -->
     <section class="hero">
       <div class="wrap">
-        <div class="hero-grid">
-          <div class="hero__inner" style="max-width: none;">
+        <div>
+          <div class="hero__inner">
             <span class="eyebrow reveal">Breaking the silence</span>
-            <h1 class="display reveal" id="hero-headline" data-delay="1" style="font-size: clamp(2.4rem, 5vw, 4.2rem);">The Silent Organ Speaks. It's Time to Listen.</h1>
+            <h1 class="display reveal" id="hero-headline" data-delay="1" style="font-size: clamp(2.6rem, 5.5vw, 4.6rem);">The Silent Organ Speaks. It's Time to Listen.</h1>
             <p class="lede reveal" id="hero-subhead" data-delay="2">Liver disease and MASH often develop without a single symptom. We're here to break the silence, raise awareness, and save lives.</p>
-            <p class="reveal" id="hero-intro" data-delay="3" style="color: var(--ink-soft); max-width: 62ch;">The liver works tirelessly behind the scenes, often giving no warning signs when something is wrong. Because liver disease and Metabolic Dysfunction-Associated Steatohepatitis (MASH) rarely show early symptoms, millions of people remain unaware until significant damage has occurred. Silent Organ Speaks was created to give a voice to a silent condition, bringing critical education, early detection resources, and patient advocacy into the light.</p>
+            <p class="reveal" id="hero-intro" data-delay="3" style="color: var(--ink-soft); max-width: 62ch;">Because MASH rarely shows early symptoms, millions remain unaware until real damage is done. This is a place to catch it sooner.</p>
             <div class="hero__actions reveal" data-delay="4">
               <a href="story.html" class="btn btn--primary">Read my story <span class="arrow">→</span></a>
               <a href="mash.html" class="btn btn--ghost">Learn about MASH</a>
@@ -76,17 +76,17 @@
               {
                 h: "The Silent Organ Speaks. It's Time to Listen.",
                 s: "Liver disease and MASH often develop without a single symptom. We're here to break the silence, raise awareness, and save lives.",
-                i: "The liver works tirelessly behind the scenes, often giving no warning signs when something is wrong. Because liver disease and Metabolic Dysfunction-Associated Steatohepatitis (MASH) rarely show early symptoms, millions of people remain unaware until significant damage has occurred. Silent Organ Speaks was created to give a voice to a silent condition, bringing critical education, early detection resources, and patient advocacy into the light."
+                i: "Because MASH rarely shows early symptoms, millions remain unaware until real damage is done. This is a place to catch it sooner."
               },
               {
                 h: "Giving Voice to a Silent Condition",
                 s: "Connecting patients, advocates, and answers in the fight against silent liver disease and MASH.",
-                i: "When a disease doesn't speak through symptoms, we have to speak for it. For millions living with or at risk of MASH and liver disease, the journey begins with awareness. Here, you'll find empowered patient stories, practical resources, and a community dedicated to ensuring no one has to navigate a quiet diagnosis alone."
+                i: "When a disease doesn't speak through symptoms, we have to speak for it. No one should navigate a quiet diagnosis alone."
               },
               {
                 h: "No Symptoms Doesn't Mean No Action",
                 s: "Uncovering MASH and liver disease before it's too late.",
-                i: "Liver disease doesn't make noise until it reaches advanced stages. That's why proactive awareness and early screening are our best tools. Silent Organ Speaks is dedicated to turning silence into action by advocating for early detection, sharing life-saving facts, and empowering you to take charge of your liver health today."
+                i: "Liver disease stays quiet until it is advanced. Awareness and early screening are the best tools we have."
               }
             ];
             var o = opts[Math.floor(Math.random() * opts.length)];
@@ -98,14 +98,6 @@
             if (I) I.textContent = o.i;
           })();
           </script>
-          <div class="hero-media reveal" data-delay="2">
-            <div class="ph ph--plum">
-              <div class="stack center" style="padding:2rem;">
-                <svg class="ph__ico" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-                <span class="ph__label">Add a hero photo of you</span>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -120,24 +112,18 @@
         <div class="stat-row">
           <div class="stat-cell reveal">
             <div class="stat-cell__num">1 in 3</div>
-            <span class="eyebrow">MASH prevalence</span>
-            <h3>Adults affected globally</h3>
-            <p>Around 33 to 38% of adults live with MASLD, and roughly 15 million U.S. adults have progressed to MASH, its more severe form.</p>
+            <p>adults live with MASLD, the condition behind MASH.</p>
           </div>
           <div class="stat-cell reveal" data-delay="1">
             <div class="stat-cell__num">~10%</div>
-            <span class="eyebrow">Testing &amp; diagnostics</span>
-            <h3>Undergo a liver biopsy</h3>
-            <p>Most MASH is now assessed with blood tests like FIB-4 and ultrasound. Only about 10% need a biopsy, so early detection leans on noninvasive tests.</p>
+            <p>need a biopsy. Most MASH is found with blood tests and ultrasound.</p>
           </div>
           <div class="stat-cell reveal" data-delay="2">
             <div class="stat-cell__num">49%</div>
-            <span class="eyebrow">Provider engagement</span>
-            <h3>Diagnosed in primary care</h3>
-            <p>Nearly half of cases are caught in primary care. Yet fewer than 5% of at-risk patients get metabolic screening first, so earlier conversations matter.</p>
+            <p>of cases are caught in primary care, so early conversations matter.</p>
           </div>
         </div>
-        <p class="center form__note reveal" style="margin-top: 1.5rem;">Figures are approximate and drawn from published liver-health research, shared for awareness, not diagnosis.</p>
+        <p class="center form__note reveal" style="margin-top: 1.5rem;">Approximate figures from published liver-health research, shared for awareness, not diagnosis.</p>
       </div>
     </section>
 
@@ -147,7 +133,7 @@
         <div class="center stack reveal" style="max-width: 640px; margin-inline: auto;">
           <span class="eyebrow" style="justify-content:center;">Three ways in</span>
           <h2>Where would you like to begin?</h2>
-          <p class="lede">Whether you're newly diagnosed, caring for someone you love, or a clinician looking to listen, there's a doorway here for you.</p>
+          
         </div>
         <div class="pillars" style="margin-top: clamp(2.5rem,5vw,4rem);">
           <article class="pillar reveal" data-delay="1">
@@ -155,7 +141,7 @@
               <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.6-9.3-9.2C1.2 8.6 3 5 6.4 5c2 0 3.4 1.2 4.2 2.4C11.4 6.2 12.8 5 14.8 5c3.4 0 5.2 3.6 3.7 6.8C16.2 16.4 12 21 12 21z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
             </div>
             <h3>My Story</h3>
-            <p>From a diagnosis I never saw coming to a mission to help others. The honest version, and why I keep telling it.</p>
+            <p>A diagnosis I never saw coming, and why I keep telling it.</p>
             <a href="story.html" class="link-arrow">Read the journey →</a>
           </article>
           <article class="pillar reveal" data-delay="2">
@@ -163,7 +149,7 @@
               <svg viewBox="0 0 24 24" fill="none"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z" stroke="currentColor" stroke-width="1.7"/><path d="M12 8v4l3 2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
             <h3>Understanding MASH</h3>
-            <p>What MASH and MASLD actually are, who's at risk, and the questions worth asking your doctor, in plain, human language.</p>
+            <p>What MASH is, who is at risk, and what to ask your doctor.</p>
             <a href="mash.html" class="link-arrow">Get the facts →</a>
           </article>
           <article class="pillar reveal" data-delay="3">
@@ -171,93 +157,9 @@
               <svg viewBox="0 0 24 24" fill="none"><path d="M4 13c0 4 3.6 7 8 7s8-3 8-7H4z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M8 13c0-3 1.8-6 4-8 2.2 2 4 5 4 8" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
             </div>
             <h3>Liver-Loving Recipes</h3>
-            <p>Nourishing, fully plant-based meals that are as generous as they are gentle on your liver. Food as everyday medicine.</p>
+            <p>Plant-based meals that are gentle on your liver.</p>
             <a href="recipes.html" class="link-arrow">Start cooking →</a>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== FEATURE 1 · MY STORY ===================== -->
-    <section class="section">
-      <div class="wrap">
-        <div class="feature">
-          <div class="feature__media reveal">
-            <div class="ph ph--plum"><span class="ph__label">Add a photo of you</span></div>
-          </div>
-          <div class="stack reveal" data-delay="1">
-            <span class="feature__num">01 · My Story</span>
-            <h2>"Fatty liver" sounded manageable. It wasn't.</h2>
-            <p class="lede">I didn't feel sick, that's the terrifying part. By the time I had answers, my condition had progressed to liver fibrosis stage 3, and I was facing advanced scarring, an uncertain future, and a deep sense of isolation.</p>
-            <p style="color: var(--ink-soft);">I turned that fear into a mission: to learn everything, change how I live, and stand up so the next person catches it sooner.</p>
-            <div style="margin-top:0.5rem;"><a href="story.html" class="btn btn--primary">Read my full story <span class="arrow">→</span></a></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== FEATURE 2 · MASH ===================== -->
-    <section class="section">
-      <div class="wrap">
-        <div class="feature feature--flip">
-          <div class="feature__media reveal">
-            <div class="ph ph--sage"><span class="ph__label">Optional illustration</span></div>
-          </div>
-          <div class="stack reveal" data-delay="1">
-            <span class="feature__num">02 · Understanding MASH</span>
-            <h2>A silent condition, explained in plain language.</h2>
-            <p class="lede">MASH, metabolic dysfunction-associated steatohepatitis, is one of the fastest-growing liver conditions in the world, and most people who have it don't know yet.</p>
-            <div class="grid two" style="gap:1rem; margin-top:0.5rem;">
-              <div class="fact"><h3 style="font-size:1.1rem;">What it is</h3><p>Fat in the liver, plus inflammation and cell damage.</p></div>
-              <div class="fact" style="border-color: rgba(168,5,5,0.25);"><h3 style="font-size:1.1rem;">Why it matters</h3><p>Left unchecked it can progress, caught early, the liver can heal.</p></div>
-            </div>
-            <div style="margin-top:0.5rem;"><a href="mash.html" class="btn btn--primary">Understand MASH <span class="arrow">→</span></a></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== FEATURE 3 · RECIPES ===================== -->
-    <section class="section">
-      <div class="wrap">
-        <div class="feature">
-          <div class="feature__media reveal">
-            <div class="ph ph--sage"><span class="ph__label">Recipe photo</span></div>
-          </div>
-          <div class="stack reveal" data-delay="1">
-            <span class="feature__num">03 · Recipes</span>
-            <h2>Food that loves your liver back.</h2>
-            <p class="lede">Simple, colorful, fully plant-based dishes, lower in added sugar and refined carbs, rich in fiber, plant protein, healthy fats, and flavor.</p>
-            <div class="recipe__tags" style="margin-top:0.25rem;">
-              <span class="tag">High fiber</span><span class="tag tag--amber">Omega-3</span><span class="tag">No added sugar</span><span class="tag tag--amber">Plant-forward</span>
-            </div>
-            <div style="margin-top:0.75rem;"><a href="recipes.html" class="btn btn--primary">Browse recipes <span class="arrow">→</span></a></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== STATS ===================== -->
-    <section class="section">
-      <div class="wrap">
-        <div class="panel panel--cream reveal">
-          <div class="stats">
-            <div class="center"><div class="stat__num">50+</div><p class="stat__lbl" style="margin-inline:auto;">talks shared with patients, caregivers, and clinicians</p></div>
-            <div class="center"><div class="stat__num">1 goal</div><p class="stat__lbl" style="margin-inline:auto;">to help even one person catch liver disease sooner</p></div>
-            <div class="center"><div class="stat__num">You</div><p class="stat__lbl" style="margin-inline:auto;">are not alone in this, that's the whole point of this space</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== TESTIMONIAL ===================== -->
-    <section class="section section--tight">
-      <div class="wrap">
-        <div class="center reveal" style="max-width: 900px; margin-inline:auto;">
-          <blockquote class="quote">
-            <span class="quote__mark">“</span>She made an entire auditorium understand what a lab result never could.
-            <cite class="cite">Event organizer, patient summit</cite>
-          </blockquote>
         </div>
       </div>
     </section>
