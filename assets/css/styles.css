@@ -120,7 +120,7 @@ h1, h2, h3, h4 {
 }
 .display {
   font-family: var(--sans);
-  font-size: clamp(2.1rem, 4.5vw, 3.6rem);
+  font-size: clamp(1.75rem, 3.2vw, 2.7rem);
   font-weight: 700;
   line-height: 1.08;
   letter-spacing: -0.02em;
@@ -139,7 +139,7 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.55rem); font-weight: 500; }
   font-weight: 600;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: var(--ink-faint);
+  color: #A31E21;
   display: inline-flex;
   align-items: center;
   gap: 0.7rem;
@@ -423,7 +423,7 @@ body.menu-open .nav__toggle span:nth-child(3) { transform: translateY(-7px) rota
 .panel--plum h2, .panel--plum h3, .panel--sage h2, .panel--sage h3 { color: var(--ink); }
 .panel--cream { padding: clamp(2rem, 4vw, 3.25rem); }
 /* Neutralize any legacy light-on-dark inline colors inside these now-light panels */
-.panel--plum .eyebrow, .panel--sage .eyebrow { color: var(--ink-faint) !important; }
+.panel--plum .eyebrow, .panel--sage .eyebrow { color: #A31E21 !important; }
 .panel--plum p, .panel--sage p { color: var(--ink-soft) !important; }
 .panel--plum .quote, .panel--sage .quote { color: var(--ink) !important; }
 .panel--plum .cite, .panel--sage .cite { color: var(--ink-faint) !important; }
@@ -499,7 +499,7 @@ body.menu-open .nav__toggle span:nth-child(3) { transform: translateY(-7px) rota
    ========================================================================== */
 .page-hero { padding-top: clamp(9.5rem, 16vw, 13rem); padding-bottom: clamp(3.5rem, 7vw, 6rem); position: relative; overflow: hidden; }
 .page-hero__inner { position: relative; z-index: 2; max-width: 820px; }
-.page-hero .display { font-size: clamp(2.1rem, 4.5vw, 3.4rem); margin-block: 1.5rem 1.5rem; }
+.page-hero .display { font-size: clamp(1.75rem, 3.2vw, 2.6rem); margin-block: 1.25rem 1.25rem; }
 
 /* ==========================================================================
    Responsive
