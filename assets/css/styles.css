@@ -86,6 +86,28 @@ a { color: inherit; text-decoration: none; }
 button { font: inherit; cursor: pointer; }
 ul { list-style: none; padding: 0; }
 
+/* Animated soft aurora background (subtle, brand-toned, sits behind all content) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: -25%;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(44% 52% at 14% 16%, rgba(224, 214, 208, 1), transparent 72%),
+    radial-gradient(40% 48% at 88% 10%, rgba(44, 0, 0, 0.10), transparent 72%),
+    radial-gradient(56% 62% at 84% 82%, rgba(65, 206, 0, 0.20), transparent 72%),
+    radial-gradient(48% 54% at 20% 90%, rgba(168, 5, 5, 0.06), transparent 74%);
+  filter: blur(22px);
+  will-change: transform;
+  animation: bgdrift 28s ease-in-out infinite alternate;
+}
+@keyframes bgdrift {
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  50%  { transform: translate3d(2.2%, -1.6%, 0) scale(1.08); }
+  100% { transform: translate3d(-2.2%, 1.6%, 0) scale(1.05); }
+}
+
 /* ---- Typography ---- */
 h1, h2, h3, h4 {
   font-family: var(--sans);
@@ -95,13 +117,14 @@ h1, h2, h3, h4 {
   color: var(--ink);
 }
 .display {
+  font-family: var(--serif);
   font-size: clamp(2.9rem, 8vw, 6.75rem);
-  font-weight: 500;
-  line-height: 0.98;
-  letter-spacing: -0.035em;
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
   text-transform: none;
 }
-h2 { font-size: clamp(2rem, 4.6vw, 3.4rem); font-weight: 500; letter-spacing: -0.025em; line-height: 1.06; }
+h2 { font-family: var(--serif); font-size: clamp(2rem, 4.6vw, 3.4rem); font-weight: 400; letter-spacing: -0.015em; line-height: 1.1; }
 /* Expressive serif-italic accent for a single emphasized word */
 .serif-em, .italic-accent { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spacing: 0; }
 h3 { font-size: clamp(1.2rem, 2vw, 1.55rem); font-weight: 500; }
@@ -189,8 +212,8 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.55rem); font-weight: 500; }
 .brand { display: flex; align-items: center; gap: 0.65rem; font-family: var(--sans); font-size: 1.18rem; font-weight: 600; letter-spacing: -0.01em; white-space: nowrap; flex: none; line-height: 1.05; }
 .brand__mark { width: 42px; height: auto; flex: none; }
 /* Real logo image (nav + footer) */
-.brand-logo { height: 48px; width: auto; display: block; transition: height .4s var(--ease); }
-.nav.scrolled .brand-logo { height: 40px; }
+.brand-logo { height: clamp(84px, 9.5vw, 132px); width: auto; display: block; transition: height .4s var(--ease); }
+.nav.scrolled .brand-logo { height: 44px; }
 /* Footer uses the white logo variant — sits directly on the dark background */
 .footer .brand-logo { height: 44px; }
 .lg-bubble { stroke: var(--inferno); fill: none; }
@@ -205,6 +228,9 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.55rem); font-weight: 500; }
 }
 .nav__links a:hover::after, .nav__links a[aria-current="page"]::after { width: 100%; }
 .nav__cta { display: flex; align-items: center; gap: 1rem; }
+/* Soften the persistent nav CTA to a subtle outline (keeps lime sparing) */
+.nav__cta .btn--amber { background: transparent; color: var(--mahogany); border-color: var(--line); }
+.nav__cta .btn--amber:hover { background: var(--mahogany); color: var(--white); border-color: var(--mahogany); }
 .nav__toggle { display: none; background: none; border: 0; width: 44px; height: 44px; position: relative; }
 .nav__toggle span { position: absolute; left: 10px; right: 10px; height: 1.5px; background: var(--ink); transition: transform .3s var(--ease), opacity .3s var(--ease); }
 .nav__toggle span:nth-child(1) { top: 15px; }
@@ -424,7 +450,11 @@ body.menu-open .nav__toggle span:nth-child(3) { transform: translateY(-7px) rota
 .acc { border-top: 1px solid var(--line); }
 .acc__item { border-bottom: 1px solid var(--line); }
 .acc__head { width: 100%; text-align: left; background: none; border: 0; padding: 1.5rem 0; display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; font-family: var(--sans); font-weight: 500; font-size: clamp(1.1rem,1.8vw,1.3rem); color: var(--ink); }
-.acc__ico { flex: none; width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--mahogany); display: grid; place-items: center; color: var(--mahogany); transition: transform .35s var(--ease), background .35s var(--ease), color .35s var(--ease); }
+.acc__ico { position: relative; flex: none; width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--mahogany); color: var(--mahogany); font-size: 0; transition: transform .35s var(--ease), background .35s var(--ease), color .35s var(--ease); }
+/* Plus drawn as two centered bars — perfectly centered, rotates to an X when open */
+.acc__ico::before, .acc__ico::after { content: ""; position: absolute; top: 50%; left: 50%; background: currentColor; border-radius: 1px; }
+.acc__ico::before { width: 11px; height: 1.5px; transform: translate(-50%, -50%); }
+.acc__ico::after  { width: 1.5px; height: 11px; transform: translate(-50%, -50%); }
 .acc__item.open .acc__ico { transform: rotate(45deg); background: var(--mahogany); color: #fff; }
 .acc__body { max-height: 0; overflow: hidden; transition: max-height .45s var(--ease); }
 .acc__body p { padding-bottom: 1.5rem; color: var(--ink-soft); }
