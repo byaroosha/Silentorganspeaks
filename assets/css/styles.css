@@ -150,6 +150,12 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.55rem); font-weight: 500; }
   color: var(--ink-soft);
   font-weight: 400;
 }
+/* Homepage hero subhead: bold and more compact than the standard lede */
+#hero-subhead {
+  font-size: clamp(0.98rem, 1.3vw, 1.1rem);
+  font-weight: 700;
+  line-height: 1.5;
+}
 
 /* ---- Layout ---- */
 .wrap { width: 100%; max-width: var(--maxw); margin-inline: auto; padding-inline: var(--gutter); }
