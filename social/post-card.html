@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex" />
+<title>Post Card Maker | Silent Organ Speaks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,700&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --mahogany: #2C0000; --mahogany-2: #1C0000; --dust: #E6DED9; --dust-2: #F4F1EE;
+    --white: #FFFFFF; --lime: #41CE00; --lime-ink: #163F00; --inferno: #A80505;
+    --ink: #241111; --ink-soft: #6A5757; --line: rgba(44,0,0,.14);
+    --sans: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    --mono: "Roboto Mono", ui-monospace, "SF Mono", "Courier New", monospace;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--dust-2); color: var(--ink); font-family: var(--sans); line-height: 1.5; }
+  header { padding: 20px 24px; border-bottom: 1px solid var(--line); display: flex; align-items: center; gap: 16px; background: var(--white); }
+  header img { height: 34px; }
+  header h1 { font-size: 1rem; margin: 0; font-weight: 700; letter-spacing: -0.01em; }
+  header p { margin: 0; color: var(--ink-soft); font-size: .85rem; }
+  main { display: grid; grid-template-columns: 380px 1fr; gap: 24px; padding: 24px; max-width: 1400px; margin: 0 auto; }
+  @media (max-width: 900px) { main { grid-template-columns: 1fr; } }
+  .panel { background: var(--white); border: 1px solid var(--line); padding: 20px; }
+  label { display: block; font-family: var(--mono); font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); margin: 14px 0 6px; }
+  label:first-child { margin-top: 0; }
+  input[type=text], select, textarea { width: 100%; font: inherit; font-size: .95rem; padding: 10px 12px; border: 1px solid var(--line); background: var(--dust-2); color: var(--ink); border-radius: 0; }
+  textarea { resize: vertical; min-height: 72px; }
+  textarea#caption { min-height: 260px; font-size: .9rem; }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .row3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+  .check { display: flex; align-items: center; gap: 8px; margin-top: 14px; font-size: .9rem; }
+  .check input { width: 16px; height: 16px; }
+  button { font: inherit; font-weight: 700; padding: 12px 18px; border: 1px solid var(--mahogany); background: var(--mahogany); color: var(--white); cursor: pointer; border-radius: 0; }
+  button.secondary { background: var(--white); color: var(--mahogany); }
+  button:hover { background: var(--mahogany-2); color: var(--white); }
+  .actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
+  .preview { display: flex; flex-direction: column; gap: 16px; }
+  .stage { background: var(--dust); border: 1px solid var(--line); padding: 20px; display: flex; justify-content: center; align-items: flex-start; }
+  canvas { max-width: 100%; height: auto; box-shadow: 0 20px 50px rgba(44,0,0,.18); }
+  .status { font-size: .85rem; color: var(--ink-soft); min-height: 1.2em; }
+  .status.err { color: var(--inferno); }
+  .meta { font-family: var(--mono); font-size: .75rem; color: var(--ink-soft); }
+  .copywrap { position: relative; }
+  .copywrap button { position: absolute; right: 8px; top: 8px; padding: 6px 10px; font-size: .8rem; }
+</style>
+</head>
+<body>
+<header>
+  <img src="../assets/img/SOSBlack.png" alt="Silent Organ Speaks" />
+  <div>
+    <h1>Post card maker</h1>
+    <p>Pick a day, download the image, copy the caption. Edit anything before you export.</p>
+  </div>
+</header>
+
+<main>
+  <section class="panel" aria-label="Controls">
+    <label for="day">Calendar day</label>
+    <select id="day"><option value="">Custom (blank card)</option></select>
+    <div class="meta" id="daymeta"></div>
+
+    <div class="row3">
+      <div>
+        <label for="template">Template</label>
+        <select id="template">
+          <option value="tip">Tip / fact</option>
+          <option value="quote">Quote</option>
+          <option value="stat">Big number</option>
+          <option value="question">Ask your doctor</option>
+          <option value="mythfact">Myth vs fact</option>
+          <option value="recipe">Recipe</option>
+        </select>
+      </div>
+      <div>
+        <label for="theme">Theme</label>
+        <select id="theme">
+          <option value="dark">Mahogany</option>
+          <option value="light">Light</option>
+        </select>
+      </div>
+      <div>
+        <label for="size">Size</label>
+        <select id="size">
+          <option value="1080x1350">Portrait 4:5</option>
+          <option value="1080x1080">Square</option>
+          <option value="1080x1920">Story 9:16</option>
+        </select>
+      </div>
+    </div>
+
+    <label for="eyebrow">Eyebrow (small label)</label>
+    <input type="text" id="eyebrow" />
+    <label for="headline">Headline</label>
+    <textarea id="headline"></textarea>
+    <label for="body">Body</label>
+    <textarea id="body"></textarea>
+    <label for="footnote">Footnote</label>
+    <input type="text" id="footnote" />
+
+    <div class="row">
+      <div><label for="handle">Handle</label><input type="text" id="handle" value="@silentorganspeaks" /></div>
+      <div><label for="site">Website</label><input type="text" id="site" value="silentorganspeaks.org" /></div>
+    </div>
+    <div class="check"><input type="checkbox" id="logo" checked /><label for="logo" style="margin:0">Show logo</label></div>
+    <div class="check"><input type="checkbox" id="disclaimer" checked /><label for="disclaimer" style="margin:0">Add "Educational, not medical advice" if no footnote</label></div>
+
+    <div class="actions">
+      <button id="download">Download PNG</button>
+      <button id="copy" class="secondary">Copy caption</button>
+    </div>
+    <div class="status" id="status"></div>
+  </section>
+
+  <section class="preview" aria-label="Preview">
+    <div class="stage"><canvas id="card" width="1080" height="1350"></canvas></div>
+    <div class="panel copywrap">
+      <label for="caption">Caption (edit freely, then copy)</label>
+      <textarea id="caption" spellcheck="false"></textarea>
+    </div>
+  </section>
+</main>
+
+<script>
+(function () {
+  const $ = (id) => document.getElementById(id);
+  const canvas = $('card');
+  const ctx = canvas.getContext('2d');
+  const C = { mahogany:'#2C0000', mahogany2:'#1C0000', dust:'#E6DED9', dust2:'#F4F1EE', white:'#FFFFFF', lime:'#41CE00', limeInk:'#163F00', inferno:'#A80505', ink:'#241111', inkSoft:'#6A5757' };
+  const SANS = '"Roboto", Arial, sans-serif';
+  const MONO = '"Roboto Mono", "Courier New", monospace';
+
+  let data = null;
+  const logos = { dark: new Image(), light: new Image() };
+  logos.dark.src = '../assets/img/SOSWhite.png';
+  logos.light.src = '../assets/img/SOSBlack.png';
+  logos.dark.onload = logos.light.onload = () => render();
+
+  const fields = ['template','theme','size','eyebrow','headline','body','footnote','handle','site','logo','disclaimer'];
+  fields.forEach((f) => $(f).addEventListener('input', render));
+
+  function setStatus(msg, err) { const s = $('status'); s.textContent = msg || ''; s.className = 'status' + (err ? ' err' : ''); }
+
+  // ---- Calendar loading ----
+  fetch('calendar.json').then((r) => r.json()).then((d) => {
+    data = d;
+    if (d.brand) { $('handle').value = d.brand.handle || $('handle').value; $('site').value = d.brand.site || $('site').value; }
+    const sel = $('day');
+    d.posts.forEach((p) => {
+      const o = document.createElement('option');
+      o.value = p.day; o.textContent = `Day ${p.day} · ${p.weekday} · ${p.pillar}`;
+      sel.appendChild(o);
+    });
+    sel.addEventListener('change', loadDay);
+    // Default to the day matching today's weekday in week 1, so Monday opens on Day 1.
+    const wd = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][new Date().getDay()];
+    const first = d.posts.find((p) => p.weekday === wd) || d.posts[0];
+    sel.value = first.day; loadDay();
+  }).catch(() => {
+    setStatus('calendar.json could not be loaded (open this page over http, see social/README.md). Custom cards still work.', true);
+    render();
+  });
+
+  function loadDay() {
+    const p = data && data.posts.find((x) => String(x.day) === $('day').value);
+    if (!p) { $('daymeta').textContent = ''; $('caption').value = ''; render(); return; }
+    $('template').value = p.card.template; $('theme').value = p.card.theme;
+    $('eyebrow').value = p.card.eyebrow || ''; $('headline').value = p.card.headline || '';
+    $('body').value = p.card.body || ''; $('footnote').value = p.card.footnote || '';
+    $('daymeta').textContent = `${p.format} · CTA: ${p.cta}`;
+    $('caption').value = p.caption + '\n\n' + p.hashtags.join(' ');
+    render();
+  }
+
+  // ---- Text helpers ----
+  function wrap(text, maxWidth) {
+    const out = [];
+    text.split('\n').forEach((para) => {
+      const words = para.split(/\s+/).filter(Boolean);
+      let line = '';
+      words.forEach((w) => {
+        const t = line ? line + ' ' + w : w;
+        if (ctx.measureText(t).width > maxWidth && line) { out.push(line); line = w; } else { line = t; }
+      });
+      out.push(line);
+    });
+    return out;
+  }
+  // Pick the largest size in [min,max] whose wrapped block fits maxHeight.
+  function fit(text, font, max, min, maxWidth, maxHeight, lh) {
+    for (let s = max; s >= min; s -= 2) {
+      ctx.font = font(s);
+      const lines = wrap(text, maxWidth);
+      if (lines.length * s * lh <= maxHeight) return { size: s, lines };
+    }
+    ctx.font = font(min);
+    return { size: min, lines: wrap(text, maxWidth) };
+  }
+  // y is the top of the text block. Lines are drawn at their baselines; the new top is returned.
+  function drawLines(lines, x, y, size, lh, align) {
+    ctx.textAlign = align || 'left';
+    lines.forEach((l, i) => ctx.fillText(l, x, y + size * 0.82 + i * size * lh));
+    return y + lines.length * size * lh;
+  }
+
+  // ---- Render ----
+  function render() {
+    const [W, H] = $('size').value.split('x').map(Number);
+    canvas.width = W; canvas.height = H;
+    const dark = $('theme').value === 'dark';
+    const tpl = $('template').value;
+    const P = 96;                              // padding
+    const maxW = W - P * 2;
+    const bg = dark ? C.mahogany : C.dust2;
+    const fg = dark ? C.white : C.mahogany;
+    const soft = dark ? 'rgba(255,255,255,.72)' : C.inkSoft;
+    const accent = dark ? C.lime : C.inferno;
+    const line = dark ? 'rgba(255,255,255,.18)' : 'rgba(44,0,0,.14)';
+
+    ctx.fillStyle = bg; ctx.fillRect(0, 0, W, H);
+    // Top accent rule, used sparingly like the site.
+    ctx.fillStyle = accent; ctx.fillRect(P, P - 24, 72, 6);
+
+    // Footer: hairline, logo left, handle + site right.
+    const footerY = H - P;
+    ctx.fillStyle = line; ctx.fillRect(P, footerY - 72, maxW, 2);
+    const logo = logos[dark ? 'dark' : 'light'];
+    if ($('logo').checked && logo.complete && logo.naturalWidth) {
+      const lh = 52, lw = lh * (logo.naturalWidth / logo.naturalHeight);
+      ctx.drawImage(logo, P, footerY - lh + 4, lw, lh);
+    } else {
+      ctx.fillStyle = fg; ctx.font = `700 26px ${SANS}`; ctx.textAlign = 'left'; ctx.textBaseline = 'alphabetic';
+      ctx.fillText('Silent Organ Speaks', P, footerY - 6);
+    }
+    ctx.fillStyle = soft; ctx.font = `500 22px ${MONO}`; ctx.textAlign = 'right';
+    ctx.fillText($('handle').value, W - P, footerY - 26);
+    ctx.fillText($('site').value, W - P, footerY + 2);
+
+    // Footnote sits above the footer hairline.
+    let footnote = $('footnote').value.trim();
+    if (!footnote && $('disclaimer').checked && tpl !== 'recipe' && tpl !== 'quote') footnote = 'Educational, not medical advice';
+    let contentBottom = footerY - 110;
+    if (footnote) {
+      ctx.font = `400 24px ${SANS}`;
+      const fl = wrap(footnote, maxW);
+      ctx.fillStyle = soft;
+      const fy = contentBottom - fl.length * 24 * 1.35;
+      drawLines(fl, P, fy, 24, 1.35, 'left');
+      contentBottom = fy - 56;
+    }
+
+    const eyebrow = $('eyebrow').value.trim();
+    let headline = $('headline').value.trim();
+    let body = $('body').value.trim();
+    if (tpl === 'mythfact') { headline = headline.replace(/^myth:\s*/i, ''); body = body.replace(/^fact:\s*/i, ''); }
+    const top = P + 40;
+    const avail = contentBottom - top;
+
+    // Measure blocks for this template, then vertically center them.
+    const blocks = [];
+    if (eyebrow && tpl !== 'mythfact') {
+      ctx.font = `500 26px ${MONO}`;
+      blocks.push({ kind: 'eyebrow', lines: wrap(eyebrow.toUpperCase(), maxW), size: 26, lh: 1.4, gap: 36 });
+    }
+    const headSpec = {
+      tip:      { font: (s) => `700 ${s}px ${SANS}`, max: 84, min: 44, share: .55 },
+      quote:    { font: (s) => `italic 400 ${s}px ${SANS}`, max: 76, min: 40, share: .7 },
+      stat:     { font: (s) => `900 ${s}px ${SANS}`, max: 300, min: 120, share: .5 },
+      question: { font: (s) => `italic 700 ${s}px ${SANS}`, max: 72, min: 40, share: .65 },
+      mythfact: { font: (s) => `700 ${s}px ${SANS}`, max: 64, min: 36, share: .4 },
+      recipe:   { font: (s) => `900 ${s}px ${SANS}`, max: 96, min: 48, share: .5 },
+    }[tpl];
+    if (tpl === 'mythfact') blocks.push({ kind: 'label', text: 'MYTH', color: C.inferno, size: 24, lh: 1.4, gap: 18 });
+    if (headline) {
+      const h = fit(headline, headSpec.font, headSpec.max, headSpec.min, maxW, avail * headSpec.share, 1.12);
+      blocks.push({ kind: 'headline', lines: h.lines, size: h.size, font: headSpec.font(h.size), lh: 1.12, gap: 40, pre: tpl === 'quote' ? h.size * 0.9 : 0 });
+    }
+    if (tpl === 'mythfact') blocks.push({ kind: 'label', text: 'FACT', color: C.lime, size: 24, lh: 1.4, gap: 18 });
+    if (body) {
+      let bodyFont, max, min;
+      if (tpl === 'quote') { bodyFont = (s) => `500 ${s}px ${MONO}`; max = 28; min = 22; }
+      else if (tpl === 'recipe') { bodyFont = (s) => `500 ${s}px ${MONO}`; max = 30; min = 22; }
+      else if (tpl === 'stat') { bodyFont = (s) => `400 ${s}px ${SANS}`; max = 48; min = 30; }
+      else { bodyFont = (s) => `400 ${s}px ${SANS}`; max = 40; min = 26; }
+      const b = fit(body, bodyFont, max, min, maxW, avail * .4, 1.4);
+      blocks.push({ kind: 'body', lines: b.lines, size: b.size, font: bodyFont(b.size), lh: 1.4, gap: 0, mono: tpl === 'quote' || tpl === 'recipe' });
+    }
+    if (tpl === 'recipe') blocks.push({ kind: 'tag', text: 'PLANT-BASED RECIPE', size: 22, lh: 1.4, gap: 0, pre: 42 });
+
+    let total = 0;
+    blocks.forEach((b) => { const n = b.lines ? b.lines.length : 1; total += n * b.size * b.lh + b.gap + (b.pre || 0); });
+    let y = top + Math.max(0, (avail - total) / 2);
+    ctx.textBaseline = 'alphabetic';
+
+    blocks.forEach((b) => {
+      if (b.kind === 'eyebrow') {
+        ctx.fillStyle = accent; ctx.font = `500 ${b.size}px ${MONO}`;
+        y = drawLines(b.lines, P, y, b.size, b.lh) + b.gap;
+      } else if (b.kind === 'label') {
+        ctx.fillStyle = b.color; ctx.font = `600 ${b.size}px ${MONO}`;
+        y = drawLines([b.text], P, y, b.size, b.lh) + b.gap;
+      } else if (b.kind === 'headline') {
+        if (b.pre) { // decorative opening quote mark in the accent color
+          ctx.save(); ctx.fillStyle = accent; ctx.font = `900 ${b.size * 1.6}px ${SANS}`; ctx.textAlign = 'left';
+          ctx.fillText('“', P - 8, y + b.size * 1.15); ctx.restore();
+          y += b.pre;
+        }
+        ctx.fillStyle = fg; ctx.font = b.font;
+        y = drawLines(b.lines, P, y, b.size, b.lh) + b.gap;
+      } else if (b.kind === 'body') {
+        ctx.fillStyle = b.mono ? soft : (dark ? 'rgba(255,255,255,.88)' : C.ink); ctx.font = b.font;
+        if (tpl === 'quote') { ctx.fillStyle = accent; ctx.fillRect(P, y + b.size * 0.5, 40, 3); ctx.fillStyle = soft; y = drawLines(b.lines, P + 56, y, b.size, b.lh); }
+        else y = drawLines(b.lines, P, y, b.size, b.lh);
+        y += b.gap;
+      } else if (b.kind === 'tag') {
+        y += 24;
+        ctx.font = `600 ${b.size}px ${MONO}`; ctx.textAlign = 'left';
+        const w = ctx.measureText(b.text).width + 36;
+        ctx.fillStyle = dark ? C.lime : C.mahogany; ctx.fillRect(P, y, w, 48);
+        ctx.fillStyle = dark ? C.limeInk : C.white; ctx.fillText(b.text, P + 18, y + 32);
+        y += 48;
+      }
+    });
+  }
+
+  // ---- Export / copy ----
+  $('download').addEventListener('click', () => {
+    render();
+    try {
+      canvas.toBlob((blob) => {
+        if (!blob) { setStatus('Export failed. Try unchecking "Show logo" or open the page over http.', true); return; }
+        const a = document.createElement('a');
+        const day = $('day').value ? `day-${$('day').value}` : 'custom';
+        a.download = `sos-${day}-${$('size').value}.png`;
+        a.href = URL.createObjectURL(blob); a.click();
+        setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+        setStatus('Downloaded. Now copy the caption.');
+      }, 'image/png');
+    } catch (e) {
+      setStatus('The browser blocked the export because the logo was loaded from a local file. Uncheck "Show logo", or serve the folder over http (see social/README.md).', true);
+    }
+  });
+  $('copy').addEventListener('click', async () => {
+    const t = $('caption').value;
+    try { await navigator.clipboard.writeText(t); setStatus('Caption copied.'); }
+    catch (e) { $('caption').select(); document.execCommand('copy'); setStatus('Caption copied.'); }
+  });
+
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(render);
+  render();
+})();
+</script>
+</body>
+</html>
