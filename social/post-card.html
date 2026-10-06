@@ -79,7 +79,13 @@
         <label for="theme">Theme</label>
         <select id="theme">
           <option value="dark">Mahogany</option>
-          <option value="light">Light</option>
+          <option value="forest">Deep green</option>
+          <option value="red">Inferno red</option>
+          <option value="lime">Lime green</option>
+          <option value="light">Soft grey</option>
+          <option value="dust">Dust grey</option>
+          <option value="sand">Sand</option>
+          <option value="white">White</option>
         </select>
       </div>
       <div>
@@ -129,9 +135,22 @@
   const $ = (id) => document.getElementById(id);
   const canvas = $('card');
   const ctx = canvas.getContext('2d');
-  const C = { mahogany:'#2C0000', mahogany2:'#1C0000', dust:'#E6DED9', dust2:'#F4F1EE', white:'#FFFFFF', lime:'#41CE00', limeInk:'#163F00', inferno:'#A80505', ink:'#241111', inkSoft:'#6A5757' };
+  const C = { mahogany:'#2C0000', mahogany2:'#1C0000', dust:'#E6DED9', dust2:'#F4F1EE', white:'#FFFFFF', lime:'#41CE00', limeInk:'#163F00', inferno:'#A80505', ink:'#241111', inkSoft:'#6A5757', sand:'#F3D9B8' };
   const SANS = '"Roboto", Arial, sans-serif';
   const MONO = '"Roboto Mono", "Courier New", monospace';
+
+  // Card themes, all from the site's palette (styles.css and the recipes page).
+  // logo: 'dark' draws the white logo, 'light' draws the black one.
+  const THEMES = {
+    dark:   { bg: C.mahogany, fg: C.white, soft: 'rgba(255,255,255,.72)', body: 'rgba(255,255,255,.88)', accent: C.lime, line: 'rgba(255,255,255,.18)', logo: 'dark', tagBg: C.lime, tagInk: C.limeInk, myth: C.sand, fact: C.lime },
+    forest: { bg: C.limeInk, fg: C.white, soft: 'rgba(255,255,255,.75)', body: 'rgba(255,255,255,.9)', accent: C.lime, line: 'rgba(255,255,255,.2)', logo: 'dark', tagBg: C.lime, tagInk: C.limeInk, myth: C.sand, fact: C.lime },
+    red:    { bg: C.inferno, fg: C.white, soft: 'rgba(255,255,255,.8)', body: 'rgba(255,255,255,.92)', accent: C.sand, line: 'rgba(255,255,255,.25)', logo: 'dark', tagBg: C.white, tagInk: C.inferno, myth: C.sand, fact: C.white },
+    lime:   { bg: C.lime, fg: C.limeInk, soft: 'rgba(22,63,0,.8)', body: C.limeInk, accent: C.mahogany, line: 'rgba(22,63,0,.25)', logo: 'light', tagBg: C.mahogany, tagInk: C.white, myth: C.mahogany, fact: C.limeInk },
+    light:  { bg: C.dust2, fg: C.mahogany, soft: C.inkSoft, body: C.ink, accent: C.inferno, line: 'rgba(44,0,0,.14)', logo: 'light', tagBg: C.mahogany, tagInk: C.white, myth: C.inferno, fact: C.limeInk },
+    dust:   { bg: C.dust, fg: C.mahogany, soft: '#5E4B4B', body: C.ink, accent: C.inferno, line: 'rgba(44,0,0,.16)', logo: 'light', tagBg: C.mahogany, tagInk: C.white, myth: C.inferno, fact: C.limeInk },
+    sand:   { bg: C.sand, fg: C.mahogany, soft: '#5E4040', body: C.ink, accent: C.inferno, line: 'rgba(44,0,0,.18)', logo: 'light', tagBg: C.mahogany, tagInk: C.white, myth: C.inferno, fact: C.limeInk },
+    white:  { bg: C.white, fg: C.mahogany, soft: C.inkSoft, body: C.ink, accent: C.inferno, line: 'rgba(44,0,0,.14)', logo: 'light', tagBg: C.mahogany, tagInk: C.white, myth: C.inferno, fact: C.limeInk },
+  };
 
   let data = null;
   const logos = { dark: new Image(), light: new Image() };
@@ -210,22 +229,18 @@
   function render() {
     const [W, H] = $('size').value.split('x').map(Number);
     canvas.width = W; canvas.height = H;
-    const dark = $('theme').value === 'dark';
+    const T = THEMES[$('theme').value] || THEMES.dark;
     const tpl = $('template').value;
     const P = 96;                              // padding
     const maxW = W - P * 2;
-    const bg = dark ? C.mahogany : C.dust2;
-    const fg = dark ? C.white : C.mahogany;
-    const soft = dark ? 'rgba(255,255,255,.72)' : C.inkSoft;
-    const accent = dark ? C.lime : C.inferno;
-    const line = dark ? 'rgba(255,255,255,.18)' : 'rgba(44,0,0,.14)';
+    const bg = T.bg, fg = T.fg, soft = T.soft, accent = T.accent, line = T.line;
 
     ctx.fillStyle = bg; ctx.fillRect(0, 0, W, H);
 
     // Footer: hairline, logo left, handle + site right.
     const footerY = H - P;
     ctx.fillStyle = line; ctx.fillRect(P, footerY - 72, maxW, 2);
-    const logo = logos[dark ? 'dark' : 'light'];
+    const logo = logos[T.logo];
     if ($('logo').checked && logo.complete && logo.naturalWidth) {
       const lh = 52, lw = lh * (logo.naturalWidth / logo.naturalHeight);
       ctx.drawImage(logo, P, footerY - lh + 4, lw, lh);
@@ -271,12 +286,12 @@
       mythfact: { font: (s) => `700 ${s}px ${SANS}`, max: 64, min: 36, share: .4 },
       recipe:   { font: (s) => `900 ${s}px ${SANS}`, max: 96, min: 48, share: .5 },
     }[tpl];
-    if (tpl === 'mythfact') blocks.push({ kind: 'label', text: 'MYTH', color: C.inferno, size: 24, lh: 1.4, gap: 18 });
+    if (tpl === 'mythfact') blocks.push({ kind: 'label', text: 'MYTH', color: T.myth, size: 24, lh: 1.4, gap: 18 });
     if (headline) {
       const h = fit(headline, headSpec.font, headSpec.max, headSpec.min, maxW, avail * headSpec.share, 1.12);
       blocks.push({ kind: 'headline', lines: h.lines, size: h.size, font: headSpec.font(h.size), lh: 1.12, gap: 40, pre: tpl === 'quote' ? h.size * 0.9 : 0 });
     }
-    if (tpl === 'mythfact') blocks.push({ kind: 'label', text: 'FACT', color: C.lime, size: 24, lh: 1.4, gap: 18 });
+    if (tpl === 'mythfact') blocks.push({ kind: 'label', text: 'FACT', color: T.fact, size: 24, lh: 1.4, gap: 18 });
     if (body) {
       let bodyFont, max, min;
       if (tpl === 'quote') { bodyFont = (s) => `500 ${s}px ${MONO}`; max = 28; min = 22; }
@@ -309,7 +324,7 @@
         ctx.fillStyle = fg; ctx.font = b.font;
         y = drawLines(b.lines, P, y, b.size, b.lh) + b.gap;
       } else if (b.kind === 'body') {
-        ctx.fillStyle = b.mono ? soft : (dark ? 'rgba(255,255,255,.88)' : C.ink); ctx.font = b.font;
+        ctx.fillStyle = b.mono ? soft : T.body; ctx.font = b.font;
         if (tpl === 'quote') { ctx.fillStyle = accent; ctx.fillRect(P, y + b.size * 0.5, 40, 3); ctx.fillStyle = soft; y = drawLines(b.lines, P + 56, y, b.size, b.lh); }
         else y = drawLines(b.lines, P, y, b.size, b.lh);
         y += b.gap;
@@ -317,8 +332,8 @@
         y += 24;
         ctx.font = `600 ${b.size}px ${MONO}`; ctx.textAlign = 'left';
         const w = ctx.measureText(b.text).width + 36;
-        ctx.fillStyle = dark ? C.lime : C.mahogany; ctx.fillRect(P, y, w, 48);
-        ctx.fillStyle = dark ? C.limeInk : C.white; ctx.fillText(b.text, P + 18, y + 32);
+        ctx.fillStyle = T.tagBg; ctx.fillRect(P, y, w, 48);
+        ctx.fillStyle = T.tagInk; ctx.fillText(b.text, P + 18, y + 32);
         y += 48;
       }
     });
