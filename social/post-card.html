@@ -78,14 +78,24 @@
       <div>
         <label for="theme">Theme</label>
         <select id="theme">
-          <option value="dark">Mahogany</option>
-          <option value="forest">Deep green</option>
-          <option value="red">Inferno red</option>
-          <option value="lime">Lime green</option>
-          <option value="light">Soft grey</option>
-          <option value="dust">Dust grey</option>
-          <option value="sand">Sand</option>
-          <option value="white">White</option>
+          <optgroup label="Site colors">
+            <option value="dark">Mahogany</option>
+            <option value="forest">Deep green</option>
+            <option value="red">Inferno red</option>
+            <option value="lime">Lime green</option>
+            <option value="light">Soft grey</option>
+            <option value="dust">Dust grey</option>
+            <option value="sand">Sand</option>
+            <option value="white">White</option>
+          </optgroup>
+          <optgroup label="Earthy companions">
+            <option value="blush">Blush</option>
+            <option value="clay">Clay</option>
+            <option value="ochre">Ochre</option>
+            <option value="sage">Sage</option>
+            <option value="olive">Olive</option>
+            <option value="plum">Plum</option>
+          </optgroup>
         </select>
       </div>
       <div>
@@ -135,7 +145,9 @@
   const $ = (id) => document.getElementById(id);
   const canvas = $('card');
   const ctx = canvas.getContext('2d');
-  const C = { mahogany:'#2C0000', mahogany2:'#1C0000', dust:'#E6DED9', dust2:'#F4F1EE', white:'#FFFFFF', lime:'#41CE00', limeInk:'#163F00', inferno:'#A80505', ink:'#241111', inkSoft:'#6A5757', sand:'#F3D9B8' };
+  const C = { mahogany:'#2C0000', mahogany2:'#1C0000', dust:'#E6DED9', dust2:'#F4F1EE', white:'#FFFFFF', lime:'#41CE00', limeInk:'#163F00', inferno:'#A80505', ink:'#241111', inkSoft:'#6A5757', sand:'#F3D9B8',
+    // Earthy companions: muted tones that bridge mahogany, red and green.
+    blush:'#EBCFC6', clay:'#A95A3F', ochre:'#D9A441', sage:'#C9CFB4', olive:'#4F5530', oliveInk:'#3E4A1E', plum:'#4A1F36' };
   const SANS = '"Roboto", Arial, sans-serif';
   const MONO = '"Roboto Mono", "Courier New", monospace';
 
@@ -150,6 +162,12 @@
     dust:   { bg: C.dust, fg: C.mahogany, soft: '#5E4B4B', body: C.ink, accent: C.inferno, line: 'rgba(44,0,0,.16)', logo: 'light', tagBg: C.mahogany, tagInk: C.white, myth: C.inferno, fact: C.limeInk },
     sand:   { bg: C.sand, fg: C.mahogany, soft: '#5E4040', body: C.ink, accent: C.inferno, line: 'rgba(44,0,0,.18)', logo: 'light', tagBg: C.mahogany, tagInk: C.white, myth: C.inferno, fact: C.limeInk },
     white:  { bg: C.white, fg: C.mahogany, soft: C.inkSoft, body: C.ink, accent: C.inferno, line: 'rgba(44,0,0,.14)', logo: 'light', tagBg: C.mahogany, tagInk: C.white, myth: C.inferno, fact: C.limeInk },
+    blush:  { bg: C.blush, fg: C.mahogany, soft: '#6A4A44', body: C.ink, accent: C.inferno, line: 'rgba(44,0,0,.16)', logo: 'light', tagBg: C.mahogany, tagInk: C.white, myth: C.inferno, fact: C.oliveInk },
+    clay:   { bg: C.clay, fg: C.white, soft: 'rgba(255,255,255,.82)', body: 'rgba(255,255,255,.94)', accent: C.sand, line: 'rgba(255,255,255,.25)', logo: 'dark', tagBg: C.sand, tagInk: C.mahogany, myth: C.sand, fact: C.white },
+    ochre:  { bg: C.ochre, fg: C.mahogany, soft: '#5A3A1E', body: '#2C1A0A', accent: C.mahogany, line: 'rgba(44,0,0,.2)', logo: 'light', tagBg: C.mahogany, tagInk: C.white, myth: C.mahogany, fact: C.oliveInk },
+    sage:   { bg: C.sage, fg: C.mahogany, soft: '#4E4A3C', body: C.ink, accent: C.oliveInk, line: 'rgba(44,0,0,.16)', logo: 'light', tagBg: C.mahogany, tagInk: C.white, myth: C.inferno, fact: C.oliveInk },
+    olive:  { bg: C.olive, fg: C.white, soft: 'rgba(255,255,255,.78)', body: 'rgba(255,255,255,.9)', accent: C.sand, line: 'rgba(255,255,255,.2)', logo: 'dark', tagBg: C.sand, tagInk: C.mahogany, myth: C.sand, fact: C.sage },
+    plum:   { bg: C.plum, fg: C.white, soft: 'rgba(255,255,255,.75)', body: 'rgba(255,255,255,.9)', accent: C.blush, line: 'rgba(255,255,255,.2)', logo: 'dark', tagBg: C.blush, tagInk: C.plum, myth: C.sand, fact: C.blush },
   };
 
   let data = null;
