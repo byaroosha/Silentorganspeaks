@@ -249,7 +249,7 @@
     canvas.width = W; canvas.height = H;
     const T = THEMES[$('theme').value] || THEMES.dark;
     const tpl = $('template').value;
-    const P = 96;                              // padding
+    const P = 80;                              // padding
     const maxW = W - P * 2;
     const bg = T.bg, fg = T.fg, soft = T.soft, accent = T.accent, line = T.line;
 
@@ -257,29 +257,30 @@
 
     // Footer: hairline, logo left, handle + site right.
     const footerY = H - P;
-    ctx.fillStyle = line; ctx.fillRect(P, footerY - 72, maxW, 2);
+    ctx.fillStyle = line; ctx.fillRect(P, footerY - 84, maxW, 2);
     const logo = logos[T.logo];
     if ($('logo').checked && logo.complete && logo.naturalWidth) {
-      const lh = 52, lw = lh * (logo.naturalWidth / logo.naturalHeight);
+      const lh = 62, lw = lh * (logo.naturalWidth / logo.naturalHeight);
       ctx.drawImage(logo, P, footerY - lh + 4, lw, lh);
     } else {
       ctx.fillStyle = fg; ctx.font = `700 26px ${SANS}`; ctx.textAlign = 'left'; ctx.textBaseline = 'alphabetic';
       ctx.fillText('Silent Organ Speaks', P, footerY - 6);
     }
-    ctx.fillStyle = soft; ctx.font = `500 22px ${MONO}`; ctx.textAlign = 'right';
-    ctx.fillText($('handle').value, W - P, footerY - 26);
-    ctx.fillText($('site').value, W - P, footerY + 2);
+    ctx.fillStyle = soft; ctx.font = `500 27px ${MONO}`; ctx.textAlign = 'right';
+    const hv = $('handle').value.trim(), sv = $('site').value.trim();
+    if (hv && sv) { ctx.fillText(hv, W - P, footerY - 32); ctx.fillText(sv, W - P, footerY + 2); }
+    else if (hv || sv) ctx.fillText(hv || sv, W - P, footerY - 14);
 
     // Footnote sits above the footer hairline.
     let footnote = $('footnote').value.trim();
     if (!footnote && $('disclaimer').checked && tpl !== 'recipe' && tpl !== 'quote') footnote = 'Educational, not medical advice';
-    let contentBottom = footerY - 110;
+    let contentBottom = footerY - 124;
     if (footnote) {
-      ctx.font = `400 24px ${SANS}`;
+      ctx.font = `400 31px ${SANS}`;
       const fl = wrap(footnote, maxW);
       ctx.fillStyle = soft;
-      const fy = contentBottom - fl.length * 24 * 1.35;
-      drawLines(fl, P, fy, 24, 1.35, 'left');
+      const fy = contentBottom - fl.length * 31 * 1.35;
+      drawLines(fl, P, fy, 31, 1.35, 'left');
       contentBottom = fy - 56;
     }
 
@@ -291,38 +292,44 @@
     const avail = contentBottom - top;
 
     // Measure blocks for this template, then vertically center them.
+    // k scales the type down step by step when a long card would not fit.
+    function measure(k) {
     const blocks = [];
     if (eyebrow && tpl !== 'mythfact') {
-      ctx.font = `500 26px ${MONO}`;
-      blocks.push({ kind: 'eyebrow', lines: wrap(eyebrow.toUpperCase(), maxW), size: 26, lh: 1.4, gap: 36 });
+      ctx.font = `500 34px ${MONO}`;
+      blocks.push({ kind: 'eyebrow', lines: wrap(eyebrow.toUpperCase(), maxW), size: 34, lh: 1.35, gap: 40 });
     }
     const headSpec = {
-      tip:      { font: (s) => `700 ${s}px ${SANS}`, max: 84, min: 44, share: .55 },
-      quote:    { font: (s) => `italic 400 ${s}px ${SANS}`, max: 76, min: 40, share: .7 },
-      stat:     { font: (s) => `900 ${s}px ${SANS}`, max: 300, min: 120, share: .5 },
-      question: { font: (s) => `italic 700 ${s}px ${SANS}`, max: 72, min: 40, share: .65 },
-      mythfact: { font: (s) => `700 ${s}px ${SANS}`, max: 64, min: 36, share: .4 },
-      recipe:   { font: (s) => `900 ${s}px ${SANS}`, max: 96, min: 48, share: .5 },
+      tip:      { font: (s) => `700 ${s}px ${SANS}`, max: 108, min: 56, share: .55 },
+      quote:    { font: (s) => `italic 400 ${s}px ${SANS}`, max: 96, min: 50, share: .7 },
+      stat:     { font: (s) => `900 ${s}px ${SANS}`, max: 340, min: 140, share: .5 },
+      question: { font: (s) => `italic 700 ${s}px ${SANS}`, max: 94, min: 50, share: .65 },
+      mythfact: { font: (s) => `700 ${s}px ${SANS}`, max: 84, min: 46, share: .4 },
+      recipe:   { font: (s) => `900 ${s}px ${SANS}`, max: 120, min: 60, share: .5 },
     }[tpl];
-    if (tpl === 'mythfact') blocks.push({ kind: 'label', text: 'MYTH', color: T.myth, size: 24, lh: 1.4, gap: 18 });
+    if (tpl === 'mythfact') blocks.push({ kind: 'label', text: 'MYTH', color: T.myth, size: 32, lh: 1.35, gap: 18 });
     if (headline) {
-      const h = fit(headline, headSpec.font, headSpec.max, headSpec.min, maxW, avail * headSpec.share, 1.12);
+      const h = fit(headline, headSpec.font, Math.round(headSpec.max * k), Math.round(headSpec.min * k), maxW, avail * headSpec.share, 1.12);
       blocks.push({ kind: 'headline', lines: h.lines, size: h.size, font: headSpec.font(h.size), lh: 1.12, gap: 40, pre: tpl === 'quote' ? h.size * 0.9 : 0 });
     }
-    if (tpl === 'mythfact') blocks.push({ kind: 'label', text: 'FACT', color: T.fact, size: 24, lh: 1.4, gap: 18 });
+    if (tpl === 'mythfact') blocks.push({ kind: 'label', text: 'FACT', color: T.fact, size: 32, lh: 1.35, gap: 18 });
     if (body) {
       let bodyFont, max, min;
-      if (tpl === 'quote') { bodyFont = (s) => `500 ${s}px ${MONO}`; max = 28; min = 22; }
-      else if (tpl === 'recipe') { bodyFont = (s) => `500 ${s}px ${MONO}`; max = 30; min = 22; }
-      else if (tpl === 'stat') { bodyFont = (s) => `400 ${s}px ${SANS}`; max = 48; min = 30; }
-      else { bodyFont = (s) => `400 ${s}px ${SANS}`; max = 40; min = 26; }
-      const b = fit(body, bodyFont, max, min, maxW, avail * .4, 1.4);
-      blocks.push({ kind: 'body', lines: b.lines, size: b.size, font: bodyFont(b.size), lh: 1.4, gap: 0, mono: tpl === 'quote' || tpl === 'recipe' });
+      if (tpl === 'quote') { bodyFont = (s) => `500 ${s}px ${MONO}`; max = 36; min = 28; }
+      else if (tpl === 'recipe') { bodyFont = (s) => `500 ${s}px ${MONO}`; max = 38; min = 28; }
+      else if (tpl === 'stat') { bodyFont = (s) => `400 ${s}px ${SANS}`; max = 60; min = 38; }
+      else { bodyFont = (s) => `400 ${s}px ${SANS}`; max = 52; min = 34; }
+      const b = fit(body, bodyFont, Math.round(max * k), Math.round(min * k), maxW, avail * .45, 1.38);
+      blocks.push({ kind: 'body', lines: b.lines, size: b.size, font: bodyFont(b.size), lh: 1.38, gap: 0, mono: tpl === 'quote' || tpl === 'recipe' });
     }
-    if (tpl === 'recipe') blocks.push({ kind: 'tag', text: 'PLANT-BASED RECIPE', size: 22, lh: 1.4, gap: 0, pre: 42 });
+    if (tpl === 'recipe') blocks.push({ kind: 'tag', text: 'PLANT-BASED RECIPE', size: 28, lh: 1.4, gap: 0, pre: 47 });
 
     let total = 0;
     blocks.forEach((b) => { const n = b.lines ? b.lines.length : 1; total += n * b.size * b.lh + b.gap + (b.pre || 0); });
+    return { blocks, total };
+    }
+    let blocks, total;
+    for (const k of [1, .93, .86, .8, .74, .68, .62]) { ({ blocks, total } = measure(k)); if (total <= avail) break; }
     let y = top + Math.max(0, (avail - total) / 2);
     ctx.textBaseline = 'alphabetic';
 
@@ -350,9 +357,9 @@
         y += 24;
         ctx.font = `600 ${b.size}px ${MONO}`; ctx.textAlign = 'left';
         const w = ctx.measureText(b.text).width + 36;
-        ctx.fillStyle = T.tagBg; ctx.fillRect(P, y, w, 48);
-        ctx.fillStyle = T.tagInk; ctx.fillText(b.text, P + 18, y + 32);
-        y += 48;
+        ctx.fillStyle = T.tagBg; ctx.fillRect(P, y, w, 60);
+        ctx.fillStyle = T.tagInk; ctx.fillText(b.text, P + 18, y + 40);
+        y += 60;
       }
     });
   }
