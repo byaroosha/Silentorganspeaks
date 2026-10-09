@@ -249,7 +249,7 @@
     canvas.width = W; canvas.height = H;
     const T = THEMES[$('theme').value] || THEMES.dark;
     const tpl = $('template').value;
-    const P = 80;                              // padding
+    const P = 88;                              // padding
     const maxW = W - P * 2;
     const bg = T.bg, fg = T.fg, soft = T.soft, accent = T.accent, line = T.line;
 
@@ -257,30 +257,30 @@
 
     // Footer: hairline, logo left, handle + site right.
     const footerY = H - P;
-    ctx.fillStyle = line; ctx.fillRect(P, footerY - 84, maxW, 2);
+    ctx.fillStyle = line; ctx.fillRect(P, footerY - 78, maxW, 2);
     const logo = logos[T.logo];
     if ($('logo').checked && logo.complete && logo.naturalWidth) {
-      const lh = 62, lw = lh * (logo.naturalWidth / logo.naturalHeight);
+      const lh = 56, lw = lh * (logo.naturalWidth / logo.naturalHeight);
       ctx.drawImage(logo, P, footerY - lh + 4, lw, lh);
     } else {
       ctx.fillStyle = fg; ctx.font = `700 26px ${SANS}`; ctx.textAlign = 'left'; ctx.textBaseline = 'alphabetic';
       ctx.fillText('Silent Organ Speaks', P, footerY - 6);
     }
-    ctx.fillStyle = soft; ctx.font = `500 27px ${MONO}`; ctx.textAlign = 'right';
+    ctx.fillStyle = soft; ctx.font = `500 24px ${MONO}`; ctx.textAlign = 'right';
     const hv = $('handle').value.trim(), sv = $('site').value.trim();
-    if (hv && sv) { ctx.fillText(hv, W - P, footerY - 32); ctx.fillText(sv, W - P, footerY + 2); }
-    else if (hv || sv) ctx.fillText(hv || sv, W - P, footerY - 14);
+    if (hv && sv) { ctx.fillText(hv, W - P, footerY - 28); ctx.fillText(sv, W - P, footerY + 2); }
+    else if (hv || sv) ctx.fillText(hv || sv, W - P, footerY - 12);
 
     // Footnote sits above the footer hairline.
     let footnote = $('footnote').value.trim();
     if (!footnote && $('disclaimer').checked && tpl !== 'recipe' && tpl !== 'quote') footnote = 'Educational, not medical advice';
-    let contentBottom = footerY - 124;
+    let contentBottom = footerY - 116;
     if (footnote) {
-      ctx.font = `400 31px ${SANS}`;
+      ctx.font = `400 27px ${SANS}`;
       const fl = wrap(footnote, maxW);
       ctx.fillStyle = soft;
-      const fy = contentBottom - fl.length * 31 * 1.35;
-      drawLines(fl, P, fy, 31, 1.35, 'left');
+      const fy = contentBottom - fl.length * 27 * 1.35;
+      drawLines(fl, P, fy, 27, 1.35, 'left');
       contentBottom = fy - 56;
     }
 
@@ -296,33 +296,33 @@
     function measure(k) {
     const blocks = [];
     if (eyebrow && tpl !== 'mythfact') {
-      ctx.font = `500 34px ${MONO}`;
-      blocks.push({ kind: 'eyebrow', lines: wrap(eyebrow.toUpperCase(), maxW), size: 34, lh: 1.35, gap: 40 });
+      ctx.font = `500 29px ${MONO}`;
+      blocks.push({ kind: 'eyebrow', lines: wrap(eyebrow.toUpperCase(), maxW), size: 29, lh: 1.35, gap: 38 });
     }
     const headSpec = {
-      tip:      { font: (s) => `700 ${s}px ${SANS}`, max: 108, min: 56, share: .55 },
-      quote:    { font: (s) => `italic 400 ${s}px ${SANS}`, max: 96, min: 50, share: .7 },
-      stat:     { font: (s) => `900 ${s}px ${SANS}`, max: 340, min: 140, share: .5 },
-      question: { font: (s) => `italic 700 ${s}px ${SANS}`, max: 94, min: 50, share: .65 },
-      mythfact: { font: (s) => `700 ${s}px ${SANS}`, max: 84, min: 46, share: .4 },
-      recipe:   { font: (s) => `900 ${s}px ${SANS}`, max: 120, min: 60, share: .5 },
+      tip:      { font: (s) => `700 ${s}px ${SANS}`, max: 94, min: 50, share: .55 },
+      quote:    { font: (s) => `italic 400 ${s}px ${SANS}`, max: 84, min: 44, share: .7 },
+      stat:     { font: (s) => `900 ${s}px ${SANS}`, max: 320, min: 130, share: .5 },
+      question: { font: (s) => `italic 700 ${s}px ${SANS}`, max: 80, min: 44, share: .65 },
+      mythfact: { font: (s) => `700 ${s}px ${SANS}`, max: 72, min: 40, share: .4 },
+      recipe:   { font: (s) => `900 ${s}px ${SANS}`, max: 106, min: 54, share: .5 },
     }[tpl];
-    if (tpl === 'mythfact') blocks.push({ kind: 'label', text: 'MYTH', color: T.myth, size: 32, lh: 1.35, gap: 18 });
+    if (tpl === 'mythfact') blocks.push({ kind: 'label', text: 'MYTH', color: T.myth, size: 27, lh: 1.35, gap: 18 });
     if (headline) {
       const h = fit(headline, headSpec.font, Math.round(headSpec.max * k), Math.round(headSpec.min * k), maxW, avail * headSpec.share, 1.12);
       blocks.push({ kind: 'headline', lines: h.lines, size: h.size, font: headSpec.font(h.size), lh: 1.12, gap: 40, pre: tpl === 'quote' ? h.size * 0.9 : 0 });
     }
-    if (tpl === 'mythfact') blocks.push({ kind: 'label', text: 'FACT', color: T.fact, size: 32, lh: 1.35, gap: 18 });
+    if (tpl === 'mythfact') blocks.push({ kind: 'label', text: 'FACT', color: T.fact, size: 27, lh: 1.35, gap: 18 });
     if (body) {
       let bodyFont, max, min;
-      if (tpl === 'quote') { bodyFont = (s) => `500 ${s}px ${MONO}`; max = 36; min = 28; }
-      else if (tpl === 'recipe') { bodyFont = (s) => `500 ${s}px ${MONO}`; max = 38; min = 28; }
-      else if (tpl === 'stat') { bodyFont = (s) => `400 ${s}px ${SANS}`; max = 60; min = 38; }
-      else { bodyFont = (s) => `400 ${s}px ${SANS}`; max = 52; min = 34; }
+      if (tpl === 'quote') { bodyFont = (s) => `500 ${s}px ${MONO}`; max = 31; min = 24; }
+      else if (tpl === 'recipe') { bodyFont = (s) => `500 ${s}px ${MONO}`; max = 33; min = 24; }
+      else if (tpl === 'stat') { bodyFont = (s) => `400 ${s}px ${SANS}`; max = 52; min = 34; }
+      else { bodyFont = (s) => `400 ${s}px ${SANS}`; max = 44; min = 30; }
       const b = fit(body, bodyFont, Math.round(max * k), Math.round(min * k), maxW, avail * .45, 1.38);
       blocks.push({ kind: 'body', lines: b.lines, size: b.size, font: bodyFont(b.size), lh: 1.38, gap: 0, mono: tpl === 'quote' || tpl === 'recipe' });
     }
-    if (tpl === 'recipe') blocks.push({ kind: 'tag', text: 'PLANT-BASED RECIPE', size: 28, lh: 1.4, gap: 0, pre: 47 });
+    if (tpl === 'recipe') blocks.push({ kind: 'tag', text: 'PLANT-BASED RECIPE', size: 24, lh: 1.4, gap: 0, pre: 44 });
 
     let total = 0;
     blocks.forEach((b) => { const n = b.lines ? b.lines.length : 1; total += n * b.size * b.lh + b.gap + (b.pre || 0); });
@@ -330,7 +330,7 @@
     }
     let blocks, total;
     for (const k of [1, .93, .86, .8, .74, .68, .62]) { ({ blocks, total } = measure(k)); if (total <= avail) break; }
-    let y = top + Math.max(0, (avail - total) / 2);
+    let y = top + Math.max(0, (avail - total) * 0.42);
     ctx.textBaseline = 'alphabetic';
 
     blocks.forEach((b) => {
@@ -357,9 +357,9 @@
         y += 24;
         ctx.font = `600 ${b.size}px ${MONO}`; ctx.textAlign = 'left';
         const w = ctx.measureText(b.text).width + 36;
-        ctx.fillStyle = T.tagBg; ctx.fillRect(P, y, w, 60);
-        ctx.fillStyle = T.tagInk; ctx.fillText(b.text, P + 18, y + 40);
-        y += 60;
+        ctx.fillStyle = T.tagBg; ctx.fillRect(P, y, w, 52);
+        ctx.fillStyle = T.tagInk; ctx.fillText(b.text, P + 18, y + 35);
+        y += 52;
       }
     });
   }
