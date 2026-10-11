@@ -7,7 +7,7 @@
 <title>Post Card Maker | Silent Organ Speaks</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,700&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,700&family=Roboto+Mono:wght@500;600&family=Outfit:wght@400;600&display=swap" rel="stylesheet" />
 <style>
   :root {
     --mahogany: #2C0000; --mahogany-2: #1C0000; --dust: #E6DED9; --dust-2: #F4F1EE;
@@ -68,6 +68,7 @@
         <label for="template">Template</label>
         <select id="template">
           <option value="tip">Tip / fact</option>
+          <option value="editorial">Editorial (clean, *highlight* words)</option>
           <option value="quote">Quote</option>
           <option value="stat">Big number</option>
           <option value="question">Ask your doctor</option>
@@ -118,7 +119,7 @@
     <textarea id="headline"></textarea>
     <label for="body">Body</label>
     <textarea id="body"></textarea>
-    <label for="data">Chart or step data (one per line, "Label | value" or "value | label")</label>
+    <label for="data">Chart or step data (one per line, "Label | value"). Editorial: slide counter like "1 / 8"</label>
     <textarea id="data" placeholder="Type 2 diabetes | 55%&#10;Obesity | 75%"></textarea>
     <label for="footnote">Footnote</label>
     <input type="text" id="footnote" />
@@ -243,6 +244,39 @@
     ctx.font = font(min);
     return { size: min, lines: wrap(text, maxWidth) };
   }
+  const GEO = '"Outfit", "Roboto", Arial, sans-serif';
+  // Rich text: *words* between asterisks are drawn bold in the accent color.
+  function richTokens(text) {
+    const out = [];
+    text.split(/(\*[^*]+\*)/).forEach((seg) => {
+      if (!seg) return; let hi = false;
+      if (seg.length > 2 && seg.startsWith('*') && seg.endsWith('*')) { seg = seg.slice(1, -1); hi = true; }
+      seg.split(/(\n|\s+)/).forEach((w) => { if (w) out.push({ t: w, hi }); });
+    });
+    return out;
+  }
+  function layoutRich(text, size, maxW, fam) {
+    const lines = [[]]; let w = 0;
+    for (const tk of richTokens(text)) {
+      if (tk.t === '\n') { lines.push([]); w = 0; continue; }
+      ctx.font = `${tk.hi ? 600 : 400} ${size}px ${fam}`;
+      const tw = ctx.measureText(tk.t).width;
+      if (/^\s+$/.test(tk.t)) { if (w === 0) continue; lines[lines.length - 1].push({ ...tk, w: tw }); w += tw; continue; }
+      if (w + tw > maxW && w > 0) { const L = lines[lines.length - 1]; while (L.length && /^\s+$/.test(L[L.length - 1].t)) L.pop(); lines.push([]); w = 0; }
+      lines[lines.length - 1].push({ ...tk, w: tw }); w += tw;
+    }
+    return lines;
+  }
+  function fitRich(text, max, min, maxW, maxH, lh, fam) {
+    for (let s = max; s >= min; s -= 2) { const lines = layoutRich(text, s, maxW, fam); if (lines.length * s * lh <= maxH) return { size: s, lines }; }
+    return { size: min, lines: layoutRich(text, min, maxW, fam) };
+  }
+  function drawRich(lines, x, y, size, lh, fam, fg, accent) {
+    ctx.textAlign = 'left';
+    lines.forEach((L, i) => { let cx = x; const by = y + size * 0.82 + i * size * lh;
+      L.forEach((tk) => { ctx.font = `${tk.hi ? 600 : 400} ${size}px ${fam}`; ctx.fillStyle = tk.hi ? accent : fg; ctx.fillText(tk.t, cx, by); cx += tk.w; }); });
+    return y + lines.length * size * lh;
+  }
   const num = (v) => parseFloat(String(v).replace(/[^0-9.\-]/g, '')) || 0;
   function roundRect(x, y, w, h, r) { r = Math.min(r, h / 2, w / 2); ctx.beginPath(); ctx.moveTo(x + r, y); ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r); ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath(); ctx.fill(); }
   // y is the top of the text block. Lines are drawn at their baselines; the new top is returned.
@@ -266,7 +300,19 @@
 
     // Footer: hairline, logo left, handle + site right.
     const footerY = H - P;
-    ctx.fillStyle = line; ctx.fillRect(P, footerY - 78, maxW, 2);
+    const counter = tpl === 'editorial' ? ($('data').value.split('\n').map((l) => l.trim()).find((l) => /^\d+\s*\/\s*\d+$/.test(l)) || '') : '';
+    if (tpl === 'editorial') {
+      // three thin brand stripes along the top, like a bookmark ribbon
+      ctx.fillStyle = C.mahogany; ctx.fillRect(0, 0, W, 10); ctx.fillStyle = C.lime; ctx.fillRect(0, 10, W, 8); ctx.fillStyle = C.inferno; ctx.fillRect(0, 18, W, 8);
+      if (counter) {
+        const [a, b] = counter.split('/').map((v) => v.trim());
+        ctx.fillStyle = accent; ctx.font = `500 26px ${MONO}`; ctx.textAlign = 'center'; ctx.fillText(`${a} / ${b}`, W / 2, footerY - 6);
+        if (parseInt(a, 10) < parseInt(b, 10)) { // arrow circle on the right edge, mid-card
+          const ax = W - P - 36, ay = Math.round(H * 0.47); ctx.strokeStyle = accent; ctx.lineWidth = 4; ctx.beginPath(); ctx.arc(ax, ay, 40, 0, Math.PI * 2); ctx.stroke();
+          ctx.beginPath(); ctx.moveTo(ax - 16, ay); ctx.lineTo(ax + 16, ay); ctx.moveTo(ax + 4, ay - 12); ctx.lineTo(ax + 16, ay); ctx.lineTo(ax + 4, ay + 12); ctx.stroke();
+        }
+      }
+    } else { ctx.fillStyle = line; ctx.fillRect(P, footerY - 78, maxW, 2); }
     const logo = logos[T.logo];
     if ($('logo').checked && logo.complete && logo.naturalWidth) {
       const lh = 56, lw = lh * (logo.naturalWidth / logo.naturalHeight);
@@ -319,13 +365,19 @@
       donut:    { font: (s) => `700 ${s}px ${SANS}`, max: 72, min: 40, share: .28 },
       compare:  { font: (s) => `700 ${s}px ${SANS}`, max: 72, min: 40, share: .28 },
       steps:    { font: (s) => `700 ${s}px ${SANS}`, max: 76, min: 42, share: .3 },
+      editorial:{ font: (s) => `400 ${s}px ${GEO}`, max: 104, min: 60, share: .52 },
     }[tpl];
     // Data rows for chart and step templates: "Label | value" per line.
     const rows = $('data').value.split('\n').map((l) => l.trim()).filter(Boolean).map((l) => {
       const i = l.indexOf('|'); return i < 0 ? { label: l, value: '' } : { label: l.slice(0, i).trim(), value: l.slice(i + 1).trim() };
     }).map((r) => (tpl !== 'steps' && /^[~<>≈]?\d/.test(r.label) && !/^[~<>≈]?\d/.test(r.value)) ? { label: r.value, value: r.label } : r); // number may come first
     if (tpl === 'mythfact') blocks.push({ kind: 'label', text: 'MYTH', color: T.myth, size: 27, lh: 1.35, gap: 18 });
-    if (headline) {
+    if (tpl === 'editorial') {
+      const rw = maxW - (counter ? 100 : 0); // leave room for the arrow
+      if (headline) { const h = fitRich(headline, Math.round(104 * k), Math.round(60 * k), rw, avail * 0.52, 1.08, GEO); blocks.push({ kind: 'rich', lines: h.lines, size: h.size, lh: 1.08, gap: 44 }); }
+      if (body) { const b = fitRich(body, Math.round(52 * k), Math.round(34 * k), rw, avail * 0.42, 1.28, GEO); blocks.push({ kind: 'rich', lines: b.lines, size: b.size, lh: 1.28, gap: 0 }); }
+    }
+    if (headline && tpl !== 'editorial') {
       const h = fit(headline, headSpec.font, Math.round(headSpec.max * k), Math.round(headSpec.min * k), maxW, avail * headSpec.share, 1.12);
       blocks.push({ kind: 'headline', lines: h.lines, size: h.size, font: headSpec.font(h.size), lh: 1.12, gap: 40, pre: tpl === 'quote' ? h.size * 0.9 : 0 });
     }
@@ -359,7 +411,7 @@
       let h = 0; items.forEach((it) => { h += Math.max(d, it.lines.length * ts * 1.35) + 26; });
       blocks.push({ kind: 'steps', items, ts, d, size: h, lh: 1, gap: 20 });
     }
-    if (body) {
+    if (body && tpl !== 'editorial') {
       let bodyFont, max, min;
       if (tpl === 'quote') { bodyFont = (s) => `500 ${s}px ${MONO}`; max = 31; min = 24; }
       else if (tpl === 'recipe') { bodyFont = (s) => `500 ${s}px ${MONO}`; max = 33; min = 24; }
@@ -400,6 +452,8 @@
         if (tpl === 'quote') { ctx.fillStyle = accent; ctx.fillRect(P, y + b.size * 0.5, 40, 3); ctx.fillStyle = soft; y = drawLines(b.lines, P + 56, y, b.size, b.lh); }
         else y = drawLines(b.lines, P, y, b.size, b.lh);
         y += b.gap;
+      } else if (b.kind === 'rich') {
+        y = drawRich(b.lines, P, y, b.size, b.lh, GEO, fg, accent) + b.gap;
       } else if (b.kind === 'bars') {
         b.rows.forEach((r) => {
           ctx.fillStyle = soft; ctx.font = `400 ${b.lab}px ${SANS}`; ctx.textAlign = 'left';
@@ -480,7 +534,7 @@
     catch (e) { $('caption').select(); document.execCommand('copy'); setStatus('Caption copied.'); }
   });
 
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(render);
+  if (document.fonts && document.fonts.ready) { document.fonts.ready.then(render); Promise.all(['400 40px Outfit', '600 40px Outfit', '400 40px Roboto', '700 40px Roboto'].map((f) => document.fonts.load(f).catch(() => null))).then(render); }
   render();
 })();
 </script>

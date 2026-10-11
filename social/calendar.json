@@ -44,14 +44,15 @@
       "day": 20,
       "weekday": "Sat",
       "pillar": "Living well",
-      "format": "Single image",
+      "format": "Single image (editorial card)",
       "card": {
-        "template": "tip",
-        "theme": "light",
-        "eyebrow": "Living well · 03",
-        "headline": "Ease off.",
-        "body": "Added sugar, refined carbs, ultra-processed foods and alcohol. Not all at once. One swap at a time.",
-        "footnote": "Talk with your care team about what is right for you"
+        "template": "editorial",
+        "theme": "white",
+        "eyebrow": "",
+        "headline": "*Ease off.* Not all at once.",
+        "body": "Added sugar, refined carbs, ultra-processed food and alcohol. One swap at a time, and keep the swaps *you actually like*.",
+        "footnote": "Talk with your care team about what is right for you",
+        "data": ""
       },
       "caption": "The gentle version of \"cut it out.\" 🤍\n\nThe things I eased off for my liver: added sugar, refined carbs, ultra-processed foods and alcohol. Not overnight. One swap at a time, and the swaps that stuck were the ones I actually liked.\n\nSweet drink → sparkling water with lemon.\nWhite rice every night → half rice, half lentils.\nEvening wine → herbal tea, honestly most nights now.\n\nNone of this is a rule for you. It is what worked for me alongside my care team.\n\nWhat is one swap that stuck for you? Share it, someone reading needs the idea.",
       "hashtags": [
@@ -170,14 +171,15 @@
       "day": 25,
       "weekday": "Thu",
       "pillar": "Know your numbers",
-      "format": "Single image",
+      "format": "Single image (editorial card)",
       "card": {
-        "template": "tip",
-        "theme": "light",
-        "eyebrow": "Know your numbers",
-        "headline": "Keep your own folder.",
-        "body": "Lab results, scans, dates. Numbers mean more as a trend than as a single result. You are allowed to ask for copies.",
-        "footnote": ""
+        "template": "editorial",
+        "theme": "white",
+        "eyebrow": "",
+        "headline": "Keep *your own folder*.",
+        "body": "A single ALT result is a snapshot. Three years of them is a story. You are allowed to ask for copies, and to ask *what changed*.",
+        "footnote": "",
+        "data": ""
       },
       "caption": "The most useful \"test\" is the one you can compare to last year's. 📁\n\nA single ALT result is a snapshot. Three years of them is a story. Keep your own copies of lab results and scans, with dates, in one place. Paper folder, phone album, spreadsheet, whatever you will actually use.\n\nYou are allowed to ask for copies. You are allowed to ask what changed.\n\nOther routine markers you might see on the page: GGT, ALP and bilirubin for liver and bile duct function, platelets and albumin for how the liver is coping over time.\n\nEducational only. Your care team interprets the trend.",
       "hashtags": [
@@ -271,14 +273,15 @@
       "day": 29,
       "weekday": "Mon",
       "pillar": "Know your liver",
-      "format": "Single image or Reel",
+      "format": "Single image (editorial card)",
       "card": {
-        "template": "tip",
-        "theme": "dark",
-        "eyebrow": "Reasons for hope",
-        "headline": "The liver wants to heal.",
-        "body": "One of the most hopeful facts in medicine: the liver can regenerate. In earlier stages, steady, sustainable changes can reduce fat, calm inflammation and even improve scarring.",
-        "footnote": "Outcomes depend on stage and the person. Your care team can guide what is realistic"
+        "template": "editorial",
+        "theme": "white",
+        "eyebrow": "",
+        "headline": "The liver *wants to heal*.",
+        "body": "It is the only organ in your body that can regrow. In the early stages, steady changes can reduce fat, calm inflammation and *even improve scarring*.",
+        "footnote": "Outcomes depend on stage and the person. Your care team can guide what is realistic",
+        "data": ""
       },
       "caption": "If you only remember one thing from this page, make it this. 💚\n\nThe liver can regenerate. In the earlier stages, steady, sustainable changes can reduce liver fat, calm inflammation and even improve early scarring.\n\nWhat that looks like in practice:\n✓ Whole-food eating patterns, like Mediterranean style\n✓ Regular movement you can actually keep up\n✓ Managing blood sugar, cholesterol and blood pressure with your care team\n✓ Limiting added sugar, refined carbs and alcohol\n\nOutcomes depend on the stage and on each person, which is exactly why early attention matters so much.\n\nYou cannot undo a diagnosis. You can take charge of what comes next.",
       "hashtags": [
@@ -711,14 +714,15 @@
       "day": 46,
       "weekday": "Thu",
       "pillar": "Stats and facts",
-      "format": "Single image",
+      "format": "Single image (editorial card)",
       "card": {
-        "template": "tip",
-        "theme": "red",
-        "eyebrow": "Did you know",
-        "headline": "Sugary drinks go straight to the liver.",
-        "body": "In a 2021 trial, drinks adding 80 g of fructose or sucrose a day roughly doubled the liver's own fat production within weeks, in otherwise healthy men.",
-        "footnote": "Source: Geidl-Flueck et al., Journal of Hepatology 2021"
+        "template": "editorial",
+        "theme": "white",
+        "eyebrow": "",
+        "headline": "Sugary drinks go *straight to the liver*.",
+        "body": "In a 2021 trial, two large sodas' worth of added sugar a day *roughly doubled* the liver's own fat production within weeks. Weight barely moved.",
+        "footnote": "Source: Geidl-Flueck et al., Journal of Hepatology 2021",
+        "data": ""
       },
       "caption": "The ingredient my liver responds to fastest. 🥤\n\nIn a 2021 study, healthy young men drank beverages adding 80 grams of fructose or table sugar a day for seven weeks. That is about two large sodas. Their livers roughly doubled their own fat production, measured directly. Weight barely changed.\n\nThe liver handles fructose almost alone, and when there is more than it needs, it turns the surplus into fat and stores it right there.\n\nI did not quit sugar. I quit drinking it. Sparkling water with lemon, unsweetened iced tea, and coffee without the syrup. That one swap moved my numbers more than any other.\n\nWhat do you drink instead? Give someone an idea below.\n\nEducational only, not medical advice.",
       "hashtags": [
@@ -787,14 +791,15 @@
       "day": 49,
       "weekday": "Sun",
       "pillar": "Community",
-      "format": "Single image",
+      "format": "Single image (editorial card)",
       "card": {
-        "template": "tip",
-        "theme": "dust",
-        "eyebrow": "Did you know",
-        "headline": "Coffee and the liver get along.",
-        "body": "Several large studies have linked regular coffee drinking with less liver scarring. US liver guidance notes the association. Black or lightly dressed is the version that counts.",
-        "footnote": "Source: AASLD practice guidance on MASLD, 2023. Educational, not medical advice"
+        "template": "editorial",
+        "theme": "white",
+        "eyebrow": "",
+        "headline": "Coffee and the liver *get along*.",
+        "body": "Across several large studies, regular coffee drinkers tend to have *less liver scarring*. The catch: the studies are about coffee, not the syrup.",
+        "footnote": "Source: AASLD practice guidance on MASLD, 2023. Educational, not medical advice",
+        "data": ""
       },
       "caption": "Good news for a Sunday morning. ☕\n\nAcross several large studies, people who drink coffee regularly tend to have less liver scarring than those who do not, and US liver society guidance now mentions the link. It is an association, not a prescription, and no one knows exactly why.\n\nThe catch: the studies are about coffee, not about the sugar and syrup that often come with it. A caramel drink with 40 grams of sugar is not the same beverage.\n\nI drink mine black, two cups, before the dogs get their walk.\n\nSunday poll: coffee or tea? And how do you take it? ☕🍵\n\nEducational only. Your care team knows whether coffee is right for you.",
       "hashtags": [
@@ -1071,14 +1076,15 @@
       "day": 60,
       "weekday": "Thu",
       "pillar": "Stats and facts",
-      "format": "Single image",
+      "format": "Single image (editorial card)",
       "card": {
-        "template": "tip",
-        "theme": "dark",
-        "eyebrow": "Did you know",
-        "headline": "MASH is the fastest-growing reason for a liver transplant in the US.",
-        "body": "It is already the leading reason among women waiting for a new liver. Thirty days of facts end where my story began.",
-        "footnote": "Source: Noureddin et al., American Journal of Gastroenterology 2018"
+        "template": "editorial",
+        "theme": "white",
+        "eyebrow": "",
+        "headline": "MASH is now the *fastest-growing reason* for a liver transplant in the US.",
+        "body": "And the leading reason among women on the waiting list. My father needed a new liver. I got to keep mine, *because mine was found in time*.",
+        "footnote": "Source: Noureddin et al., American Journal of Gastroenterology 2018",
+        "data": ""
       },
       "caption": "Sixty days. Let's end where my story began: a transplant list. 🤍\n\nMASH is the fastest-growing reason for liver transplant in the United States, and it has become the leading reason among women on the waiting list. My father needed a new liver because his disease was found too late. I got to keep mine because mine was found in time.\n\nThat is the whole page in two sentences.\n\nThank you for sixty days of reading, saving, sharing and telling me your stories. Next month I want to go deeper. Tell me what you want most:\n1. More recipes from around the world\n2. Deeper dives into your test results\n3. More of my story\n4. Interviews with people who live this\n\nVote below. 👇",
       "hashtags": [

@@ -50,14 +50,13 @@ Screenshot this, add it to your list.
 
 ### Day 20 · Sat · Living well
 
-**Format:** Single image  
+**Format:** Single image (editorial card)  
 **Goal / CTA:** Comment
 
-**Image (template: tip, light):**
+**Image (template: editorial, white):**
 
-- Eyebrow: Living well · 03
-- Headline: Ease off.
-- Body: Added sugar, refined carbs, ultra-processed foods and alcohol. Not all at once. One swap at a time.
+- Headline: *Ease off.* Not all at once.
+- Body: Added sugar, refined carbs, ultra-processed food and alcohol. One swap at a time, and keep the swaps *you actually like*.
 - Footnote: Talk with your care team about what is right for you
 
 **Caption:**
@@ -197,14 +196,13 @@ Who is on your team? Tag them. 💚
 
 ### Day 25 · Thu · Know your numbers
 
-**Format:** Single image  
+**Format:** Single image (editorial card)  
 **Goal / CTA:** Save
 
-**Image (template: tip, light):**
+**Image (template: editorial, white):**
 
-- Eyebrow: Know your numbers
-- Headline: Keep your own folder.
-- Body: Lab results, scans, dates. Numbers mean more as a trend than as a single result. You are allowed to ask for copies.
+- Headline: Keep *your own folder*.
+- Body: A single ALT result is a snapshot. Three years of them is a story. You are allowed to ask for copies, and to ask *what changed*.
 
 **Caption:**
 
@@ -313,14 +311,13 @@ Sunday ask: is there a check-up you have been putting off? Say "booking it" in t
 
 ### Day 29 · Mon · Know your liver
 
-**Format:** Single image or Reel  
+**Format:** Single image (editorial card)  
 **Goal / CTA:** Share
 
-**Image (template: tip, dark):**
+**Image (template: editorial, white):**
 
-- Eyebrow: Reasons for hope
-- Headline: The liver wants to heal.
-- Body: One of the most hopeful facts in medicine: the liver can regenerate. In earlier stages, steady, sustainable changes can reduce fat, calm inflammation and even improve scarring.
+- Headline: The liver *wants to heal*.
+- Body: It is the only organ in your body that can regrow. In the early stages, steady changes can reduce fat, calm inflammation and *even improve scarring*.
 - Footnote: Outcomes depend on stage and the person. Your care team can guide what is realistic
 
 **Caption:**
@@ -860,14 +857,13 @@ Where should I cook next? Name a country below. 👇
 
 ### Day 46 · Thu · Stats and facts
 
-**Format:** Single image  
+**Format:** Single image (editorial card)  
 **Goal / CTA:** Comment
 
-**Image (template: tip, red):**
+**Image (template: editorial, white):**
 
-- Eyebrow: Did you know
-- Headline: Sugary drinks go straight to the liver.
-- Body: In a 2021 trial, drinks adding 80 g of fructose or sucrose a day roughly doubled the liver's own fat production within weeks, in otherwise healthy men.
+- Headline: Sugary drinks go *straight to the liver*.
+- Body: In a 2021 trial, two large sodas' worth of added sugar a day *roughly doubled* the liver's own fat production within weeks. Weight barely moved.
 - Footnote: Source: Geidl-Flueck et al., Journal of Hepatology 2021
 
 **Caption:**
@@ -951,14 +947,13 @@ General healthy-eating ideas, not personalized nutrition advice.
 
 ### Day 49 · Sun · Community
 
-**Format:** Single image  
+**Format:** Single image (editorial card)  
 **Goal / CTA:** Comment
 
-**Image (template: tip, dust):**
+**Image (template: editorial, white):**
 
-- Eyebrow: Did you know
-- Headline: Coffee and the liver get along.
-- Body: Several large studies have linked regular coffee drinking with less liver scarring. US liver guidance notes the association. Black or lightly dressed is the version that counts.
+- Headline: Coffee and the liver *get along*.
+- Body: Across several large studies, regular coffee drinkers tend to have *less liver scarring*. The catch: the studies are about coffee, not the syrup.
 - Footnote: Source: AASLD practice guidance on MASLD, 2023. Educational, not medical advice
 
 **Caption:**
@@ -1303,14 +1298,13 @@ What would you tell yourself on day one? Tell me, and tell them.
 
 ### Day 60 · Thu · Stats and facts
 
-**Format:** Single image  
+**Format:** Single image (editorial card)  
 **Goal / CTA:** Vote in comments
 
-**Image (template: tip, dark):**
+**Image (template: editorial, white):**
 
-- Eyebrow: Did you know
-- Headline: MASH is the fastest-growing reason for a liver transplant in the US.
-- Body: It is already the leading reason among women waiting for a new liver. Thirty days of facts end where my story began.
+- Headline: MASH is now the *fastest-growing reason* for a liver transplant in the US.
+- Body: And the leading reason among women on the waiting list. My father needed a new liver. I got to keep mine, *because mine was found in time*.
 - Footnote: Source: Noureddin et al., American Journal of Gastroenterology 2018
 
 **Caption:**
