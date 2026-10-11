@@ -73,6 +73,10 @@
           <option value="question">Ask your doctor</option>
           <option value="mythfact">Myth vs fact</option>
           <option value="recipe">Recipe</option>
+          <option value="bars">Chart: bars</option>
+          <option value="donut">Chart: donut</option>
+          <option value="compare">Chart: compare</option>
+          <option value="steps">Numbered steps</option>
         </select>
       </div>
       <div>
@@ -114,6 +118,8 @@
     <textarea id="headline"></textarea>
     <label for="body">Body</label>
     <textarea id="body"></textarea>
+    <label for="data">Chart or step data (one per line, "Label | value" or "value | label")</label>
+    <textarea id="data" placeholder="Type 2 diabetes | 55%&#10;Obesity | 75%"></textarea>
     <label for="footnote">Footnote</label>
     <input type="text" id="footnote" />
 
@@ -176,7 +182,7 @@
   logos.light.src = '../assets/img/SOSBlack.png';
   logos.dark.onload = logos.light.onload = () => render();
 
-  const fields = ['template','theme','size','eyebrow','headline','body','footnote','handle','site','logo','disclaimer'];
+  const fields = ['template','theme','size','eyebrow','headline','body','data','footnote','handle','site','logo','disclaimer'];
   fields.forEach((f) => $(f).addEventListener('input', render));
 
   function setStatus(msg, err) { const s = $('status'); s.textContent = msg || ''; s.className = 'status' + (err ? ' err' : ''); }
@@ -207,6 +213,7 @@
     $('template').value = p.card.template; $('theme').value = p.card.theme;
     $('eyebrow').value = p.card.eyebrow || ''; $('headline').value = p.card.headline || '';
     $('body').value = p.card.body || ''; $('footnote').value = p.card.footnote || '';
+    $('data').value = p.card.data || '';
     $('daymeta').textContent = `${p.format} · CTA: ${p.cta}`;
     $('caption').value = p.caption + '\n\n' + p.hashtags.join(' ');
     render();
@@ -236,6 +243,8 @@
     ctx.font = font(min);
     return { size: min, lines: wrap(text, maxWidth) };
   }
+  const num = (v) => parseFloat(String(v).replace(/[^0-9.\-]/g, '')) || 0;
+  function roundRect(x, y, w, h, r) { r = Math.min(r, h / 2, w / 2); ctx.beginPath(); ctx.moveTo(x + r, y); ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r); ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath(); ctx.fill(); }
   // y is the top of the text block. Lines are drawn at their baselines; the new top is returned.
   function drawLines(lines, x, y, size, lh, align) {
     ctx.textAlign = align || 'left';
@@ -306,18 +315,56 @@
       question: { font: (s) => `italic 700 ${s}px ${SANS}`, max: 80, min: 44, share: .65 },
       mythfact: { font: (s) => `700 ${s}px ${SANS}`, max: 72, min: 40, share: .4 },
       recipe:   { font: (s) => `900 ${s}px ${SANS}`, max: 106, min: 54, share: .5 },
+      bars:     { font: (s) => `700 ${s}px ${SANS}`, max: 72, min: 40, share: .28 },
+      donut:    { font: (s) => `700 ${s}px ${SANS}`, max: 72, min: 40, share: .28 },
+      compare:  { font: (s) => `700 ${s}px ${SANS}`, max: 72, min: 40, share: .28 },
+      steps:    { font: (s) => `700 ${s}px ${SANS}`, max: 76, min: 42, share: .3 },
     }[tpl];
+    // Data rows for chart and step templates: "Label | value" per line.
+    const rows = $('data').value.split('\n').map((l) => l.trim()).filter(Boolean).map((l) => {
+      const i = l.indexOf('|'); return i < 0 ? { label: l, value: '' } : { label: l.slice(0, i).trim(), value: l.slice(i + 1).trim() };
+    }).map((r) => (tpl !== 'steps' && /^[~<>≈]?\d/.test(r.label) && !/^[~<>≈]?\d/.test(r.value)) ? { label: r.value, value: r.label } : r); // number may come first
     if (tpl === 'mythfact') blocks.push({ kind: 'label', text: 'MYTH', color: T.myth, size: 27, lh: 1.35, gap: 18 });
     if (headline) {
       const h = fit(headline, headSpec.font, Math.round(headSpec.max * k), Math.round(headSpec.min * k), maxW, avail * headSpec.share, 1.12);
       blocks.push({ kind: 'headline', lines: h.lines, size: h.size, font: headSpec.font(h.size), lh: 1.12, gap: 40, pre: tpl === 'quote' ? h.size * 0.9 : 0 });
     }
     if (tpl === 'mythfact') blocks.push({ kind: 'label', text: 'FACT', color: T.fact, size: 27, lh: 1.35, gap: 18 });
+    if (tpl === 'bars' && rows.length) {
+      const lab = Math.round(34 * k), val = Math.round(36 * k), row = Math.round(126 * k);
+      const allPct = rows.every((r) => /%/.test(r.value));
+      const max = allPct ? 100 : Math.max(...rows.map((r) => num(r.value)), 1);
+      blocks.push({ kind: 'bars', rows, max, lab, val, row, size: rows.length * row, lh: 1, gap: 28 });
+    }
+    if (tpl === 'donut' && rows.length) {
+      const r = Math.round(Math.min(240, maxW * 0.27) * Math.max(k, .7));
+      const dl = Math.round(30 * k); ctx.font = `400 ${dl}px ${SANS}`;
+      const dlines = rows[0].label ? wrap(rows[0].label, maxW) : [];
+      blocks.push({ kind: 'donut', row: rows[0], r, dl, dlines, size: r * 2 + 24 + (dlines.length ? 20 + dlines.length * dl * 1.35 : 0), lh: 1, gap: 36 });
+    }
+    if (tpl === 'compare' && rows.length) {
+      const items = rows.slice(0, 3);
+      const ls = Math.round(32 * k);
+      const colW = (maxW - (items.length - 1) * 48) / items.length;
+      let vs = Math.round((items.length > 2 ? 104 : 150) * k);
+      for (; vs > 40; vs -= 4) { ctx.font = `900 ${vs}px ${SANS}`; if (items.every((it) => ctx.measureText(it.value).width <= colW - 12)) break; }
+      ctx.font = `400 ${ls}px ${SANS}`;
+      const labLines = Math.max(...items.map((it) => wrap(it.label, colW - 8).length));
+      blocks.push({ kind: 'compare', items, vs, ls, colW, labLines, size: vs * 1.05 + 16 + labLines * ls * 1.35, lh: 1, gap: 28 });
+    }
+    if (tpl === 'steps' && rows.length) {
+      const ts = Math.round(36 * k), d = Math.round(60 * k);
+      ctx.font = `400 ${ts}px ${SANS}`;
+      const items = rows.map((r) => ({ lines: wrap(r.value ? `${r.label}: ${r.value}` : r.label, maxW - d - 28) }));
+      let h = 0; items.forEach((it) => { h += Math.max(d, it.lines.length * ts * 1.35) + 26; });
+      blocks.push({ kind: 'steps', items, ts, d, size: h, lh: 1, gap: 20 });
+    }
     if (body) {
       let bodyFont, max, min;
       if (tpl === 'quote') { bodyFont = (s) => `500 ${s}px ${MONO}`; max = 31; min = 24; }
       else if (tpl === 'recipe') { bodyFont = (s) => `500 ${s}px ${MONO}`; max = 33; min = 24; }
       else if (tpl === 'stat') { bodyFont = (s) => `400 ${s}px ${SANS}`; max = 52; min = 34; }
+      else if (tpl === 'bars' || tpl === 'donut' || tpl === 'compare' || tpl === 'steps') { bodyFont = (s) => `400 ${s}px ${SANS}`; max = 36; min = 26; }
       else { bodyFont = (s) => `400 ${s}px ${SANS}`; max = 44; min = 30; }
       const b = fit(body, bodyFont, Math.round(max * k), Math.round(min * k), maxW, avail * .45, 1.38);
       blocks.push({ kind: 'body', lines: b.lines, size: b.size, font: bodyFont(b.size), lh: 1.38, gap: 0, mono: tpl === 'quote' || tpl === 'recipe' });
@@ -352,6 +399,52 @@
         ctx.fillStyle = b.mono ? soft : T.body; ctx.font = b.font;
         if (tpl === 'quote') { ctx.fillStyle = accent; ctx.fillRect(P, y + b.size * 0.5, 40, 3); ctx.fillStyle = soft; y = drawLines(b.lines, P + 56, y, b.size, b.lh); }
         else y = drawLines(b.lines, P, y, b.size, b.lh);
+        y += b.gap;
+      } else if (b.kind === 'bars') {
+        b.rows.forEach((r) => {
+          ctx.fillStyle = soft; ctx.font = `400 ${b.lab}px ${SANS}`; ctx.textAlign = 'left';
+          ctx.fillText(r.label, P, y + b.lab * 0.9);
+          ctx.fillStyle = fg; ctx.font = `700 ${b.val}px ${MONO}`; ctx.textAlign = 'right';
+          ctx.fillText(r.value, W - P, y + b.lab * 0.9);
+          const ty = y + b.lab * 1.35 + 10, th = Math.max(14, Math.round(b.row * 0.2));
+          ctx.fillStyle = line; roundRect(P, ty, maxW, th, th / 2);
+          const wv = Math.max(th, maxW * Math.min(1, num(r.value) / b.max));
+          ctx.fillStyle = accent; roundRect(P, ty, wv, th, th / 2);
+          y += b.row;
+        });
+        y += b.gap;
+      } else if (b.kind === 'donut') {
+        const cx = W / 2, cy = y + b.r + 12, v = Math.min(1, Math.max(0, num(b.row.value) / 100));
+        const lw = Math.round(b.r * 0.22);
+        ctx.lineCap = 'round'; ctx.lineWidth = lw;
+        ctx.strokeStyle = line; ctx.beginPath(); ctx.arc(cx, cy, b.r - lw / 2, 0, Math.PI * 2); ctx.stroke();
+        ctx.strokeStyle = accent; ctx.beginPath(); ctx.arc(cx, cy, b.r - lw / 2, -Math.PI / 2, -Math.PI / 2 + v * Math.PI * 2); ctx.stroke();
+        ctx.fillStyle = fg; ctx.font = `900 ${Math.round(b.r * 0.62)}px ${SANS}`; ctx.textAlign = 'center';
+        ctx.fillText(b.row.value, cx, cy + b.r * 0.22);
+        if (b.dlines.length) { ctx.fillStyle = soft; ctx.font = `400 ${b.dl}px ${SANS}`; drawLines(b.dlines, cx, cy + b.r + 32, b.dl, 1.35, 'center'); }
+        ctx.textAlign = 'left';
+        y += b.size + b.gap;
+      } else if (b.kind === 'compare') {
+        b.items.forEach((it, i) => {
+          const x = P + i * (b.colW + 48);
+          if (i > 0) { ctx.fillStyle = line; ctx.fillRect(x - 24, y + 8, 2, b.size - 16); }
+          ctx.fillStyle = i === 0 ? accent : fg; ctx.font = `900 ${b.vs}px ${SANS}`; ctx.textAlign = 'left';
+          ctx.fillText(it.value, x, y + b.vs * 0.9);
+          ctx.fillStyle = soft; ctx.font = `400 ${b.ls}px ${SANS}`;
+          drawLines(wrap(it.label, b.colW - 8), x, y + b.vs * 1.05 + 16, b.ls, 1.35);
+        });
+        y += b.size + b.gap;
+      } else if (b.kind === 'steps') {
+        b.items.forEach((it, i) => {
+          const h = Math.max(b.d, it.lines.length * b.ts * 1.35);
+          ctx.fillStyle = accent; ctx.beginPath(); ctx.arc(P + b.d / 2, y + b.d / 2, b.d / 2, 0, Math.PI * 2); ctx.fill();
+          ctx.fillStyle = [C.lime, C.sand, C.blush].includes(accent) ? C.mahogany : C.white;
+          ctx.font = `700 ${Math.round(b.d * 0.5)}px ${SANS}`; ctx.textAlign = 'center';
+          ctx.fillText(String(i + 1), P + b.d / 2, y + b.d * 0.68);
+          ctx.textAlign = 'left'; ctx.fillStyle = T.body; ctx.font = `400 ${b.ts}px ${SANS}`;
+          drawLines(it.lines, P + b.d + 28, y + (b.d - b.ts * 1.2) / 2, b.ts, 1.35);
+          y += h + 26;
+        });
         y += b.gap;
       } else if (b.kind === 'tag') {
         y += 24;

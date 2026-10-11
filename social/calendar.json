@@ -7,222 +7,1539 @@
   },
   "pillars": {
     "Mon": "Know your liver (plain-language education, myth vs fact)",
-    "Tue": "Liver-loving recipe (plant-based, from the site)",
+    "Tue": "World recipe (plant-based, from a different cuisine each week)",
     "Wed": "My story (a moment from Aroosha's journey)",
-    "Thu": "Know your numbers (one test or score, explained simply)",
+    "Thu": "Stats and facts (one sourced number, usually as a chart)",
     "Fri": "Ask your doctor (one question to bring to an appointment)",
-    "Sat": "Living well (one habit, food, movement, rest)",
+    "Sat": "World recipe (plant-based, from a different cuisine each week)",
     "Sun": "Community (a question, a stat, an invitation to share)"
   },
   "posts": [
     {
-      "day": 1, "weekday": "Mon", "pillar": "Know your liver", "format": "Single image",
-      "card": {"template": "tip", "theme": "dark", "eyebrow": "Why \"silent organ\"?", "headline": "Your liver rarely complains until damage is advanced.", "body": "No pain. No warning light. That is why awareness and early conversations with your doctor matter so much.", "footnote": "Educational, not medical advice"},
+      "day": 1,
+      "weekday": "Mon",
+      "pillar": "Know your liver",
+      "format": "Single image",
+      "card": {
+        "template": "tip",
+        "theme": "dark",
+        "eyebrow": "Why \"silent organ\"?",
+        "headline": "Your liver rarely complains until damage is advanced.",
+        "body": "No pain. No warning light. That is why awareness and early conversations with your doctor matter so much.",
+        "footnote": "Educational, not medical advice"
+      },
       "caption": "Hello, I'm Aroosha, and this page exists because of one sentence a doctor said to me: \"You have MASH.\"\n\nThe liver is called the silent organ for a reason. It can carry fat, inflammation and even scarring for years without a single symptom. Mine did. My father's did too.\n\nSo this is a place to break the silence: my story, liver science in words that make sense, and the plant-based food that helps me feel in charge again.\n\nIf you have ever wondered whether your liver is okay, you are in the right place. Welcome. 💚\n\nFollow along, and tell me in the comments: have you ever had your liver health checked?",
-      "hashtags": ["#LiverHealth", "#MASH", "#MASLD", "#FattyLiver", "#PatientAdvocate", "#LiverAwareness", "#SilentOrganSpeaks"],
+      "hashtags": [
+        "#LiverHealth",
+        "#MASH",
+        "#MASLD",
+        "#FattyLiver",
+        "#PatientAdvocate",
+        "#LiverAwareness",
+        "#SilentOrganSpeaks"
+      ],
       "cta": "Follow + comment"
     },
     {
-      "day": 2, "weekday": "Tue", "pillar": "Recipe", "format": "Carousel (3 slides: photo, ingredients, method)",
-      "card": {"template": "recipe", "theme": "light", "eyebrow": "From my kitchen", "headline": "Mediterranean Lentil & Herb Bowl", "body": "High fiber · Plant-based · 30 minutes", "footnote": "Full recipe on the site, link in bio"},
+      "day": 2,
+      "weekday": "Tue",
+      "pillar": "Recipe",
+      "format": "Carousel (3 slides: photo, ingredients, method)",
+      "card": {
+        "template": "recipe",
+        "theme": "light",
+        "eyebrow": "From my kitchen",
+        "headline": "Mediterranean Lentil & Herb Bowl",
+        "body": "High fiber · Plant-based · 30 minutes",
+        "footnote": "Full recipe on the site, link in bio"
+      },
       "caption": "The bowl I make when I need something warm, fast and kind to my liver. 🥗\n\nYou'll need:\n• 1 cup cooked green or brown lentils\n• 2 cups mixed greens and fresh herbs\n• Cherry tomatoes and cucumber\n• Extra-virgin olive oil + lemon\n• Toasted walnuts, salt and pepper\n\nMethod:\n1. Toss the lentils with olive oil and lemon.\n2. Fold in the chopped herbs and greens.\n3. Add tomatoes and cucumber.\n4. Top with walnuts, season, and serve.\n\nFiber and plant protein keep blood sugar steady and keep me satisfied for hours. Eating for liver health was never about deprivation for me. It was about rediscovering food that is colorful and genuinely good.\n\nSave this one for a busy weeknight. 🔖\n\nEveryone's needs are different. These recipes share general healthy-eating ideas, not personalized nutrition advice.",
-      "hashtags": ["#PlantBasedRecipes", "#LiverFriendly", "#FattyLiverDiet", "#WholeFoodPlantBased", "#MASLD", "#HealthyLiver", "#LentilBowl"],
+      "hashtags": [
+        "#PlantBasedRecipes",
+        "#LiverFriendly",
+        "#FattyLiverDiet",
+        "#WholeFoodPlantBased",
+        "#MASLD",
+        "#HealthyLiver",
+        "#LentilBowl"
+      ],
       "cta": "Save"
     },
     {
-      "day": 3, "weekday": "Wed", "pillar": "My story", "format": "Reel (30 to 45 seconds, talking to camera) or quote card",
-      "card": {"template": "quote", "theme": "dark", "eyebrow": "My story", "headline": "I always told my students I don't understand the phrase \"I can't.\" Nothing tested that like the day a doctor told me I had MASH.", "body": "Aroosha", "footnote": ""},
+      "day": 3,
+      "weekday": "Wed",
+      "pillar": "My story",
+      "format": "Reel (30 to 45 seconds, talking to camera) or quote card",
+      "card": {
+        "template": "quote",
+        "theme": "dark",
+        "eyebrow": "My story",
+        "headline": "I always told my students I don't understand the phrase \"I can't.\" Nothing tested that like the day a doctor told me I had MASH.",
+        "body": "Aroosha",
+        "footnote": ""
+      },
       "caption": "I taught at the university. I told my students mindset is everything.\n\nThen a doctor lowered his head and said the words: metabolic dysfunction-associated steatohepatitis. MASH. Stage 3 fibrosis.\n\nAll I could picture was my father in a hospital bed after his liver transplant. I was terrified I would follow in his footsteps.\n\nThat moment is where this page begins. Not because the fear went away, but because I decided to act anyway.\n\nIf you are newly diagnosed and reading this at 2am, I see you. You are not alone in this. 💚\n\nReel script if you film it: Hook (0 to 3s): \"The day I was diagnosed with MASH, I could only think of one person.\" Middle: my father's transplant, the fear, the decision to act. Close: \"If you were just diagnosed, this page is for you. Follow for the rest of the story.\"",
-      "hashtags": ["#MASH", "#LiverDisease", "#NewlyDiagnosed", "#PatientStory", "#LiverFibrosis", "#ChronicIllnessWarrior", "#SilentOrganSpeaks"],
+      "hashtags": [
+        "#MASH",
+        "#LiverDisease",
+        "#NewlyDiagnosed",
+        "#PatientStory",
+        "#LiverFibrosis",
+        "#ChronicIllnessWarrior",
+        "#SilentOrganSpeaks"
+      ],
       "cta": "Follow for the story"
     },
     {
-      "day": 4, "weekday": "Thu", "pillar": "Know your numbers", "format": "Single image",
-      "card": {"template": "tip", "theme": "light", "eyebrow": "Know your numbers", "headline": "ALT & AST", "body": "Liver enzymes measured in a routine blood test. When liver cells are stressed or inflamed, these can rise, an early flag worth watching.", "footnote": "What your results mean is a conversation for you and your doctor"},
+      "day": 4,
+      "weekday": "Thu",
+      "pillar": "Know your numbers",
+      "format": "Single image",
+      "card": {
+        "template": "tip",
+        "theme": "light",
+        "eyebrow": "Know your numbers",
+        "headline": "ALT & AST",
+        "body": "Liver enzymes measured in a routine blood test. When liver cells are stressed or inflamed, these can rise, an early flag worth watching.",
+        "footnote": "What your results mean is a conversation for you and your doctor"
+      },
       "caption": "You do not need to memorize the science. But knowing the names of a few tests helps you ask for them and understand your results.\n\nToday: ALT and AST. 🩸\n\nThey are liver enzymes checked in a routine blood panel. When liver cells are stressed or inflamed, these numbers can climb. For many people, including me, a raised ALT was one of the first clues that something was happening quietly.\n\nA normal result does not rule everything out, and a high one does not mean the worst. It means: ask a question.\n\nTry this at your next appointment: \"What do my ALT and AST results mean for me?\"\n\nEducational only. Your care team interprets your numbers in the context of you.",
-      "hashtags": ["#KnowYourNumbers", "#LiverEnzymes", "#LiverHealth", "#MASLD", "#MASH", "#HealthLiteracy", "#PatientAdvocacy"],
+      "hashtags": [
+        "#KnowYourNumbers",
+        "#LiverEnzymes",
+        "#LiverHealth",
+        "#MASLD",
+        "#MASH",
+        "#HealthLiteracy",
+        "#PatientAdvocacy"
+      ],
       "cta": "Save + share"
     },
     {
-      "day": 5, "weekday": "Fri", "pillar": "Ask your doctor", "format": "Single image",
-      "card": {"template": "question", "theme": "dark", "eyebrow": "Bring this to your appointment", "headline": "\"Should my liver health be checked, given my risk factors?\"", "body": "Advocacy starts with the conversation in the exam room.", "footnote": ""},
+      "day": 5,
+      "weekday": "Fri",
+      "pillar": "Ask your doctor",
+      "format": "Single image",
+      "card": {
+        "template": "question",
+        "theme": "dark",
+        "eyebrow": "Bring this to your appointment",
+        "headline": "\"Should my liver health be checked, given my risk factors?\"",
+        "body": "Advocacy starts with the conversation in the exam room.",
+        "footnote": ""
+      },
       "caption": "One question. That is all it takes to start.\n\n\"Should my liver health be checked, given my risk factors?\"\n\nMASH is closely tied to metabolic health. Type 2 diabetes, extra weight around the midsection, high cholesterol or triglycerides, high blood pressure. Having one of these does not mean you have liver disease. It does mean it is worth asking.\n\nMy husband brings his own list of questions to my appointments. My doctor jokes they are too hard. I would rather ask a hard question than miss an easy answer. 📝\n\nScreenshot this for your next visit. Every Friday I will share one more question worth asking.",
-      "hashtags": ["#AskYourDoctor", "#PatientAdvocate", "#LiverHealth", "#MASH", "#Type2Diabetes", "#MetabolicHealth", "#SelfAdvocacy"],
+      "hashtags": [
+        "#AskYourDoctor",
+        "#PatientAdvocate",
+        "#LiverHealth",
+        "#MASH",
+        "#Type2Diabetes",
+        "#MetabolicHealth",
+        "#SelfAdvocacy"
+      ],
       "cta": "Screenshot"
     },
     {
-      "day": 6, "weekday": "Sat", "pillar": "Living well", "format": "Single image or short Reel of a colorful plate",
-      "card": {"template": "tip", "theme": "light", "eyebrow": "Living well · 01", "headline": "Eat the rainbow.", "body": "Vegetables, legumes, whole grains and fruit at the center of every plate. Not restriction, abundance.", "footnote": "A registered dietitian can tailor this to you"},
+      "day": 6,
+      "weekday": "Sat",
+      "pillar": "Living well",
+      "format": "Single image or short Reel of a colorful plate",
+      "card": {
+        "template": "tip",
+        "theme": "light",
+        "eyebrow": "Living well · 01",
+        "headline": "Eat the rainbow.",
+        "body": "Vegetables, legumes, whole grains and fruit at the center of every plate. Not restriction, abundance.",
+        "footnote": "A registered dietitian can tailor this to you"
+      },
       "caption": "For me, eating plant-based is not about what I take away. It is about what I pile on. 🌈\n\nFiber-rich vegetables. Legumes. Whole grains. Fruit. Nuts and seeds. The foods that help my liver most are also the most colorful ones on the plate.\n\nSmall habit for this weekend: add one more color to one meal. That is it.\n\nA plant-based pattern can be wonderfully nourishing, and everyone's needs differ. A registered dietitian can help with nutrients like B12, vitamin D, iron and omega-3s.\n\nWhat is the most colorful thing you ate this week? Tell me below. 👇",
-      "hashtags": ["#PlantBased", "#EatTheRainbow", "#LiverFriendly", "#MASLD", "#HealthyHabits", "#WholeFoods", "#LivingWell"],
+      "hashtags": [
+        "#PlantBased",
+        "#EatTheRainbow",
+        "#LiverFriendly",
+        "#MASLD",
+        "#HealthyHabits",
+        "#WholeFoods",
+        "#LivingWell"
+      ],
       "cta": "Comment"
     },
     {
-      "day": 7, "weekday": "Sun", "pillar": "Community", "format": "Single image",
-      "card": {"template": "stat", "theme": "dark", "eyebrow": "The silent scale", "headline": "1 in 3", "body": "adults live with MASLD, the condition behind MASH.", "footnote": "Approximate figure from published liver-health research, for awareness, not diagnosis"},
+      "day": 7,
+      "weekday": "Sun",
+      "pillar": "Community",
+      "format": "Single image",
+      "card": {
+        "template": "stat",
+        "theme": "dark",
+        "eyebrow": "The silent scale",
+        "headline": "1 in 3",
+        "body": "adults live with MASLD, the condition behind MASH.",
+        "footnote": "Approximate figure from published liver-health research, for awareness, not diagnosis"
+      },
       "caption": "Roughly 1 in 3 adults is living with MASLD, fat building up in the liver. Most of them do not know it. 🤍\n\nThink about your dinner table. Your group chat. Your office.\n\nThis is not a scare post. It is a reminder that a silent condition needs people willing to speak about it out loud.\n\nSo here is my Sunday question: has a doctor ever talked to you about your liver? Yes or no in the comments. I read every one.\n\nAnd if you know someone with diabetes, high cholesterol or a family history of liver disease, send them this post. It might start a conversation.",
-      "hashtags": ["#MASLD", "#FattyLiver", "#LiverAwareness", "#LiverHealth", "#MASH", "#PublicHealth", "#SilentOrganSpeaks"],
+      "hashtags": [
+        "#MASLD",
+        "#FattyLiver",
+        "#LiverAwareness",
+        "#LiverHealth",
+        "#MASH",
+        "#PublicHealth",
+        "#SilentOrganSpeaks"
+      ],
       "cta": "Comment + share"
     },
     {
-      "day": 8, "weekday": "Mon", "pillar": "Know your liver", "format": "Carousel (3 slides, one per stage)",
-      "card": {"template": "tip", "theme": "light", "eyebrow": "The stages, simply", "headline": "MASLD → MASH → Fibrosis", "body": "Fat in the liver. Then fat plus inflammation and cell damage. Then scarring that can build if inflammation continues. Caught early, the liver can heal.", "footnote": "Swipe for each stage"},
+      "day": 8,
+      "weekday": "Mon",
+      "pillar": "Know your liver",
+      "format": "Carousel (3 slides, one per stage)",
+      "card": {
+        "template": "tip",
+        "theme": "light",
+        "eyebrow": "The stages, simply",
+        "headline": "MASLD → MASH → Fibrosis",
+        "body": "Fat in the liver. Then fat plus inflammation and cell damage. Then scarring that can build if inflammation continues. Caught early, the liver can heal.",
+        "footnote": "Swipe for each stage"
+      },
       "caption": "Three words that get mixed up all the time. Here they are in plain language. ➡️\n\nSlide 1, MASLD: extra fat in the liver, generally without much inflammation. The earliest and most common stage.\n\nSlide 2, MASH: fat plus inflammation and liver cell damage. The stage that needs closer attention and care.\n\nSlide 3, Fibrosis: scarring that can build if inflammation continues. Monitoring and lifestyle change aim to slow or reverse it.\n\nThe encouraging part, and I hold onto this: caught early, the liver has a remarkable ability to heal.\n\nSave this so you have the words next time a doctor uses them.",
-      "hashtags": ["#MASLD", "#MASH", "#LiverFibrosis", "#LiverHealth", "#HealthEducation", "#FattyLiver", "#PatientEducation"],
+      "hashtags": [
+        "#MASLD",
+        "#MASH",
+        "#LiverFibrosis",
+        "#LiverHealth",
+        "#HealthEducation",
+        "#FattyLiver",
+        "#PatientEducation"
+      ],
       "cta": "Save"
     },
     {
-      "day": 9, "weekday": "Tue", "pillar": "Recipe", "format": "Reel (10 to 20 seconds, assembling the jar) or single photo",
-      "card": {"template": "recipe", "theme": "light", "eyebrow": "Breakfast", "headline": "Berry & Walnut Breakfast Jars", "body": "No added sugar · 10 minutes · Make ahead", "footnote": "Full recipe on the site, link in bio"},
+      "day": 9,
+      "weekday": "Tue",
+      "pillar": "Recipe",
+      "format": "Reel (10 to 20 seconds, assembling the jar) or single photo",
+      "card": {
+        "template": "recipe",
+        "theme": "light",
+        "eyebrow": "Breakfast",
+        "headline": "Berry & Walnut Breakfast Jars",
+        "body": "No added sugar · 10 minutes · Make ahead",
+        "footnote": "Full recipe on the site, link in bio"
+      },
       "caption": "Breakfast that is ready before I am. 🫐\n\nOvernight oats layered with berries and walnuts: fiber, antioxidants and good fats to start the day, with no added sugar.\n\nHow I build a jar:\n• Rolled oats + unsweetened plant milk\n• A spoon of chia or ground flaxseed\n• A handful of berries, fresh or frozen\n• Toasted walnuts on top in the morning\n\nMix, lid on, fridge overnight. Make three on Sunday and the week starts itself.\n\nWhat is in your go-to breakfast? I am always collecting ideas.\n\nGeneral healthy-eating ideas, not personalized nutrition advice.",
-      "hashtags": ["#OvernightOats", "#PlantBasedBreakfast", "#NoAddedSugar", "#LiverFriendly", "#MASLD", "#MealPrep", "#HealthyBreakfast"],
+      "hashtags": [
+        "#OvernightOats",
+        "#PlantBasedBreakfast",
+        "#NoAddedSugar",
+        "#LiverFriendly",
+        "#MASLD",
+        "#MealPrep",
+        "#HealthyBreakfast"
+      ],
       "cta": "Save"
     },
     {
-      "day": 10, "weekday": "Wed", "pillar": "My story", "format": "Quote card or Reel",
-      "card": {"template": "quote", "theme": "dark", "eyebrow": "My story", "headline": "His cirrhosis had progressed quietly for years, undetected until a routine surgery revealed it.", "body": "Aroosha, on her father", "footnote": ""},
+      "day": 10,
+      "weekday": "Wed",
+      "pillar": "My story",
+      "format": "Quote card or Reel",
+      "card": {
+        "template": "quote",
+        "theme": "dark",
+        "eyebrow": "My story",
+        "headline": "His cirrhosis had progressed quietly for years, undetected until a routine surgery revealed it.",
+        "body": "Aroosha, on her father",
+        "footnote": ""
+      },
       "caption": "Before my diagnosis, there was my father's.\n\nHis cirrhosis progressed silently for years. Nobody knew until a routine surgery revealed it. I remember him after his liver transplant, hands tied down so he would not disturb his incision.\n\nWhen I heard \"stage 3 fibrosis\" about my own liver, that image was all I could see.\n\nFamily history is one of the reasons I say get tested so often. If liver disease runs in your family, you are not being dramatic by asking your doctor about it. You are being wise.\n\nDo you have a family history of liver disease? You can share as much or as little as you want below. 💚",
-      "hashtags": ["#LiverTransplant", "#Cirrhosis", "#FamilyHistory", "#LiverDisease", "#MASH", "#PatientStory", "#LiverAwareness"],
+      "hashtags": [
+        "#LiverTransplant",
+        "#Cirrhosis",
+        "#FamilyHistory",
+        "#LiverDisease",
+        "#MASH",
+        "#PatientStory",
+        "#LiverAwareness"
+      ],
       "cta": "Comment"
     },
     {
-      "day": 11, "weekday": "Thu", "pillar": "Know your numbers", "format": "Single image",
-      "card": {"template": "tip", "theme": "light", "eyebrow": "Know your numbers", "headline": "FIB-4 & APRI", "body": "Simple scores calculated from blood results you may already have. They estimate the likelihood of scarring (fibrosis), no extra needle required.", "footnote": "Ask whether a score has been calculated for you"},
+      "day": 11,
+      "weekday": "Thu",
+      "pillar": "Know your numbers",
+      "format": "Single image",
+      "card": {
+        "template": "tip",
+        "theme": "light",
+        "eyebrow": "Know your numbers",
+        "headline": "FIB-4 & APRI",
+        "body": "Simple scores calculated from blood results you may already have. They estimate the likelihood of scarring (fibrosis), no extra needle required.",
+        "footnote": "Ask whether a score has been calculated for you"
+      },
       "caption": "A test you might already have, hiding in your bloodwork. 🔍\n\nFIB-4 and APRI are simple scores calculated from routine results like ALT, AST, platelets and your age. They estimate how likely it is that scarring is present in the liver.\n\nNo new needle. Often no new appointment. Just arithmetic your doctor can do with numbers that are already in your file.\n\nIf you have risk factors, a question worth asking: \"Would a FIB-4 score help check for scarring?\"\n\nEducational only. Which tests are right for you, and what they mean, is for you and a qualified professional to decide together.",
-      "hashtags": ["#FIB4", "#KnowYourNumbers", "#LiverFibrosis", "#MASH", "#MASLD", "#LiverHealth", "#HealthLiteracy"],
+      "hashtags": [
+        "#FIB4",
+        "#KnowYourNumbers",
+        "#LiverFibrosis",
+        "#MASH",
+        "#MASLD",
+        "#LiverHealth",
+        "#HealthLiteracy"
+      ],
       "cta": "Save"
     },
     {
-      "day": 12, "weekday": "Fri", "pillar": "Ask your doctor", "format": "Single image",
-      "card": {"template": "question", "theme": "dark", "eyebrow": "Bring this to your appointment", "headline": "\"What do my liver enzyme results actually mean?\"", "body": "It is okay to ask, take notes, and ask again until you understand.", "footnote": ""},
+      "day": 12,
+      "weekday": "Fri",
+      "pillar": "Ask your doctor",
+      "format": "Single image",
+      "card": {
+        "template": "question",
+        "theme": "dark",
+        "eyebrow": "Bring this to your appointment",
+        "headline": "\"What do my liver enzyme results actually mean?\"",
+        "body": "It is okay to ask, take notes, and ask again until you understand.",
+        "footnote": ""
+      },
       "caption": "Friday question, week two. 📝\n\n\"What do my liver enzyme results actually mean?\"\n\nNot \"are they normal.\" Not \"is it fine.\" What do they mean, for me, over time?\n\nThe most important thing I learned as a patient: it is okay to ask questions, take notes, and ask again until you understand. Your care team would rather explain twice than have you leave confused.\n\nBring a trusted person if it helps you feel heard. Keep your own copy of your results. You are a partner in your care, not a passenger.\n\nScreenshot and save for your next visit.",
-      "hashtags": ["#AskYourDoctor", "#PatientAdvocacy", "#LiverEnzymes", "#MASH", "#HealthLiteracy", "#SelfAdvocacy", "#LiverHealth"],
+      "hashtags": [
+        "#AskYourDoctor",
+        "#PatientAdvocacy",
+        "#LiverEnzymes",
+        "#MASH",
+        "#HealthLiteracy",
+        "#SelfAdvocacy",
+        "#LiverHealth"
+      ],
       "cta": "Screenshot"
     },
     {
-      "day": 13, "weekday": "Sat", "pillar": "Living well", "format": "Reel (a walk, 10 to 15 seconds) or single image",
-      "card": {"template": "tip", "theme": "light", "eyebrow": "Living well · 02", "headline": "Keep moving.", "body": "Regular, sustainable activity you can actually keep up. The best workout is the one you will do again on Tuesday.", "footnote": ""},
+      "day": 13,
+      "weekday": "Sat",
+      "pillar": "Living well",
+      "format": "Reel (a walk, 10 to 15 seconds) or single image",
+      "card": {
+        "template": "tip",
+        "theme": "light",
+        "eyebrow": "Living well · 02",
+        "headline": "Keep moving.",
+        "body": "Regular, sustainable activity you can actually keep up. The best workout is the one you will do again on Tuesday.",
+        "footnote": ""
+      },
       "caption": "I did not change my life with a dramatic workout plan. I changed it with movement I could keep up. 🚶‍♀️\n\nWalks after dinner. Taking the stairs. Stretching while the kettle boils. Boring, repeatable, mine.\n\nRegular movement is one of the things my care team and I lean on to support my liver and metabolic health. Sustainable beats impressive, every time.\n\nWeekend habit: a ten-minute walk after one meal today. That is the whole assignment.\n\nWhat movement do you actually enjoy? Tell me, I might steal it.",
-      "hashtags": ["#MoveYourBody", "#LivingWell", "#MetabolicHealth", "#LiverHealth", "#MASLD", "#HealthyHabits", "#SustainableHealth"],
+      "hashtags": [
+        "#MoveYourBody",
+        "#LivingWell",
+        "#MetabolicHealth",
+        "#LiverHealth",
+        "#MASLD",
+        "#HealthyHabits",
+        "#SustainableHealth"
+      ],
       "cta": "Comment"
     },
     {
-      "day": 14, "weekday": "Sun", "pillar": "Community", "format": "Single image",
-      "card": {"template": "mythfact", "theme": "dark", "eyebrow": "Myth vs fact", "headline": "Myth: No symptoms means no problem.", "body": "Fact: Early liver disease often has no symptoms at all. That is exactly why awareness and routine conversations with your doctor matter.", "footnote": ""},
+      "day": 14,
+      "weekday": "Sun",
+      "pillar": "Community",
+      "format": "Single image",
+      "card": {
+        "template": "mythfact",
+        "theme": "dark",
+        "eyebrow": "Myth vs fact",
+        "headline": "Myth: No symptoms means no problem.",
+        "body": "Fact: Early liver disease often has no symptoms at all. That is exactly why awareness and routine conversations with your doctor matter.",
+        "footnote": ""
+      },
       "caption": "The most dangerous sentence in liver health: \"But I feel fine.\" 🤍\n\nI felt fine. My father felt fine. Early liver disease rarely announces itself. When symptoms do show up, they are vague: tiredness, discomfort on the upper right side, just not feeling right. Easy to dismiss.\n\nThat is why MASH is so often found by accident, through blood tests or imaging done for another reason.\n\nNo symptoms does not mean no action. It means a conversation.\n\nSunday ask: tag one person who always says \"I'm fine.\" Lovingly. 💚",
-      "hashtags": ["#MythVsFact", "#LiverAwareness", "#MASH", "#MASLD", "#FattyLiver", "#SilentDisease", "#LiverHealth"],
+      "hashtags": [
+        "#MythVsFact",
+        "#LiverAwareness",
+        "#MASH",
+        "#MASLD",
+        "#FattyLiver",
+        "#SilentDisease",
+        "#LiverHealth"
+      ],
       "cta": "Tag a friend"
     },
     {
-      "day": 15, "weekday": "Mon", "pillar": "Know your liver", "format": "Single image",
-      "card": {"template": "tip", "theme": "light", "eyebrow": "Did the name change?", "headline": "NASH is now MASH. NAFLD is now MASLD.", "body": "In 2023, international liver societies updated the names to reflect the condition's link to metabolic health. Same condition, clearer name.", "footnote": ""},
+      "day": 15,
+      "weekday": "Mon",
+      "pillar": "Know your liver",
+      "format": "Single image",
+      "card": {
+        "template": "tip",
+        "theme": "light",
+        "eyebrow": "Did the name change?",
+        "headline": "NASH is now MASH. NAFLD is now MASLD.",
+        "body": "In 2023, international liver societies updated the names to reflect the condition's link to metabolic health. Same condition, clearer name.",
+        "footnote": ""
+      },
       "caption": "If your records say NASH and your new doctor says MASH, you are not losing your mind. 🧠\n\nIn 2023, an international group of liver societies updated the terminology:\n• NAFLD → MASLD (metabolic dysfunction-associated steatotic liver disease)\n• NASH → MASH (metabolic dysfunction-associated steatohepatitis)\n\nSame underlying condition. The new names drop \"nonalcoholic\" and point to what actually drives it: metabolic health.\n\nYou will still see the old names in older articles and records. Now you know they are talking about the same thing.\n\nSave this for the next time someone asks.",
-      "hashtags": ["#MASH", "#NASH", "#MASLD", "#NAFLD", "#LiverHealth", "#HealthEducation", "#Hepatology"],
+      "hashtags": [
+        "#MASH",
+        "#NASH",
+        "#MASLD",
+        "#NAFLD",
+        "#LiverHealth",
+        "#HealthEducation",
+        "#Hepatology"
+      ],
       "cta": "Save"
     },
     {
-      "day": 16, "weekday": "Tue", "pillar": "Recipe", "format": "Carousel or short cooking Reel",
-      "card": {"template": "recipe", "theme": "light", "eyebrow": "Dinner", "headline": "Miso-Glazed Tofu & Garlicky Greens", "body": "Plant protein · 25 minutes", "footnote": "Full recipe on the site, link in bio"},
+      "day": 16,
+      "weekday": "Tue",
+      "pillar": "Recipe",
+      "format": "Carousel or short cooking Reel",
+      "card": {
+        "template": "recipe",
+        "theme": "light",
+        "eyebrow": "Dinner",
+        "headline": "Miso-Glazed Tofu & Garlicky Greens",
+        "body": "Plant protein · 25 minutes",
+        "footnote": "Full recipe on the site, link in bio"
+      },
       "caption": "Golden, sticky, garlicky. The dinner that convinced my family tofu is not boring. 🌿\n\nMiso-glazed tofu over quickly sautéed greens with plenty of garlic. Plant protein that is satisfying, and a plate that is mostly green.\n\nMy shortcut: press the tofu while you prep the greens, glaze with miso, a splash of tamari and a little rice vinegar, then roast hot until the edges caramelize. Greens go in the pan for the last three minutes.\n\nI love adapting recipes from cookbooks around the world to be plant-based. Spices keep every dish exciting.\n\nWould you try this? Yes or no, be honest. 😄\n\nGeneral healthy-eating ideas, not personalized nutrition advice.",
-      "hashtags": ["#PlantBasedDinner", "#TofuRecipes", "#LiverFriendly", "#MASLD", "#WholeFoodPlantBased", "#PlantProtein", "#HealthyDinner"],
+      "hashtags": [
+        "#PlantBasedDinner",
+        "#TofuRecipes",
+        "#LiverFriendly",
+        "#MASLD",
+        "#WholeFoodPlantBased",
+        "#PlantProtein",
+        "#HealthyDinner"
+      ],
       "cta": "Save"
     },
     {
-      "day": 17, "weekday": "Wed", "pillar": "My story", "format": "Quote card or Reel",
-      "card": {"template": "quote", "theme": "dark", "eyebrow": "My story", "headline": "I focus on progress, not perfection.", "body": "Aroosha", "footnote": ""},
+      "day": 17,
+      "weekday": "Wed",
+      "pillar": "My story",
+      "format": "Quote card or Reel",
+      "card": {
+        "template": "quote",
+        "theme": "dark",
+        "eyebrow": "My story",
+        "headline": "I focus on progress, not perfection.",
+        "body": "Aroosha",
+        "footnote": ""
+      },
       "caption": "My story is not one of fear. It is one of action, faith, and taking charge.\n\nOver time, with my care team beside me, lifestyle changes helped me lose more than 60 pounds and improve my liver enzymes. I did not do it perfectly. I did it repeatedly.\n\nSome weeks were walks and lentil bowls. Some weeks were just showing up to the appointment. Both counted.\n\nThis is my experience, not a prescription. Your road will look like you. But if you are standing at the start of it, I want you to know the road exists.\n\nProgress, not perfection. What is one small step you took this week? 💚",
-      "hashtags": ["#ProgressNotPerfection", "#MASH", "#LiverHealth", "#PatientStory", "#LifestyleMedicine", "#HealthJourney", "#SilentOrganSpeaks"],
+      "hashtags": [
+        "#ProgressNotPerfection",
+        "#MASH",
+        "#LiverHealth",
+        "#PatientStory",
+        "#LifestyleMedicine",
+        "#HealthJourney",
+        "#SilentOrganSpeaks"
+      ],
       "cta": "Comment"
     },
     {
-      "day": 18, "weekday": "Thu", "pillar": "Know your numbers", "format": "Single image",
-      "card": {"template": "tip", "theme": "light", "eyebrow": "Know your numbers", "headline": "FibroScan (elastography)", "body": "A quick, painless scan that measures liver stiffness and fat. A common way to assess fibrosis without a biopsy.", "footnote": ""},
+      "day": 18,
+      "weekday": "Thu",
+      "pillar": "Know your numbers",
+      "format": "Single image",
+      "card": {
+        "template": "tip",
+        "theme": "light",
+        "eyebrow": "Know your numbers",
+        "headline": "FibroScan (elastography)",
+        "body": "A quick, painless scan that measures liver stiffness and fat. A common way to assess fibrosis without a biopsy.",
+        "footnote": ""
+      },
       "caption": "The scan I was nervous about and should not have been. 🩻\n\nA FibroScan (transient elastography) is a quick, painless test. A probe rests on your skin over the liver and measures stiffness, which relates to scarring, and fat. It took minutes. No needle.\n\nFor many people, it is how fibrosis is assessed without a biopsy.\n\nOther imaging you may hear about: ultrasound, MRI, MR elastography and MRI-PDFF, which give detailed pictures when needed.\n\nQuestion worth asking: \"Would a FibroScan help check for scarring?\"\n\nEducational only. Your doctor decides which tests fit your situation.",
-      "hashtags": ["#FibroScan", "#KnowYourNumbers", "#LiverFibrosis", "#MASH", "#MASLD", "#LiverHealth", "#PatientEducation"],
+      "hashtags": [
+        "#FibroScan",
+        "#KnowYourNumbers",
+        "#LiverFibrosis",
+        "#MASH",
+        "#MASLD",
+        "#LiverHealth",
+        "#PatientEducation"
+      ],
       "cta": "Save"
     },
     {
-      "day": 19, "weekday": "Fri", "pillar": "Ask your doctor", "format": "Single image",
-      "card": {"template": "question", "theme": "dark", "eyebrow": "Bring this to your appointment", "headline": "\"Would a fibrosis assessment, like a FibroScan or a blood-based test, be helpful for me?\"", "body": "", "footnote": ""},
+      "day": 19,
+      "weekday": "Fri",
+      "pillar": "Ask your doctor",
+      "format": "Single image",
+      "card": {
+        "template": "question",
+        "theme": "dark",
+        "eyebrow": "Bring this to your appointment",
+        "headline": "\"Would a fibrosis assessment, like a FibroScan or a blood-based test, be helpful for me?\"",
+        "body": "",
+        "footnote": ""
+      },
       "caption": "Friday question, week three. 📝\n\n\"Would a fibrosis assessment, like a FibroScan or a blood-based test, be helpful for me?\"\n\nScarring is the part of liver disease that changes outcomes, and it is also the part you cannot feel. Asking about it directly is one of the most useful things I ever did in an exam room.\n\nHow I prepare for every visit:\n✓ A written list of questions and symptoms\n✓ My own folder of results and scans\n✓ Someone I trust, when it helps\n\nScreenshot this, add it to your list.",
-      "hashtags": ["#AskYourDoctor", "#LiverFibrosis", "#FibroScan", "#PatientAdvocacy", "#MASH", "#SelfAdvocacy", "#LiverHealth"],
+      "hashtags": [
+        "#AskYourDoctor",
+        "#LiverFibrosis",
+        "#FibroScan",
+        "#PatientAdvocacy",
+        "#MASH",
+        "#SelfAdvocacy",
+        "#LiverHealth"
+      ],
       "cta": "Screenshot"
     },
     {
-      "day": 20, "weekday": "Sat", "pillar": "Living well", "format": "Single image",
-      "card": {"template": "tip", "theme": "light", "eyebrow": "Living well · 03", "headline": "Ease off.", "body": "Added sugar, refined carbs, ultra-processed foods and alcohol. Not all at once. One swap at a time.", "footnote": "Talk with your care team about what is right for you"},
+      "day": 20,
+      "weekday": "Sat",
+      "pillar": "Living well",
+      "format": "Single image",
+      "card": {
+        "template": "tip",
+        "theme": "light",
+        "eyebrow": "Living well · 03",
+        "headline": "Ease off.",
+        "body": "Added sugar, refined carbs, ultra-processed foods and alcohol. Not all at once. One swap at a time.",
+        "footnote": "Talk with your care team about what is right for you"
+      },
       "caption": "The gentle version of \"cut it out.\" 🤍\n\nThe things I eased off for my liver: added sugar, refined carbs, ultra-processed foods and alcohol. Not overnight. One swap at a time, and the swaps that stuck were the ones I actually liked.\n\nSweet drink → sparkling water with lemon.\nWhite rice every night → half rice, half lentils.\nEvening wine → herbal tea, honestly most nights now.\n\nNone of this is a rule for you. It is what worked for me alongside my care team.\n\nWhat is one swap that stuck for you? Share it, someone reading needs the idea.",
-      "hashtags": ["#LivingWell", "#LiverHealth", "#MASLD", "#MetabolicHealth", "#HealthySwaps", "#LessSugar", "#SustainableHealth"],
+      "hashtags": [
+        "#LivingWell",
+        "#LiverHealth",
+        "#MASLD",
+        "#MetabolicHealth",
+        "#HealthySwaps",
+        "#LessSugar",
+        "#SustainableHealth"
+      ],
       "cta": "Comment"
     },
     {
-      "day": 21, "weekday": "Sun", "pillar": "Community", "format": "Single image",
-      "card": {"template": "stat", "theme": "dark", "eyebrow": "Reasons for hope", "headline": "~10%", "body": "need a biopsy. Most MASH is found with blood tests and ultrasound.", "footnote": "Approximate figure from published liver-health research, for awareness, not diagnosis"},
+      "day": 21,
+      "weekday": "Sun",
+      "pillar": "Community",
+      "format": "Single image (chart)",
+      "card": {
+        "template": "donut",
+        "theme": "dark",
+        "eyebrow": "Reasons for hope",
+        "headline": "The test most people fear is the one most people never need.",
+        "body": "Most MASH is found and followed with blood tests, ultrasound and a FibroScan.",
+        "footnote": "Approximate figure from published liver-health research, for awareness, not diagnosis",
+        "data": "~10% | of people with suspected MASH need a biopsy"
+      },
       "caption": "The fear that stops people getting checked: \"I don't want a biopsy.\" 🤍\n\nHere is the reassuring part. Only about 10% of people need one. Most MASH is found and monitored with blood tests and ultrasound, sometimes a FibroScan.\n\nI understand the fear. I had it. But not knowing did not protect my father, and it would not have protected me.\n\nSunday reflection: what has stopped you, or someone you love, from asking about liver health? No judgment here, just honesty.",
-      "hashtags": ["#LiverAwareness", "#MASH", "#MASLD", "#GetChecked", "#LiverHealth", "#PatientAdvocate", "#SilentOrganSpeaks"],
+      "hashtags": [
+        "#LiverAwareness",
+        "#MASH",
+        "#MASLD",
+        "#GetChecked",
+        "#LiverHealth",
+        "#PatientAdvocate",
+        "#SilentOrganSpeaks"
+      ],
       "cta": "Comment"
     },
     {
-      "day": 22, "weekday": "Mon", "pillar": "Know your liver", "format": "Carousel (4 slides, one risk factor each)",
-      "card": {"template": "tip", "theme": "light", "eyebrow": "Know your risk", "headline": "Who is more likely to be affected?", "body": "Type 2 diabetes · Excess weight, especially around the middle · High cholesterol or triglycerides · Metabolic syndrome. One of these is a reason to talk, not to panic.", "footnote": "Swipe"},
+      "day": 22,
+      "weekday": "Mon",
+      "pillar": "Know your liver",
+      "format": "Carousel (4 slides, one risk factor each)",
+      "card": {
+        "template": "tip",
+        "theme": "light",
+        "eyebrow": "Know your risk",
+        "headline": "Who is more likely to be affected?",
+        "body": "Type 2 diabetes · Excess weight, especially around the middle · High cholesterol or triglycerides · Metabolic syndrome. One of these is a reason to talk, not to panic.",
+        "footnote": "Swipe"
+      },
       "caption": "MASH is closely tied to metabolic health. These are the factors most often linked with it. ➡️\n\n1. Type 2 diabetes. Insulin resistance is among the strongest associations.\n2. Excess weight, particularly around the midsection.\n3. High cholesterol, elevated triglycerides or abnormal blood lipids.\n4. Metabolic syndrome: high blood pressure and blood sugar clustered together.\n\nHaving one or more of these does not mean you have MASH. It means it is a good reason to talk with your doctor.\n\nIf this list describes someone you love, send it to them. Then follow it up with a hug.",
-      "hashtags": ["#MASH", "#MASLD", "#Type2Diabetes", "#MetabolicSyndrome", "#LiverHealth", "#KnowYourRisk", "#HealthEducation"],
+      "hashtags": [
+        "#MASH",
+        "#MASLD",
+        "#Type2Diabetes",
+        "#MetabolicSyndrome",
+        "#LiverHealth",
+        "#KnowYourRisk",
+        "#HealthEducation"
+      ],
       "cta": "Share"
     },
     {
-      "day": 23, "weekday": "Tue", "pillar": "Recipe", "format": "Single photo or Reel of the tray coming out of the oven",
-      "card": {"template": "recipe", "theme": "light", "eyebrow": "Dinner", "headline": "Roasted Veg & Chickpea Traybake", "body": "High fiber · 40 minutes · One pan", "footnote": "Full recipe on the site, link in bio"},
+      "day": 23,
+      "weekday": "Tue",
+      "pillar": "Recipe",
+      "format": "Single photo or Reel of the tray coming out of the oven",
+      "card": {
+        "template": "recipe",
+        "theme": "light",
+        "eyebrow": "Dinner",
+        "headline": "Roasted Veg & Chickpea Traybake",
+        "body": "High fiber · 40 minutes · One pan",
+        "footnote": "Full recipe on the site, link in bio"
+      },
       "caption": "One tray. One oven. Zero decisions. 🥘\n\nA colorful sheet-pan of vegetables and chickpeas with herbs and olive oil. Fiber from the chickpeas, whole-food fat from the oil, and whatever vegetables are in the drawer.\n\nMy method: chop everything the same size, toss with olive oil, smoked paprika, cumin and salt, roast hot for about 35 minutes, finish with lemon and fresh herbs. Leftovers become lunch.\n\nThis is what \"made with joy\" means to me. Food should feel like care, not restriction.\n\nSave it for Sunday prep. 🔖\n\nGeneral healthy-eating ideas, not personalized nutrition advice.",
-      "hashtags": ["#SheetPanDinner", "#PlantBasedRecipes", "#Chickpeas", "#LiverFriendly", "#MASLD", "#HighFiber", "#HealthyDinner"],
+      "hashtags": [
+        "#SheetPanDinner",
+        "#PlantBasedRecipes",
+        "#Chickpeas",
+        "#LiverFriendly",
+        "#MASLD",
+        "#HighFiber",
+        "#HealthyDinner"
+      ],
       "cta": "Save"
     },
     {
-      "day": 24, "weekday": "Wed", "pillar": "My story", "format": "Reel (talking to camera) or quote card",
-      "card": {"template": "quote", "theme": "dark", "eyebrow": "My story", "headline": "You are a partner in your care, not a passenger.", "body": "Aroosha", "footnote": ""},
+      "day": 24,
+      "weekday": "Wed",
+      "pillar": "My story",
+      "format": "Reel (talking to camera) or quote card",
+      "card": {
+        "template": "quote",
+        "theme": "dark",
+        "eyebrow": "My story",
+        "headline": "You are a partner in your care, not a passenger.",
+        "body": "Aroosha",
+        "footnote": ""
+      },
       "caption": "My husband loves data. So he built me a dashboard. 📈\n\nMy doctor keeps me up with all the testing, but I also track my own numbers over time. Seeing my liver enzymes improve on a chart, month after month, is the visual reminder that keeps me going.\n\nAnd he brings his own list of questions to my appointments. My doctor jokes they are too hard. I think that is exactly the point.\n\nYou do not need a data-loving spouse. You need a folder, a pen, and permission to ask. You are a partner in your care, not a passenger.\n\nWho is on your team? Tag them. 💚",
-      "hashtags": ["#PatientAdvocacy", "#CarePartner", "#MASH", "#LiverHealth", "#HealthJourney", "#SelfAdvocacy", "#SilentOrganSpeaks"],
+      "hashtags": [
+        "#PatientAdvocacy",
+        "#CarePartner",
+        "#MASH",
+        "#LiverHealth",
+        "#HealthJourney",
+        "#SelfAdvocacy",
+        "#SilentOrganSpeaks"
+      ],
       "cta": "Tag someone"
     },
     {
-      "day": 25, "weekday": "Thu", "pillar": "Know your numbers", "format": "Single image",
-      "card": {"template": "tip", "theme": "light", "eyebrow": "Know your numbers", "headline": "Keep your own folder.", "body": "Lab results, scans, dates. Numbers mean more as a trend than as a single result. You are allowed to ask for copies.", "footnote": ""},
+      "day": 25,
+      "weekday": "Thu",
+      "pillar": "Know your numbers",
+      "format": "Single image",
+      "card": {
+        "template": "tip",
+        "theme": "light",
+        "eyebrow": "Know your numbers",
+        "headline": "Keep your own folder.",
+        "body": "Lab results, scans, dates. Numbers mean more as a trend than as a single result. You are allowed to ask for copies.",
+        "footnote": ""
+      },
       "caption": "The most useful \"test\" is the one you can compare to last year's. 📁\n\nA single ALT result is a snapshot. Three years of them is a story. Keep your own copies of lab results and scans, with dates, in one place. Paper folder, phone album, spreadsheet, whatever you will actually use.\n\nYou are allowed to ask for copies. You are allowed to ask what changed.\n\nOther routine markers you might see on the page: GGT, ALP and bilirubin for liver and bile duct function, platelets and albumin for how the liver is coping over time.\n\nEducational only. Your care team interprets the trend.",
-      "hashtags": ["#KnowYourNumbers", "#PatientAdvocacy", "#LiverHealth", "#MASH", "#HealthRecords", "#MASLD", "#HealthLiteracy"],
+      "hashtags": [
+        "#KnowYourNumbers",
+        "#PatientAdvocacy",
+        "#LiverHealth",
+        "#MASH",
+        "#HealthRecords",
+        "#MASLD",
+        "#HealthLiteracy"
+      ],
       "cta": "Save"
     },
     {
-      "day": 26, "weekday": "Fri", "pillar": "Ask your doctor", "format": "Single image",
-      "card": {"template": "question", "theme": "dark", "eyebrow": "Bring this to your appointment", "headline": "\"Should I see a hepatologist or a registered dietitian?\"", "body": "Asking for the right specialists is advocacy, not being difficult.", "footnote": ""},
+      "day": 26,
+      "weekday": "Fri",
+      "pillar": "Ask your doctor",
+      "format": "Single image",
+      "card": {
+        "template": "question",
+        "theme": "dark",
+        "eyebrow": "Bring this to your appointment",
+        "headline": "\"Should I see a hepatologist or a registered dietitian?\"",
+        "body": "Asking for the right specialists is advocacy, not being difficult.",
+        "footnote": ""
+      },
       "caption": "Friday question, week four. 📝\n\n\"Should I see a hepatologist or a registered dietitian?\"\n\nA hepatologist is a liver specialist. A registered dietitian can turn \"eat better\" into a plan that fits your life, your culture and your nutrient needs.\n\nAsking for the right specialists is not being difficult. It is being an advocate for the one body you have.\n\nFour Fridays, four questions. Save them all and you have a list for your next appointment:\n1. Should my liver health be checked, given my risk factors?\n2. What do my liver enzyme results actually mean?\n3. Would a fibrosis assessment be helpful for me?\n4. Should I see a hepatologist or a dietitian?",
-      "hashtags": ["#AskYourDoctor", "#Hepatologist", "#RegisteredDietitian", "#PatientAdvocacy", "#MASH", "#LiverHealth", "#SelfAdvocacy"],
+      "hashtags": [
+        "#AskYourDoctor",
+        "#Hepatologist",
+        "#RegisteredDietitian",
+        "#PatientAdvocacy",
+        "#MASH",
+        "#LiverHealth",
+        "#SelfAdvocacy"
+      ],
       "cta": "Save the list"
     },
     {
-      "day": 27, "weekday": "Sat", "pillar": "Living well", "format": "Single image",
-      "card": {"template": "tip", "theme": "light", "eyebrow": "Living well · 04", "headline": "Rest & reset.", "body": "Sleep and stress care are part of liver care, too. This quiet, hardworking organ needs you to slow down sometimes.", "footnote": ""},
+      "day": 27,
+      "weekday": "Sat",
+      "pillar": "Living well",
+      "format": "Single image",
+      "card": {
+        "template": "tip",
+        "theme": "light",
+        "eyebrow": "Living well · 04",
+        "headline": "Rest & reset.",
+        "body": "Sleep and stress care are part of liver care, too. This quiet, hardworking organ needs you to slow down sometimes.",
+        "footnote": ""
+      },
       "caption": "The habit nobody puts on the liver-health list: rest. 🌙\n\nSleep and stress care became part of how I look after this quiet, hardworking organ, right alongside food and movement. Metabolic health is a whole-body conversation.\n\nMy version: a consistent bedtime, a walk instead of doom-scrolling, and faith that carries me on the hard days.\n\nWeekend habit: protect one early night this week. Just one.\n\nHow do you reset? Tell me below, I am building a list for the newly diagnosed folks who message me.",
-      "hashtags": ["#RestAndReset", "#LivingWell", "#SleepHealth", "#StressCare", "#LiverHealth", "#MASLD", "#HealthyHabits"],
+      "hashtags": [
+        "#RestAndReset",
+        "#LivingWell",
+        "#SleepHealth",
+        "#StressCare",
+        "#LiverHealth",
+        "#MASLD",
+        "#HealthyHabits"
+      ],
       "cta": "Comment"
     },
     {
-      "day": 28, "weekday": "Sun", "pillar": "Community", "format": "Single image",
-      "card": {"template": "stat", "theme": "dark", "eyebrow": "Early conversations matter", "headline": "49%", "body": "of cases are caught in primary care. The first question often happens with your family doctor.", "footnote": "Approximate figure from published liver-health research, for awareness, not diagnosis"},
+      "day": 28,
+      "weekday": "Sun",
+      "pillar": "Community",
+      "format": "Single image (chart)",
+      "card": {
+        "template": "donut",
+        "theme": "dark",
+        "eyebrow": "Early conversations matter",
+        "headline": "Half of all cases start with an ordinary visit.",
+        "body": "The first question often happens with your family doctor, not a specialist.",
+        "footnote": "Approximate figure from published liver-health research, for awareness, not diagnosis",
+        "data": "49% | of cases are first caught in primary care"
+      },
       "caption": "You do not need a specialist to start. 🤍\n\nAround half of cases are first caught in primary care, with a family doctor, during an ordinary visit, often because someone asked an ordinary question.\n\nThat is the whole mission of this page in one number. The conversation that saves a liver can happen at a routine check-up.\n\nSunday ask: is there a check-up you have been putting off? Say \"booking it\" in the comments and I will cheer you on. 💚",
-      "hashtags": ["#PrimaryCare", "#LiverAwareness", "#MASH", "#MASLD", "#GetChecked", "#LiverHealth", "#SilentOrganSpeaks"],
+      "hashtags": [
+        "#PrimaryCare",
+        "#LiverAwareness",
+        "#MASH",
+        "#MASLD",
+        "#GetChecked",
+        "#LiverHealth",
+        "#SilentOrganSpeaks"
+      ],
       "cta": "Comment"
     },
     {
-      "day": 29, "weekday": "Mon", "pillar": "Know your liver", "format": "Single image or Reel",
-      "card": {"template": "tip", "theme": "dark", "eyebrow": "Reasons for hope", "headline": "The liver wants to heal.", "body": "One of the most hopeful facts in medicine: the liver can regenerate. In earlier stages, steady, sustainable changes can reduce fat, calm inflammation and even improve scarring.", "footnote": "Outcomes depend on stage and the person. Your care team can guide what is realistic"},
+      "day": 29,
+      "weekday": "Mon",
+      "pillar": "Know your liver",
+      "format": "Single image or Reel",
+      "card": {
+        "template": "tip",
+        "theme": "dark",
+        "eyebrow": "Reasons for hope",
+        "headline": "The liver wants to heal.",
+        "body": "One of the most hopeful facts in medicine: the liver can regenerate. In earlier stages, steady, sustainable changes can reduce fat, calm inflammation and even improve scarring.",
+        "footnote": "Outcomes depend on stage and the person. Your care team can guide what is realistic"
+      },
       "caption": "If you only remember one thing from this page, make it this. 💚\n\nThe liver can regenerate. In the earlier stages, steady, sustainable changes can reduce liver fat, calm inflammation and even improve early scarring.\n\nWhat that looks like in practice:\n✓ Whole-food eating patterns, like Mediterranean style\n✓ Regular movement you can actually keep up\n✓ Managing blood sugar, cholesterol and blood pressure with your care team\n✓ Limiting added sugar, refined carbs and alcohol\n\nOutcomes depend on the stage and on each person, which is exactly why early attention matters so much.\n\nYou cannot undo a diagnosis. You can take charge of what comes next.",
-      "hashtags": ["#LiverRegeneration", "#ReasonsForHope", "#MASH", "#MASLD", "#LiverHealth", "#LifestyleMedicine", "#SilentOrganSpeaks"],
+      "hashtags": [
+        "#LiverRegeneration",
+        "#ReasonsForHope",
+        "#MASH",
+        "#MASLD",
+        "#LiverHealth",
+        "#LifestyleMedicine",
+        "#SilentOrganSpeaks"
+      ],
       "cta": "Share"
     },
     {
-      "day": 30, "weekday": "Tue", "pillar": "Recipe + month recap", "format": "Reel (5-second smoothie pour) or single image",
-      "card": {"template": "recipe", "theme": "light", "eyebrow": "Breakfast", "headline": "Green Morning Smoothie", "body": "Antioxidant · 5 minutes", "footnote": "Full recipe on the site, link in bio"},
+      "day": 30,
+      "weekday": "Tue",
+      "pillar": "Recipe + month recap",
+      "format": "Reel (5-second smoothie pour) or single image",
+      "card": {
+        "template": "recipe",
+        "theme": "light",
+        "eyebrow": "Breakfast",
+        "headline": "Green Morning Smoothie",
+        "body": "Antioxidant · 5 minutes",
+        "footnote": "Full recipe on the site, link in bio"
+      },
       "caption": "Thirty days of breaking the silence. Let's end with something green. 🥤\n\nSpinach, berries, ground flaxseed and unsweetened almond milk. Bright, energizing, five minutes, and it hides a big handful of greens from anyone who claims not to like them.\n\nThank you for being here this month. For the comments, the \"booking it\" messages, the stories you trusted me with. This is what giving voice to a silent condition looks like.\n\nTell me what you want more of next month: recipes, test explainers, my story, or doctor questions? Vote in the comments. 👇\n\nGeneral healthy-eating ideas, not personalized nutrition advice.",
-      "hashtags": ["#GreenSmoothie", "#PlantBasedBreakfast", "#LiverFriendly", "#MASLD", "#LiverHealth", "#MonthRecap", "#SilentOrganSpeaks"],
+      "hashtags": [
+        "#GreenSmoothie",
+        "#PlantBasedBreakfast",
+        "#LiverFriendly",
+        "#MASLD",
+        "#LiverHealth",
+        "#MonthRecap",
+        "#SilentOrganSpeaks"
+      ],
+      "cta": "Vote in comments"
+    },
+    {
+      "day": 31,
+      "weekday": "Wed",
+      "pillar": "My story",
+      "format": "Reel (talking to camera) or quote card. Your own photo beats the card",
+      "card": {
+        "template": "quote",
+        "theme": "plum",
+        "eyebrow": "My story",
+        "headline": "I told my students mindset is everything. Then I had to prove it to myself.",
+        "body": "Aroosha",
+        "footnote": ""
+      },
+      "caption": "For years I stood in front of a lecture hall telling students I don't understand the phrase \"I can't.\" 🎓\n\nThen a doctor told me I had MASH with stage 3 fibrosis, and for a few days \"I can't\" was the only phrase in my head. I can't fix this. I can't be my father.\n\nWhat changed was not courage. It was a list. Questions for my doctor. One meal to cook. One walk to take. Mindset turned out to be a verb, something you do on a Tuesday, not something you have.\n\nIf you are in the \"I can't\" week right now, you do not have to feel brave. You just have to make the list. 💚\n\nWhat was your first small step? Tell me below.",
+      "hashtags": [
+        "#MASH",
+        "#PatientStory",
+        "#NewlyDiagnosed",
+        "#LiverHealth",
+        "#Mindset",
+        "#ChronicIllnessWarrior",
+        "#SilentOrganSpeaks"
+      ],
+      "cta": "Comment",
+      "note": "Add one real detail: what was actually on your first list?"
+    },
+    {
+      "day": 32,
+      "weekday": "Thu",
+      "pillar": "Stats and facts",
+      "format": "Single image (chart)",
+      "card": {
+        "template": "donut",
+        "theme": "clay",
+        "eyebrow": "Did you know",
+        "headline": "The liver can regrow.",
+        "body": "Living donors give up to 70% of their liver. Both pieces grow back to near full size within months.",
+        "data": "70% | can be removed and regrow",
+        "footnote": "Source: American Liver Foundation. Educational, not medical advice"
+      },
+      "caption": "The most hopeful fact in all of medicine, in one number. 💚\n\nA living donor can give up to 70% of their liver to someone else. Within months, both the donor's piece and the recipient's piece grow back to near full size. No other organ in the human body does this.\n\nThis is why early matters so much. Scarring is the part that limits regrowth, and scarring takes years to build. Catch it while the liver still has room to heal.\n\nMy father received a transplant. I got to keep mine, because I found out in time. Both of those are stories about the same remarkable organ.\n\nSave this for the next time someone tells you liver damage is a one-way street.",
+      "hashtags": [
+        "#LiverFacts",
+        "#LiverRegeneration",
+        "#LiverTransplant",
+        "#MASH",
+        "#LiverHealth",
+        "#ReasonsForHope",
+        "#SilentOrganSpeaks"
+      ],
+      "cta": "Save"
+    },
+    {
+      "day": 33,
+      "weekday": "Fri",
+      "pillar": "Ask your doctor",
+      "format": "Single image (steps card)",
+      "card": {
+        "template": "steps",
+        "theme": "dark",
+        "eyebrow": "Bring this to your appointment",
+        "headline": "\"Can you calculate my FIB-4 from my last blood test?\"",
+        "body": "",
+        "data": "Below 1.3 | lower likelihood of advanced scarring\n1.3 to 2.67 | unclear, a FibroScan or blood fibrosis test helps\nAbove 2.67 | higher likelihood, ask about a liver specialist",
+        "footnote": "Source: AASLD practice guidance on MASLD, 2023. Educational, not medical advice"
+      },
+      "caption": "Friday question, with a number attached. 📝\n\n\"Can you calculate my FIB-4 from my last blood test?\"\n\nFIB-4 uses four things you probably already have on file: your age, ALT, AST and platelet count. No new needle. Here is roughly how the result is read, according to US liver society guidance:\n\n• Below 1.3: lower likelihood of advanced scarring.\n• Between 1.3 and 2.67: unclear, so a FibroScan or a blood fibrosis test usually comes next.\n• Above 2.67: higher likelihood, and a liver specialist is worth asking about.\n\nThe bands shift a little with age and your doctor interprets them in context. The point is that the answer may already be sitting in your chart.\n\nScreenshot this for your next visit.",
+      "hashtags": [
+        "#FIB4",
+        "#AskYourDoctor",
+        "#LiverFibrosis",
+        "#KnowYourNumbers",
+        "#MASH",
+        "#MASLD",
+        "#PatientAdvocacy"
+      ],
+      "cta": "Screenshot"
+    },
+    {
+      "day": 34,
+      "weekday": "Sat",
+      "pillar": "World recipe",
+      "format": "Carousel: your photo of the dish as slide 1, this steps card as slide 2",
+      "card": {
+        "template": "steps",
+        "theme": "ochre",
+        "eyebrow": "Ethiopia · Misir Wat",
+        "headline": "Spiced red lentil stew, ready in 40 minutes",
+        "body": "",
+        "data": "Soften a chopped onion in a little olive oil with garlic and grated ginger\nStir in 1 to 2 tablespoons berbere spice and a spoon of tomato paste for one minute\nAdd 1 cup rinsed red lentils and 3 cups water, simmer 25 minutes until thick\nFinish with lemon and salt, serve over injera or brown rice",
+        "footnote": "Full recipe on the site, link in bio"
+      },
+      "caption": "A bowl of Ethiopia on a Saturday. 🇪🇹\n\nMisir wat is a red lentil stew built on berbere, a warm chili and spice blend that does all the work for you. Red lentils collapse into something creamy without a drop of cream.\n\nWhy my liver likes it: lentils bring fiber and plant protein, the spice brings flavor without added sugar, and a little olive oil is the only fat. Traditionally it is made with niter kibbeh, a spiced butter. Olive oil swaps in beautifully.\n\nI love cooking my way around the world and adapting each dish to be plant-based. Berbere is now a permanent resident of my spice drawer.\n\nSave this for your next lentil night. 🔖\n\nGeneral healthy-eating ideas, not personalized nutrition advice.",
+      "hashtags": [
+        "#MisirWat",
+        "#EthiopianFood",
+        "#PlantBasedRecipes",
+        "#LentilRecipes",
+        "#LiverFriendly",
+        "#MASLD",
+        "#WorldKitchen"
+      ],
+      "cta": "Save"
+    },
+    {
+      "day": 35,
+      "weekday": "Sun",
+      "pillar": "Community",
+      "format": "Single image (chart)",
+      "card": {
+        "template": "donut",
+        "theme": "blush",
+        "eyebrow": "The silent scale",
+        "headline": "Most people with fatty liver have never been told.",
+        "body": "In a US national survey, only about 4 in 100 adults with MASLD knew they had it.",
+        "data": "96% | had never been told they had it",
+        "footnote": "Source: Alqahtani et al., Hepatology Communications 2021 (US NHANES data)"
+      },
+      "caption": "Here is the number that keeps me posting. 🤍\n\nIn a US national health survey, researchers found adults whose results met the criteria for fatty liver disease, then asked whether a doctor had ever told them. Only about 4 in 100 said yes.\n\nNinety-six out of a hundred were walking around with a silent condition and no idea.\n\nThat is not a failure of those people. The liver gives no symptoms, and no one asked. Which is exactly why this page exists, and why your share matters more than my post.\n\nSunday ask: send this to one person who has diabetes, high cholesterol or a family history of liver disease. One message can be the moment someone asks.",
+      "hashtags": [
+        "#LiverAwareness",
+        "#MASLD",
+        "#FattyLiver",
+        "#SilentDisease",
+        "#MASH",
+        "#GetChecked",
+        "#SilentOrganSpeaks"
+      ],
+      "cta": "Share"
+    },
+    {
+      "day": 36,
+      "weekday": "Mon",
+      "pillar": "Stats and facts",
+      "format": "Single image (chart)",
+      "card": {
+        "template": "bars",
+        "theme": "dark",
+        "eyebrow": "The silent scale",
+        "headline": "Fatty liver is rising fast.",
+        "body": "Global prevalence in adults, by study period.",
+        "data": "1990 to 2006 | 25%\n2016 to 2019 | 38%",
+        "footnote": "Source: Younossi et al., Hepatology 2023 (meta-analysis). Approximate, for awareness, not diagnosis"
+      },
+      "caption": "One in four adults. Then, within a generation, closer to four in ten. 📈\n\nA 2023 analysis pooling studies from around the world found that fatty liver disease affected about 25% of adults in studies from 1990 to 2006, and about 38% in studies from 2016 to 2019. The overall figure today is around 30%, and climbing.\n\nIt tracks the rise in type 2 diabetes and metabolic syndrome, which is why the condition was renamed MASLD, metabolic dysfunction-associated steatotic liver disease.\n\nThis is not a niche disease. It is the most common liver condition on earth, and it is almost always silent.\n\nSave this one for the skeptic in your life.",
+      "hashtags": [
+        "#MASLD",
+        "#FattyLiver",
+        "#LiverStats",
+        "#PublicHealth",
+        "#MetabolicHealth",
+        "#LiverHealth",
+        "#MASH"
+      ],
+      "cta": "Save"
+    },
+    {
+      "day": 37,
+      "weekday": "Tue",
+      "pillar": "World recipe",
+      "format": "Carousel: your photo of the dish as slide 1, this steps card as slide 2",
+      "card": {
+        "template": "steps",
+        "theme": "sage",
+        "eyebrow": "Iran · Ash Reshteh",
+        "headline": "Persian herb, bean and noodle soup",
+        "body": "",
+        "data": "Simmer 1 cup each cooked chickpeas, kidney beans and brown lentils in vegetable stock\nAdd a mountain of chopped parsley, cilantro, spinach and a little dill, about 6 cups\nStir in whole-wheat linguine broken into pieces, cook 10 minutes\nTop with crispy onions, dried mint sizzled in olive oil, and a spoon of plant yogurt in place of kashk",
+        "footnote": "Full recipe on the site, link in bio"
+      },
+      "caption": "The soup that tastes like home to me. 🌿\n\nAsh reshteh is a Persian soup that is mostly herbs. Parsley, cilantro, spinach and dill by the armful, with chickpeas, beans, lentils and noodles holding it together. It is served for Nowruz, for guests, for cold evenings.\n\nTraditionally it is finished with kashk, a fermented dairy. I use a spoon of plain plant yogurt and nobody at my table has complained yet.\n\nWhy my liver likes it: three kinds of legumes, a huge dose of greens, and a flavor so big you never notice there is no meat.\n\nHave you tried Persian food? Tell me your favorite dish below. 👇\n\nGeneral healthy-eating ideas, not personalized nutrition advice.",
+      "hashtags": [
+        "#AshReshteh",
+        "#PersianFood",
+        "#PlantBasedRecipes",
+        "#LegumeRecipes",
+        "#LiverFriendly",
+        "#MASLD",
+        "#WorldKitchen"
+      ],
+      "cta": "Save"
+    },
+    {
+      "day": 38,
+      "weekday": "Wed",
+      "pillar": "My story",
+      "format": "Reel (talking to camera) or quote card. Your own photo beats the card",
+      "card": {
+        "template": "quote",
+        "theme": "dark",
+        "eyebrow": "My story",
+        "headline": "Action, faith, and taking charge. Not fear.",
+        "body": "Aroosha",
+        "footnote": ""
+      },
+      "caption": "People assume my story is about fear. It had fear in it. It is not about it. 🤍\n\nThree things carried me from the diagnosis to today: action, faith, and taking charge of what I could control.\n\nAction was the list, the food, the walks. Taking charge was the folder of lab results and the questions that made my doctor laugh. Faith was the part that held me up on the days the numbers did not move.\n\nI do not think you need my faith to walk this road. I do think you need something to hold on to on the quiet days. For me it was that, and the people at my table.\n\nWhat holds you up? I would love to know.",
+      "hashtags": [
+        "#MASH",
+        "#PatientStory",
+        "#Faith",
+        "#LiverHealth",
+        "#TakingCharge",
+        "#HealthJourney",
+        "#SilentOrganSpeaks"
+      ],
+      "cta": "Comment",
+      "note": "Add one sentence about what faith looked like for you in practice, a prayer, a verse, a community."
+    },
+    {
+      "day": 39,
+      "weekday": "Thu",
+      "pillar": "Stats and facts",
+      "format": "Single image (chart)",
+      "card": {
+        "template": "compare",
+        "theme": "light",
+        "eyebrow": "Know your numbers",
+        "headline": "The fiber gap",
+        "body": "Most adults get a little over half the fiber they need each day. Legumes close the gap fastest.",
+        "data": "16g | what the average adult eats a day\n28g | what guidelines suggest at 2,000 calories",
+        "footnote": "Source: Dietary Guidelines for Americans 2020–2025. General healthy-eating ideas, not personalized advice"
+      },
+      "caption": "The nutrient almost everyone is short on, and the one a liver loves most. 🫘\n\nUS guidelines suggest about 28 grams of fiber a day for a 2,000-calorie diet. The average adult gets around 16. Fiber feeds the gut bacteria that talk to your liver, slows the sugar rush after meals, and keeps you full.\n\nWhere I get mine:\n• Lentils, 1 cup cooked: about 16 g\n• Black beans, 1 cup: about 15 g\n• Oats, 1 cup cooked: about 4 g\n• An apple with skin: about 4 g\n\nOne cup of lentils is a day's gap closed. That is why every Tuesday here is a legume.\n\nGeneral healthy-eating ideas, not personalized nutrition advice.",
+      "hashtags": [
+        "#Fiber",
+        "#KnowYourNumbers",
+        "#PlantBased",
+        "#LiverFriendly",
+        "#MASLD",
+        "#GutHealth",
+        "#HealthyEating"
+      ],
+      "cta": "Save"
+    },
+    {
+      "day": 40,
+      "weekday": "Fri",
+      "pillar": "Ask your doctor",
+      "format": "Single image (steps card)",
+      "card": {
+        "template": "steps",
+        "theme": "olive",
+        "eyebrow": "Bring this to your appointment",
+        "headline": "\"What is my liver stiffness number, and what does it mean?\"",
+        "body": "",
+        "data": "Under 8 kPa | advanced scarring is unlikely\n8 to 12 kPa | unclear, more tests or follow-up\nOver 12 kPa | advanced scarring is more likely, specialist care",
+        "footnote": "Source: AASLD practice guidance on MASLD, 2023. Educational, not medical advice"
+      },
+      "caption": "Friday question, week six. 📝\n\n\"What is my liver stiffness number, and what does it mean?\"\n\nIf you have had a FibroScan, you were given a number in kilopascals, kPa. It measures how stiff the liver is, and stiffness tracks with scarring. US liver society guidance reads it roughly like this:\n\n• Under 8: advanced scarring is unlikely.\n• 8 to 12: unclear, so follow-up or another test.\n• Over 12: advanced scarring is more likely, and specialist care matters.\n\nAsk for the number itself, not just \"it looks okay.\" Write it down. Next year's number only means something next to this one.\n\nScreenshot for your next visit.",
+      "hashtags": [
+        "#FibroScan",
+        "#AskYourDoctor",
+        "#LiverFibrosis",
+        "#KnowYourNumbers",
+        "#MASH",
+        "#MASLD",
+        "#PatientAdvocacy"
+      ],
+      "cta": "Screenshot"
+    },
+    {
+      "day": 41,
+      "weekday": "Sat",
+      "pillar": "World recipe",
+      "format": "Carousel: your photo of the dish as slide 1, this steps card as slide 2",
+      "card": {
+        "template": "steps",
+        "theme": "clay",
+        "eyebrow": "Mexico · Black Bean & Sweet Potato Tacos",
+        "headline": "Smoky, sweet, and on the table in 30 minutes",
+        "body": "",
+        "data": "Roast diced sweet potato with cumin, smoked paprika and a little olive oil, 25 minutes\nWarm black beans with garlic, lime and a pinch of chipotle\nChar corn tortillas directly over the flame or in a dry pan\nFill with beans and potato, top with cabbage, cilantro, avocado and lime",
+        "footnote": "Full recipe on the site, link in bio"
+      },
+      "caption": "Taco night, liver approved. 🌮\n\nBlack beans and roasted sweet potato on charred corn tortillas, with crunchy cabbage, cilantro and lime. Smoky, a little sweet, very filling.\n\nWhy my liver likes it: beans for fiber and protein, sweet potato for slow carbohydrates, avocado for whole-food fat, and corn tortillas instead of refined flour. No cheese needed when there is lime and chipotle.\n\nThis is the dish I make when I need the whole family on board. Nobody asks where the meat went.\n\nWhat goes on your taco? Tell me below. 👇\n\nGeneral healthy-eating ideas, not personalized nutrition advice.",
+      "hashtags": [
+        "#PlantBasedTacos",
+        "#MexicanFood",
+        "#BlackBeans",
+        "#PlantBasedRecipes",
+        "#LiverFriendly",
+        "#MASLD",
+        "#WorldKitchen"
+      ],
+      "cta": "Save"
+    },
+    {
+      "day": 42,
+      "weekday": "Sun",
+      "pillar": "Community",
+      "format": "Single image (chart)",
+      "card": {
+        "template": "compare",
+        "theme": "forest",
+        "eyebrow": "Reasons for hope",
+        "headline": "What 10% weight loss did in one landmark study",
+        "body": "People with MASH who lost a tenth of their body weight over a year, with medical support.",
+        "data": "9 in 10 | saw their MASH resolve\n45% | saw scarring improve",
+        "footnote": "Source: Vilar-Gomez et al., Gastroenterology 2015. My experience, not a prescription"
+      },
+      "caption": "The study I think about on hard days. 💚\n\nIn 2015, researchers followed people with MASH through a year of lifestyle change. Among those who lost 10% or more of their body weight, 9 in 10 saw the inflammation resolve on a repeat biopsy, and nearly half saw their scarring improve.\n\nTen percent is a lot. It took me years, not a year, and I did it with a care team. I share the number not as a target for you, but as proof that the liver answers when you show up for it.\n\nProgress, not perfection.\n\nSunday ask: what is one thing you did for your health this week? Big or tiny, it counts. Tell me.",
+      "hashtags": [
+        "#ReasonsForHope",
+        "#MASH",
+        "#LiverHealth",
+        "#ProgressNotPerfection",
+        "#LifestyleMedicine",
+        "#WeightLoss",
+        "#SilentOrganSpeaks"
+      ],
+      "cta": "Comment"
+    },
+    {
+      "day": 43,
+      "weekday": "Mon",
+      "pillar": "Stats and facts",
+      "format": "Single image (chart)",
+      "card": {
+        "template": "compare",
+        "theme": "dark",
+        "eyebrow": "Know your risk",
+        "headline": "Type 2 diabetes and the liver",
+        "body": "Among adults over 50 with type 2 diabetes, screened with a FibroScan.",
+        "data": "2 in 3 | had fatty liver\n1 in 7 | already had advanced scarring",
+        "footnote": "Source: Ajmera et al., Journal of Hepatology 2023. Approximate, for awareness, not diagnosis"
+      },
+      "caption": "If you have type 2 diabetes, this post is for you. Please read it slowly. 🤍\n\nIn a 2023 study, researchers screened adults over 50 with type 2 diabetes using a FibroScan. About two in three had fatty liver. About one in seven already had advanced scarring, and most did not know.\n\nThis is why US liver and diabetes societies now suggest that people with type 2 diabetes be checked for liver fibrosis, often starting with a FIB-4 score from routine bloodwork.\n\nIf that is you or someone you love, the Friday question is simple: \"Should my liver be checked, given my diabetes?\"\n\nShare this with someone who manages their diabetes carefully but has never heard their liver mentioned.",
+      "hashtags": [
+        "#Type2Diabetes",
+        "#MASLD",
+        "#MASH",
+        "#LiverFibrosis",
+        "#KnowYourRisk",
+        "#LiverHealth",
+        "#DiabetesAwareness"
+      ],
+      "cta": "Share"
+    },
+    {
+      "day": 44,
+      "weekday": "Tue",
+      "pillar": "World recipe",
+      "format": "Carousel: your photo of the dish as slide 1, this steps card as slide 2",
+      "card": {
+        "template": "steps",
+        "theme": "ochre",
+        "eyebrow": "India · Chana Masala",
+        "headline": "Chickpeas in a spiced tomato gravy",
+        "body": "",
+        "data": "Sizzle cumin seeds in a little oil, then soften onion, garlic, ginger and a green chili\nAdd turmeric, coriander, garam masala and chopped tomatoes, cook to a thick gravy\nStir in 2 cups cooked chickpeas and a splash of water, simmer 15 minutes\nFinish with lemon, fresh cilantro and a pinch of amchur or extra lemon",
+        "footnote": "Full recipe on the site, link in bio"
+      },
+      "caption": "The dish that taught me spices do the work sugar used to do. 🇮🇳\n\nChana masala is chickpeas simmered in a tomato gravy heavy with cumin, coriander, turmeric and garam masala. It is weeknight food across India, and it has become weeknight food in my house.\n\nWhy my liver likes it: chickpeas bring fiber and plant protein, tomatoes and spices bring the flavor, and the only fat is the spoon of oil the cumin seeds sizzle in. Serve with brown rice or a whole-wheat roti.\n\nMake double. It is better tomorrow.\n\nSave for your next chickpea night. 🔖\n\nGeneral healthy-eating ideas, not personalized nutrition advice.",
+      "hashtags": [
+        "#ChanaMasala",
+        "#IndianFood",
+        "#PlantBasedRecipes",
+        "#Chickpeas",
+        "#LiverFriendly",
+        "#MASLD",
+        "#WorldKitchen"
+      ],
+      "cta": "Save"
+    },
+    {
+      "day": 45,
+      "weekday": "Wed",
+      "pillar": "My story",
+      "format": "Reel (talking to camera) or quote card. Your own photo beats the card",
+      "card": {
+        "template": "quote",
+        "theme": "blush",
+        "eyebrow": "My story",
+        "headline": "I cook my way around the world because restriction never kept me going. Curiosity did.",
+        "body": "Aroosha",
+        "footnote": ""
+      },
+      "caption": "When I was told to change how I eat, the first thing I felt was loss. 🌍\n\nThen I opened a cookbook from a country I had never visited, and something shifted. Ethiopia cooks lentils better than I ever had. India makes chickpeas sing. Iran, where my own kitchen roots are, has a soup that is mostly herbs.\n\nI stopped asking \"what can't I eat\" and started asking \"who already eats this way beautifully.\" The answer is most of the world, most of the time.\n\nThat curiosity is what kept me going when willpower ran out. Every Tuesday and Saturday here is a stamp in that passport.\n\nWhere should I cook next? Name a country below. 👇",
+      "hashtags": [
+        "#PlantBased",
+        "#WorldKitchen",
+        "#MASH",
+        "#PatientStory",
+        "#FoodIsMedicine",
+        "#LiverHealth",
+        "#SilentOrganSpeaks"
+      ],
+      "cta": "Comment",
+      "note": "Add the first cookbook or dish that changed your mind, by name."
+    },
+    {
+      "day": 46,
+      "weekday": "Thu",
+      "pillar": "Stats and facts",
+      "format": "Single image",
+      "card": {
+        "template": "tip",
+        "theme": "red",
+        "eyebrow": "Did you know",
+        "headline": "Sugary drinks go straight to the liver.",
+        "body": "In a 2021 trial, drinks adding 80 g of fructose or sucrose a day roughly doubled the liver's own fat production within weeks, in otherwise healthy men.",
+        "footnote": "Source: Geidl-Flueck et al., Journal of Hepatology 2021"
+      },
+      "caption": "The ingredient my liver responds to fastest. 🥤\n\nIn a 2021 study, healthy young men drank beverages adding 80 grams of fructose or table sugar a day for seven weeks. That is about two large sodas. Their livers roughly doubled their own fat production, measured directly. Weight barely changed.\n\nThe liver handles fructose almost alone, and when there is more than it needs, it turns the surplus into fat and stores it right there.\n\nI did not quit sugar. I quit drinking it. Sparkling water with lemon, unsweetened iced tea, and coffee without the syrup. That one swap moved my numbers more than any other.\n\nWhat do you drink instead? Give someone an idea below.\n\nEducational only, not medical advice.",
+      "hashtags": [
+        "#LiverFacts",
+        "#AddedSugar",
+        "#FattyLiver",
+        "#MASLD",
+        "#MetabolicHealth",
+        "#HealthySwaps",
+        "#LiverHealth"
+      ],
+      "cta": "Comment"
+    },
+    {
+      "day": 47,
+      "weekday": "Fri",
+      "pillar": "Ask your doctor",
+      "format": "Single image",
+      "card": {
+        "template": "question",
+        "theme": "dark",
+        "eyebrow": "Bring this to your appointment",
+        "headline": "\"Besides my liver, which parts of my metabolic health should we be watching?\"",
+        "body": "Blood sugar, blood pressure, waist, triglycerides, HDL. The liver rarely struggles alone.",
+        "footnote": ""
+      },
+      "caption": "Friday question, week seven. 📝\n\n\"Besides my liver, which parts of my metabolic health should we be watching?\"\n\nMASLD is now defined by the company it keeps: at least one of a larger waist, raised blood sugar, raised blood pressure, high triglycerides or low HDL cholesterol. Treating those is treating the liver.\n\nAsk for the actual numbers and write them next to your liver results. My husband's dashboard has all of them on one page, and the lines move together. When one improves, the others usually follow.\n\nScreenshot this for your next visit, and ask which of the five applies to you.",
+      "hashtags": [
+        "#AskYourDoctor",
+        "#MetabolicHealth",
+        "#MASLD",
+        "#MetabolicSyndrome",
+        "#KnowYourNumbers",
+        "#PatientAdvocacy",
+        "#LiverHealth"
+      ],
+      "cta": "Screenshot"
+    },
+    {
+      "day": 48,
+      "weekday": "Sat",
+      "pillar": "World recipe",
+      "format": "Carousel: your photo of the dish as slide 1, this steps card as slide 2",
+      "card": {
+        "template": "steps",
+        "theme": "sage",
+        "eyebrow": "Italy · Ribollita",
+        "headline": "Tuscan bread, bean and kale soup",
+        "body": "",
+        "data": "Soften onion, carrot and celery in olive oil with garlic and rosemary\nAdd chopped tomatoes, 2 cups cooked cannellini beans and vegetable stock, simmer 20 minutes\nStir in a big bunch of chopped cavolo nero or kale until wilted\nAdd torn stale whole-grain bread, rest 10 minutes, finish with good olive oil",
+        "footnote": "Full recipe on the site, link in bio"
+      },
+      "caption": "Peasant food from Tuscany, and one of the best things I cook. 🇮🇹\n\nRibollita means \"reboiled.\" It began as yesterday's bean soup thickened with stale bread and reheated. Cannellini beans, cavolo nero, rosemary, good olive oil. Nothing fancy, everything right.\n\nWhy my liver likes it: it is the Mediterranean pattern in a bowl. Beans, greens, whole grains, olive oil as the only fat. The Mediterranean way of eating is the one liver societies point to most often, and this is what it actually looks like on a Saturday.\n\nIt is genuinely better on day two. Make a pot.\n\nSave this for soup season. 🔖\n\nGeneral healthy-eating ideas, not personalized nutrition advice.",
+      "hashtags": [
+        "#Ribollita",
+        "#TuscanFood",
+        "#MediterraneanDiet",
+        "#PlantBasedRecipes",
+        "#LiverFriendly",
+        "#MASLD",
+        "#WorldKitchen"
+      ],
+      "cta": "Save"
+    },
+    {
+      "day": 49,
+      "weekday": "Sun",
+      "pillar": "Community",
+      "format": "Single image",
+      "card": {
+        "template": "tip",
+        "theme": "dust",
+        "eyebrow": "Did you know",
+        "headline": "Coffee and the liver get along.",
+        "body": "Several large studies have linked regular coffee drinking with less liver scarring. US liver guidance notes the association. Black or lightly dressed is the version that counts.",
+        "footnote": "Source: AASLD practice guidance on MASLD, 2023. Educational, not medical advice"
+      },
+      "caption": "Good news for a Sunday morning. ☕\n\nAcross several large studies, people who drink coffee regularly tend to have less liver scarring than those who do not, and US liver society guidance now mentions the link. It is an association, not a prescription, and no one knows exactly why.\n\nThe catch: the studies are about coffee, not about the sugar and syrup that often come with it. A caramel drink with 40 grams of sugar is not the same beverage.\n\nI drink mine black, two cups, before the dogs get their walk.\n\nSunday poll: coffee or tea? And how do you take it? ☕🍵\n\nEducational only. Your care team knows whether coffee is right for you.",
+      "hashtags": [
+        "#Coffee",
+        "#LiverHealth",
+        "#LiverFacts",
+        "#MASLD",
+        "#SundayMorning",
+        "#HealthyHabits",
+        "#SilentOrganSpeaks"
+      ],
+      "cta": "Comment"
+    },
+    {
+      "day": 50,
+      "weekday": "Mon",
+      "pillar": "Stats and facts",
+      "format": "Single image (chart)",
+      "card": {
+        "template": "compare",
+        "theme": "plum",
+        "eyebrow": "The silent scale",
+        "headline": "Liver disease, worldwide, every year",
+        "body": "Deaths from all liver disease combined, including viral hepatitis, alcohol-related disease and MASLD.",
+        "data": "2 million | deaths a year\n1 in 25 | of all deaths worldwide",
+        "footnote": "Source: Devarbhavi et al., Journal of Hepatology 2023"
+      },
+      "caption": "Two million. Every year. 🕯️\n\nLiver disease in all its forms, viral hepatitis, alcohol-related disease and fatty liver, causes about two million deaths a year worldwide. Roughly one in every 25 deaths on the planet.\n\nMost of those deaths come from cirrhosis and liver cancer, which are the end of a road that started silently years earlier. Many were preventable with earlier testing and earlier conversations.\n\nI post the hopeful numbers often. Today I am posting this one, because the hope only matters if we understand what we are up against.\n\nIf you have been putting off a check-up, let this be the nudge. Comment \"booking it\" and I will cheer you on.",
+      "hashtags": [
+        "#LiverDisease",
+        "#LiverStats",
+        "#Cirrhosis",
+        "#LiverAwareness",
+        "#MASLD",
+        "#PublicHealth",
+        "#SilentOrganSpeaks"
+      ],
+      "cta": "Comment"
+    },
+    {
+      "day": 51,
+      "weekday": "Tue",
+      "pillar": "World recipe",
+      "format": "Carousel: your photo of the dish as slide 1, this steps card as slide 2",
+      "card": {
+        "template": "steps",
+        "theme": "ochre",
+        "eyebrow": "Lebanon · Mujadara",
+        "headline": "Lentils, rice and caramelized onions",
+        "body": "",
+        "data": "Slowly cook 3 sliced onions in olive oil until deep brown and sweet, 25 minutes\nSimmer 1 cup brown lentils in water for 15 minutes until just tender\nAdd 1 cup brown rice, cumin and stock to the lentils, cover and cook 35 minutes\nFold in half the onions, pile the rest on top, serve with lemon and cucumber-mint salad",
+        "footnote": "Full recipe on the site, link in bio"
+      },
+      "caption": "Three ingredients. One of the oldest dishes in the world. 🇱🇧\n\nMujadara is lentils and rice crowned with onions cooked slowly until they are dark, sweet and almost crisp. It is eaten across Lebanon, Syria, Palestine and Jordan, and it costs almost nothing to make.\n\nWhy my liver likes it: lentils and brown rice together make a complete protein with a mountain of fiber, and the onions bring all the sweetness without a grain of sugar. Serve it with a sharp cucumber, tomato and mint salad.\n\nDo not rush the onions. The onions are the recipe.\n\nSave for a pantry dinner. 🔖\n\nGeneral healthy-eating ideas, not personalized nutrition advice.",
+      "hashtags": [
+        "#Mujadara",
+        "#LebaneseFood",
+        "#PlantBasedRecipes",
+        "#LentilRecipes",
+        "#LiverFriendly",
+        "#MASLD",
+        "#WorldKitchen"
+      ],
+      "cta": "Save"
+    },
+    {
+      "day": 52,
+      "weekday": "Wed",
+      "pillar": "My story",
+      "format": "Reel (talking to camera) or quote card. Your own photo beats the card",
+      "card": {
+        "template": "quote",
+        "theme": "forest",
+        "eyebrow": "My story",
+        "headline": "My walking partners never ask how my numbers are. They just show up at the door.",
+        "body": "Aroosha",
+        "footnote": ""
+      },
+      "caption": "The movement that stuck was not a program. It was two dogs who need a walk whether or not I feel like it. 🐾\n\nEvery guideline says the same thing: regular activity you can keep up. For me \"keep up\" turned out to mean a leash in each hand, the same bridge most mornings, and no decision to make. The decision was made the day we brought them home.\n\nExercise helps the liver even when the scale does not move. Studies show liver fat falls with regular activity on its own. But I did not know that when I started. I just knew the dogs were waiting.\n\nFind your version of the dogs. Something that removes the choice.\n\nWhat gets you out the door? 👇",
+      "hashtags": [
+        "#MoveYourBody",
+        "#DogWalks",
+        "#MASH",
+        "#PatientStory",
+        "#LiverHealth",
+        "#HealthyHabits",
+        "#SilentOrganSpeaks"
+      ],
+      "cta": "Comment",
+      "note": "Use the bridge photo of you and the dogs as the image. Add their names."
+    },
+    {
+      "day": 53,
+      "weekday": "Thu",
+      "pillar": "Stats and facts",
+      "format": "Single image (steps card)",
+      "card": {
+        "template": "steps",
+        "theme": "dark",
+        "eyebrow": "Did you know",
+        "headline": "Five of your liver's 500 jobs",
+        "body": "",
+        "data": "Filters about a liter and a half of blood every minute\nMakes bile so you can digest fat\nStores energy as glycogen and releases it between meals\nBuilds the proteins that clot your blood\nBreaks down medicines, alcohol and toxins",
+        "footnote": "Source: American Liver Foundation. Educational, not medical advice"
+      },
+      "caption": "Your liver is about the size of a football and weighs about three pounds. It is the largest organ inside you, and the busiest. 🫀\n\nFive of the roughly 500 things it does:\n1. Filters about a liter and a half of blood every minute.\n2. Makes bile so you can digest fat.\n3. Stores energy and releases it between meals so your blood sugar holds steady.\n4. Builds the proteins that make your blood clot.\n5. Breaks down medicines, alcohol and toxins.\n\nAnd it does all of it without a single nerve ending to tell you when it is struggling. That is the whole reason this page exists.\n\nSave this for the next person who asks what a liver even does.",
+      "hashtags": [
+        "#LiverFacts",
+        "#DidYouKnow",
+        "#LiverHealth",
+        "#Anatomy",
+        "#MASLD",
+        "#HealthEducation",
+        "#SilentOrganSpeaks"
+      ],
+      "cta": "Save"
+    },
+    {
+      "day": 54,
+      "weekday": "Fri",
+      "pillar": "Ask your doctor",
+      "format": "Single image",
+      "card": {
+        "template": "question",
+        "theme": "olive",
+        "eyebrow": "Bring this to your appointment",
+        "headline": "\"Are there now medicines or trials for MASH that could fit me?\"",
+        "body": "The first MASH medicines were approved in the US in 2024 and 2025. Whether one fits you is your specialist's call.",
+        "footnote": "Source: US FDA approval announcements, 2024 and 2025. Not a treatment recommendation"
+      },
+      "caption": "Friday question, week eight, and it is a new one. 📝\n\n\"Are there now medicines or clinical trials for MASH that could fit me?\"\n\nFor most of my journey there was no approved medicine for MASH at all. Lifestyle was the treatment. That changed: the US approved the first MASH medicine in 2024 and a second in 2025, both for people with significant scarring, both alongside lifestyle change, not instead of it.\n\nI am not telling you what to take. I am telling you the question is now worth asking, especially if your scarring is stage 2 or 3. Your hepatologist knows whether you qualify and whether a trial near you is recruiting.\n\nScreenshot and ask.",
+      "hashtags": [
+        "#AskYourDoctor",
+        "#MASH",
+        "#MASHTreatment",
+        "#ClinicalTrials",
+        "#LiverFibrosis",
+        "#PatientAdvocacy",
+        "#LiverHealth"
+      ],
+      "cta": "Screenshot"
+    },
+    {
+      "day": 55,
+      "weekday": "Sat",
+      "pillar": "World recipe",
+      "format": "Carousel: your photo of the dish as slide 1, this steps card as slide 2",
+      "card": {
+        "template": "steps",
+        "theme": "sage",
+        "eyebrow": "Japan · Miso Soup & Edamame Rice",
+        "headline": "A ten-minute Japanese breakfast or lunch",
+        "body": "",
+        "data": "Simmer kombu and dried shiitake in water 10 minutes for a quick dashi, remove the kombu\nAdd cubed tofu, sliced shiitake and rehydrated wakame seaweed\nTurn off the heat, whisk in 2 tablespoons miso, never boil it\nServe with brown rice tossed with shelled edamame, sesame and scallion",
+        "footnote": "Full recipe on the site, link in bio"
+      },
+      "caption": "The lightest meal I make, and one of the most satisfying. 🇯🇵\n\nMiso soup with tofu, shiitake and wakame, beside a bowl of brown rice tossed with edamame and sesame. A traditional Japanese breakfast, and a ten-minute lunch for me.\n\nWhy my liver likes it: tofu and edamame for plant protein, seaweed and mushrooms for minerals and umami, brown rice for slow carbohydrates, and almost no added fat at all. Miso is salty, so one bowl, and taste before you add any more.\n\nThe only rule: never boil the miso. Add it at the end, off the heat.\n\nSave this for a gentle morning. 🔖\n\nGeneral healthy-eating ideas, not personalized nutrition advice.",
+      "hashtags": [
+        "#MisoSoup",
+        "#JapaneseFood",
+        "#PlantBasedRecipes",
+        "#Tofu",
+        "#LiverFriendly",
+        "#MASLD",
+        "#WorldKitchen"
+      ],
+      "cta": "Save"
+    },
+    {
+      "day": 56,
+      "weekday": "Sun",
+      "pillar": "Community",
+      "format": "Single image (chart)",
+      "card": {
+        "template": "donut",
+        "theme": "dark",
+        "eyebrow": "The silent scale",
+        "headline": "Look around your table.",
+        "body": "About 30% of adults worldwide live with MASLD. Most do not know.",
+        "data": "30% | of adults worldwide",
+        "footnote": "Source: Younossi et al., Hepatology 2023 (meta-analysis). Approximate, for awareness, not diagnosis"
+      },
+      "caption": "Picture Sunday dinner. Ten people around the table. 🍽️\n\nStatistically, three of them have fat building up in their liver right now. Probably none of the three knows. Maybe one has had a doctor mention it in passing.\n\nI was one of the three for years. So was my father.\n\nThis is not a scare post. It is a scale post. A condition this common deserves to be talked about as openly as blood pressure, and we are not there yet. Every time you share one of these, we get a little closer.\n\nSunday ask: tag two people you would want sitting at that table with you. Not because they are sick. Because you love them.",
+      "hashtags": [
+        "#MASLD",
+        "#FattyLiver",
+        "#LiverAwareness",
+        "#LiverStats",
+        "#MASH",
+        "#TagAFriend",
+        "#SilentOrganSpeaks"
+      ],
+      "cta": "Tag two people"
+    },
+    {
+      "day": 57,
+      "weekday": "Mon",
+      "pillar": "Stats and facts",
+      "format": "Single image (chart)",
+      "card": {
+        "template": "bars",
+        "theme": "clay",
+        "eyebrow": "The silent scale",
+        "headline": "It starts younger than we think.",
+        "body": "Estimated share of children and teens with fatty liver.",
+        "data": "All children | 8%\nChildren with obesity | 34%",
+        "footnote": "Source: Anderson et al., PLoS ONE 2015 (meta-analysis). Approximate, for awareness"
+      },
+      "caption": "The post I wish someone had shown my parents. 🤍\n\nA pooled analysis of studies found that roughly 8% of children and teenagers have fatty liver, and about a third of children with obesity do. Fatty liver is now the most common liver condition in young people.\n\nThe liver that scars at 50 often started storing fat at 15. That is not a reason for guilt. It is a reason for earlier, kinder conversations: about sugary drinks, about movement that is fun, about family history.\n\nIf liver disease runs in your family, as it does in mine, your children's doctor should know that.\n\nShare this with a parent who would want to know.",
+      "hashtags": [
+        "#MASLD",
+        "#ChildHealth",
+        "#FattyLiver",
+        "#FamilyHistory",
+        "#LiverAwareness",
+        "#PediatricHealth",
+        "#LiverHealth"
+      ],
+      "cta": "Share"
+    },
+    {
+      "day": 58,
+      "weekday": "Tue",
+      "pillar": "World recipe",
+      "format": "Carousel: your photo of the dish as slide 1, this steps card as slide 2",
+      "card": {
+        "template": "steps",
+        "theme": "ochre",
+        "eyebrow": "Senegal · Maafe",
+        "headline": "West African peanut and sweet potato stew",
+        "body": "",
+        "data": "Soften onion, garlic, ginger and a chopped chili in a little oil, add tomato paste\nAdd cubed sweet potato, chopped tomatoes and vegetable stock, simmer 15 minutes\nWhisk in 3 tablespoons natural peanut butter until the broth turns creamy\nStir in a big bunch of chopped collard greens or kale, cook 5 minutes, serve over brown rice",
+        "footnote": "Full recipe on the site, link in bio"
+      },
+      "caption": "Peanut butter in a stew. Trust me. 🇸🇳\n\nMaafe is a West African stew found from Senegal to Mali, built on a broth thickened with ground peanuts. Mine is sweet potato and greens in a tomato-peanut sauce with ginger and chili. Rich, deeply savory, and it costs very little.\n\nWhy my liver likes it: sweet potato for slow carbohydrates, a whole bunch of greens, and the fat comes from peanuts, a whole food, in a measured amount. Use natural peanut butter with nothing added but salt.\n\nThis is the recipe that converts people who think plant-based means bland.\n\nSave it for a cold night. 🔖\n\nGeneral healthy-eating ideas, not personalized nutrition advice.",
+      "hashtags": [
+        "#Maafe",
+        "#WestAfricanFood",
+        "#SenegaleseFood",
+        "#PlantBasedRecipes",
+        "#LiverFriendly",
+        "#MASLD",
+        "#WorldKitchen"
+      ],
+      "cta": "Save"
+    },
+    {
+      "day": 59,
+      "weekday": "Wed",
+      "pillar": "My story",
+      "format": "Reel (talking to camera) or quote card. Your own photo beats the card",
+      "card": {
+        "template": "quote",
+        "theme": "plum",
+        "eyebrow": "My story",
+        "headline": "To the woman in the exam room with her head down: your liver is going to heal more than you think. So are you.",
+        "body": "Aroosha",
+        "footnote": ""
+      },
+      "caption": "If I could sit beside myself on the day of the diagnosis, this is what I would say. 💚\n\nYou are going to be scared for a while, and that is allowed. You are going to lose more than sixty pounds, not quickly, and your enzymes are going to come down. You are going to learn words like fibrosis and FibroScan and FIB-4, and you are going to teach them to other people.\n\nYou will cook food from countries you have never visited. You will walk two dogs across the same bridge a thousand times. You will build a page that strangers write to at 2am.\n\nAnd your liver, the silent one, is going to do what livers do when you finally listen. It is going to heal.\n\nWhat would you tell yourself on day one? Tell me, and tell them.",
+      "hashtags": [
+        "#MASH",
+        "#PatientStory",
+        "#DearMe",
+        "#LiverHealth",
+        "#ReasonsForHope",
+        "#ChronicIllnessWarrior",
+        "#SilentOrganSpeaks"
+      ],
+      "cta": "Comment",
+      "note": "Film this one to camera if you can. It is the strongest story post of the set."
+    },
+    {
+      "day": 60,
+      "weekday": "Thu",
+      "pillar": "Stats and facts",
+      "format": "Single image",
+      "card": {
+        "template": "tip",
+        "theme": "dark",
+        "eyebrow": "Did you know",
+        "headline": "MASH is the fastest-growing reason for a liver transplant in the US.",
+        "body": "It is already the leading reason among women waiting for a new liver. Thirty days of facts end where my story began.",
+        "footnote": "Source: Noureddin et al., American Journal of Gastroenterology 2018"
+      },
+      "caption": "Sixty days. Let's end where my story began: a transplant list. 🤍\n\nMASH is the fastest-growing reason for liver transplant in the United States, and it has become the leading reason among women on the waiting list. My father needed a new liver because his disease was found too late. I got to keep mine because mine was found in time.\n\nThat is the whole page in two sentences.\n\nThank you for sixty days of reading, saving, sharing and telling me your stories. Next month I want to go deeper. Tell me what you want most:\n1. More recipes from around the world\n2. Deeper dives into your test results\n3. More of my story\n4. Interviews with people who live this\n\nVote below. 👇",
+      "hashtags": [
+        "#MASH",
+        "#LiverTransplant",
+        "#LiverStats",
+        "#LiverAwareness",
+        "#WomensHealth",
+        "#SilentOrganSpeaks",
+        "#MonthRecap"
+      ],
       "cta": "Vote in comments"
     }
   ]

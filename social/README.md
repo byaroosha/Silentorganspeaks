@@ -6,10 +6,10 @@ A ten-minute-a-day system for promoting Silent Organ Speaks on Instagram, built 
 
 | File | What it is |
 | --- | --- |
-| `instagram-30-day-calendar.md` | 30 ready-to-post days: format, image text, caption, hashtags |
-| `calendar.json` | The same 30 posts as data. The card maker reads it. Edit here, then rebuild the markdown |
+| `instagram-30-day-calendar.md` | 60 ready-to-post days: format, image text, chart data, caption, hashtags |
+| `calendar.json` | The same 60 posts as data. The card maker reads it. Edit here, then rebuild the markdown |
 | `build-calendar.py` | Regenerates the markdown from the JSON (`python3 social/build-calendar.py`) |
-| `post-card.html` | Brand-styled image maker. Pick a day, download a 1080px PNG, copy the caption |
+| `post-card.html` | Brand-styled image maker. Pick a day, download a 1080px PNG, copy the caption. Fourteen color themes and ten templates, including bar, donut and comparison charts and numbered steps |
 | `hashtags-and-templates.md` | Bio, hashtag sets, caption formulas, story ideas, reel hooks, DM reply scripts |
 
 ## The daily routine
@@ -33,7 +33,7 @@ python3 -m http.server 8000
 
 If the site is on GitHub Pages or Netlify, the page is also live at `/social/post-card.html` on your domain.
 
-## After day 30
+## After day 60
 
 Repeat the weekly rhythm with new material. The pillars stay the same, only the content rotates:
 
@@ -45,11 +45,11 @@ Repeat the weekly rhythm with new material. The pillars stay the same, only the 
 - Saturday: what you actually did this week to live well.
 - Sunday: the best comment of the week, or a stat.
 
-Add new posts to `calendar.json` with the next day number and run the build script. The card maker picks them up automatically.
+Add new posts to `calendar.json` with the next day number and run the build script. Chart cards take a `data` field with one row per line, written as `Label | value` (or `value | label`). The card maker picks them up automatically.
 
 ## Guardrails
 
 - Every health post carries a disclaimer line. The card maker adds one by default on dark cards.
-- Only use the figures already on the site (1 in 3, about 10%, 49%). Adding a new statistic means adding its source.
+- Every statistic names its source in the card footnote (journal and year, or the organization). Days 1 to 30 use the figures already on the site; Days 31 to 60 cite published studies and society guidance. Adding a new number means adding its source, and rounding it the way the source does.
 - Share your experience as experience ("what worked for me, with my care team"), never as a prescription.
 - Never answer a medical question in DMs. Use the reply scripts.

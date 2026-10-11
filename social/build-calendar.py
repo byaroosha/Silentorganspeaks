@@ -14,7 +14,7 @@ HERE = pathlib.Path(__file__).parent
 data = json.loads((HERE / "calendar.json").read_text(encoding="utf-8"))
 
 out = []
-out.append("# Instagram 30-day calendar\n")
+out.append("# Instagram posting calendar\n")
 out.append(
     "Generated from `calendar.json`. Days are numbered, not dated, so you can "
     "start any Monday. Each entry has the post format, what the image should "
@@ -43,8 +43,14 @@ for p in data["posts"]:
     out.append(f"- Headline: {c['headline']}")
     if c.get("body"):
         out.append(f"- Body: {c['body']}")
+    if c.get("data"):
+        out.append("- Data (one row per line):")
+        for row in c["data"].split("\n"):
+            out.append(f"  - {row}")
     if c.get("footnote"):
         out.append(f"- Footnote: {c['footnote']}")
+    if p.get("note"):
+        out.append(f"\n**Before posting:** {p['note']}")
     out.append("\n**Caption:**\n")
     out.append("```text")
     out.append(p["caption"])
