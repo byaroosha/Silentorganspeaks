@@ -10,7 +10,7 @@ Breaking the silence: my story · MASH made simple · plant-based food
 Educational, not medical advice ↓
 ```
 
-Put the website in the link field. Pin three posts: Day 1 (welcome), Day 3 (my story), Day 8 (the stages carousel).
+Put the website in the link field. Pin three posts: your welcome post, your story post with the quote about your students, and the stages carousel (MASLD, MASH, fibrosis).
 
 ## Hashtag sets (rotate, 5 to 10 per post)
 

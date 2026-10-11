@@ -30,8 +30,9 @@ out.append(f"Disclaimer to keep in your bio and on health posts: *{data['brand']
 
 week = 0
 for p in data["posts"]:
-    if p["weekday"] == "Mon":
-        week += 1
+    w = (p["day"] - 1) // 7 + 1
+    if w != week:
+        week = w
         out.append(f"\n## Week {week}\n")
     c = p["card"]
     out.append(f"### Day {p['day']} · {p['weekday']} · {p['pillar']}\n")
