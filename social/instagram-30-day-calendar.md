@@ -432,7 +432,7 @@ Save this for the next time someone tells you liver damage is a one-way street.
 **Format:** Single image (steps card)  
 **Goal / CTA:** Screenshot
 
-**Image (template: steps, dark):**
+**Image (template: steps, dusk):**
 
 - Eyebrow: Bring this to your appointment
 - Headline: "Can you calculate my FIB-4 from my last blood test?"
@@ -628,7 +628,7 @@ What holds you up? I would love to know.
 **Format:** Single image (chart)  
 **Goal / CTA:** Save
 
-**Image (template: compare, light):**
+**Image (template: compare, mist):**
 
 - Eyebrow: Know your numbers
 - Headline: The fiber gap
@@ -889,7 +889,7 @@ Educational only, not medical advice.
 **Format:** Single image  
 **Goal / CTA:** Screenshot
 
-**Image (template: question, dark):**
+**Image (template: question, dusk):**
 
 - Eyebrow: Bring this to your appointment
 - Headline: "Besides my liver, which parts of my metabolic health should we be watching?"
@@ -1076,7 +1076,7 @@ What gets you out the door? 👇
 **Format:** Single image (steps card)  
 **Goal / CTA:** Save
 
-**Image (template: steps, dark):**
+**Image (template: steps, mist):**
 
 - Eyebrow: Did you know
 - Headline: Five of your liver's 500 jobs
@@ -1140,7 +1140,7 @@ Screenshot and ask.
 **Format:** Carousel: your photo of the dish as slide 1, this steps card as slide 2  
 **Goal / CTA:** Save
 
-**Image (template: steps, sage):**
+**Image (template: steps, mist):**
 
 - Eyebrow: Japan · Miso Soup & Edamame Rice
 - Headline: A ten-minute Japanese breakfast or lunch
@@ -1207,7 +1207,7 @@ Sunday ask: tag two people you would want sitting at that table with you. Not be
 **Format:** Single image (chart)  
 **Goal / CTA:** Share
 
-**Image (template: bars, clay):**
+**Image (template: bars, dusk):**
 
 - Eyebrow: The silent scale
 - Headline: It starts younger than we think.

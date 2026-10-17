@@ -379,7 +379,7 @@
       "format": "Single image (steps card)",
       "card": {
         "template": "steps",
-        "theme": "dark",
+        "theme": "dusk",
         "eyebrow": "Bring this to your appointment",
         "headline": "\"Can you calculate my FIB-4 from my last blood test?\"",
         "body": "",
@@ -535,7 +535,7 @@
       "format": "Single image (chart)",
       "card": {
         "template": "compare",
-        "theme": "light",
+        "theme": "mist",
         "eyebrow": "Know your numbers",
         "headline": "The fiber gap",
         "body": "Most adults get a little over half the fiber they need each day. Legumes close the gap fastest.",
@@ -743,7 +743,7 @@
       "format": "Single image",
       "card": {
         "template": "question",
-        "theme": "dark",
+        "theme": "dusk",
         "eyebrow": "Bring this to your appointment",
         "headline": "\"Besides my liver, which parts of my metabolic health should we be watching?\"",
         "body": "Blood sugar, blood pressure, waist, triglycerides, HDL. The liver rarely struggles alone.",
@@ -898,7 +898,7 @@
       "format": "Single image (steps card)",
       "card": {
         "template": "steps",
-        "theme": "dark",
+        "theme": "mist",
         "eyebrow": "Did you know",
         "headline": "Five of your liver's 500 jobs",
         "body": "",
@@ -949,7 +949,7 @@
       "format": "Carousel: your photo of the dish as slide 1, this steps card as slide 2",
       "card": {
         "template": "steps",
-        "theme": "sage",
+        "theme": "mist",
         "eyebrow": "Japan · Miso Soup & Edamame Rice",
         "headline": "A ten-minute Japanese breakfast or lunch",
         "body": "",
@@ -1001,7 +1001,7 @@
       "format": "Single image (chart)",
       "card": {
         "template": "bars",
-        "theme": "clay",
+        "theme": "dusk",
         "eyebrow": "The silent scale",
         "headline": "It starts younger than we think.",
         "body": "Estimated share of children and teens with fatty liver.",
