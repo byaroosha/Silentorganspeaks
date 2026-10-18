@@ -27,6 +27,8 @@
   .panel { background: var(--white); border: 1px solid var(--line); padding: 20px; }
   label { display: block; font-family: var(--mono); font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); margin: 14px 0 6px; }
   label:first-child { margin-top: 0; }
+  input[type=range] { width: 100%; accent-color: #A80505; }
+  input[type=file] { width: 100%; font: inherit; font-size: .85rem; }
   input[type=text], select, textarea { width: 100%; font: inherit; font-size: .95rem; padding: 10px 12px; border: 1px solid var(--line); background: var(--dust-2); color: var(--ink); border-radius: 0; }
   textarea { resize: vertical; min-height: 72px; }
   textarea#caption { min-height: 260px; font-size: .9rem; }
@@ -126,6 +128,14 @@
     <label for="footnote">Footnote</label>
     <input type="text" id="footnote" />
 
+    <label for="bgphoto">Background photo (optional)</label>
+    <div class="meta" id="photohint"></div>
+    <input type="file" id="bgphoto" accept="image/*" />
+    <div class="row">
+      <div><label for="overlay">Photo tint</label><input type="range" id="overlay" min="35" max="95" value="70" /></div>
+      <div style="align-self:end"><button type="button" class="secondary" id="clearphoto">Remove photo</button></div>
+    </div>
+
     <div class="row">
       <div><label for="handle">Handle</label><input type="text" id="handle" value="@silentorganspeaks" /></div>
       <div><label for="site">Website</label><input type="text" id="site" value="silentorganspeaks.org" /></div>
@@ -189,7 +199,7 @@
   logos.light.src = '../assets/img/SOSBlack.png';
   logos.dark.onload = logos.light.onload = () => render();
 
-  const fields = ['template','theme','size','eyebrow','headline','body','data','footnote','handle','site','logo','disclaimer'];
+  const fields = ['template','theme','size','eyebrow','headline','body','data','footnote','handle','site','logo','disclaimer','overlay'];
   fields.forEach((f) => $(f).addEventListener('input', render));
 
   function setStatus(msg, err) { const s = $('status'); s.textContent = msg || ''; s.className = 'status' + (err ? ' err' : ''); }
@@ -216,11 +226,13 @@
 
   function loadDay() {
     const p = data && data.posts.find((x) => String(x.day) === $('day').value);
-    if (!p) { $('daymeta').textContent = ''; $('caption').value = ''; render(); return; }
+    if (!p) { $('daymeta').textContent = ''; $('photohint').textContent = ''; $('caption').value = ''; render(); return; }
     $('template').value = p.card.template; $('theme').value = p.card.theme;
     $('eyebrow').value = p.card.eyebrow || ''; $('headline').value = p.card.headline || '';
     $('body').value = p.card.body || ''; $('footnote').value = p.card.footnote || '';
     $('data').value = p.card.data || '';
+    bgImg = null; $('bgphoto').value = '';
+    $('photohint').textContent = p.photo ? `This day uses a photo: ${p.photo.brief}` : 'This day is designed without a photo. You can still add one.';
     $('daymeta').textContent = `${p.format} · CTA: ${p.cta}`;
     $('caption').value = p.caption + '\n\n' + p.hashtags.join(' ');
     render();
@@ -284,6 +296,15 @@
     return y + lines.length * size * lh;
   }
   const num = (v) => parseFloat(String(v).replace(/[^0-9.\-]/g, '')) || 0;
+  let bgImg = null;
+  function hexA(hex, a) { const n = parseInt(hex.slice(1), 16); return `rgba(${n >> 16 & 255},${n >> 8 & 255},${n & 255},${a})`; }
+  $('bgphoto').addEventListener('change', (e) => {
+    const f = e.target.files && e.target.files[0]; if (!f) return;
+    const img = new Image(); img.onload = () => { bgImg = img; render(); setStatus('Photo added. Adjust the tint if the text is hard to read.'); };
+    img.onerror = () => setStatus('That file could not be opened as an image. Try a JPG or PNG.', true);
+    img.src = URL.createObjectURL(f);
+  });
+  $('clearphoto').addEventListener('click', () => { bgImg = null; $('bgphoto').value = ''; render(); setStatus('Photo removed.'); });
   function roundRect(x, y, w, h, r) { r = Math.min(r, h / 2, w / 2); ctx.beginPath(); ctx.moveTo(x + r, y); ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r); ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath(); ctx.fill(); }
   // y is the top of the text block. Lines are drawn at their baselines; the new top is returned.
   function drawLines(lines, x, y, size, lh, align) {
@@ -303,6 +324,16 @@
     const bg = T.bg, fg = T.fg, soft = T.soft, accent = T.accent, line = T.line;
 
     ctx.fillStyle = bg; ctx.fillRect(0, 0, W, H);
+    if (bgImg) { // cover-fit the photo, then tint it with the theme color so text stays readable
+      const s = Math.max(W / bgImg.naturalWidth, H / bgImg.naturalHeight), iw = bgImg.naturalWidth * s, ih = bgImg.naturalHeight * s;
+      ctx.drawImage(bgImg, (W - iw) / 2, (H - ih) / 2, iw, ih);
+      const a = $('overlay').value / 100, darkTheme = T.logo === 'dark';
+      const base = darkTheme ? '#120808' : '#FFFFFF'; // neutral shade keeps the photo's own colors
+      ctx.fillStyle = hexA(base, a * 0.85); ctx.fillRect(0, 0, W, H);
+      ctx.fillStyle = hexA(bg, 0.22); ctx.fillRect(0, 0, W, H); // a light brand tint
+      const g = ctx.createLinearGradient(0, H * 0.62, 0, H); g.addColorStop(0, hexA(base, 0)); g.addColorStop(1, hexA(base, 0.45));
+      ctx.fillStyle = g; ctx.fillRect(0, H * 0.62, W, H * 0.38);
+    }
 
     // Footer: hairline, logo left, handle + site right.
     const footerY = H - P;

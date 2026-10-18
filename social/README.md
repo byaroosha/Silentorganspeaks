@@ -33,6 +33,10 @@ python3 -m http.server 8000
 
 If the site is on GitHub Pages or Netlify, the page is also live at `/social/post-card.html` on your domain.
 
+## Background photos
+
+From Day 30, every Wednesday story post and Sunday community post uses a photo behind the text (Days 31, 35, 38, 42, 45, 49, 52, 56, 59). Stats, charts, doctor questions and recipes keep their clean layouts, so roughly half the feed carries a photo. Each photo day has a `photo` brief in the calendar. In the card maker, pick the day, then add the photo under "Background photo" and adjust the tint until the text reads easily. Your own photos beat stock every time; the briefs include a free stock search (Unsplash or Pexels) as a fallback.
+
 ## After day 60 (when the 42 days run out)
 
 Repeat the weekly rhythm with new material. The pillars stay the same, only the content rotates:

@@ -324,7 +324,7 @@
       "day": 31,
       "weekday": "Wed",
       "pillar": "My story",
-      "format": "Reel (talking to camera) or quote card. Your own photo beats the card",
+      "format": "Quote card with background photo, or a Reel to camera",
       "card": {
         "template": "quote",
         "theme": "plum",
@@ -344,7 +344,12 @@
         "#SilentOrganSpeaks"
       ],
       "cta": "Comment",
-      "note": "Add one real detail: what was actually on your first list?"
+      "note": "Add one real detail: what was actually on your first list?",
+      "photo": {
+        "brief": "An empty lecture hall or classroom in soft light, for your teaching years. Free stock search: \"empty lecture hall\".",
+        "source": "stock",
+        "tint": 64
+      }
     },
     {
       "day": 32,
@@ -428,10 +433,10 @@
       "day": 35,
       "weekday": "Sun",
       "pillar": "Community",
-      "format": "Single image (chart)",
+      "format": "Single image with background photo",
       "card": {
         "template": "donut",
-        "theme": "blush",
+        "theme": "dark",
         "eyebrow": "The silent scale",
         "headline": "Most people with fatty liver have never been told.",
         "body": "In a US national survey, only about 4 in 100 adults with MASLD knew they had it.",
@@ -448,7 +453,12 @@
         "#GetChecked",
         "#SilentOrganSpeaks"
       ],
-      "cta": "Share"
+      "cta": "Share",
+      "photo": {
+        "brief": "A busy street or crosswalk from above, people blurred in motion. Free stock search: \"crowd crosswalk aerial\".",
+        "source": "stock",
+        "tint": 64
+      }
     },
     {
       "day": 36,
@@ -506,7 +516,7 @@
       "day": 38,
       "weekday": "Wed",
       "pillar": "My story",
-      "format": "Reel (talking to camera) or quote card. Your own photo beats the card",
+      "format": "Quote card with background photo, or a Reel to camera",
       "card": {
         "template": "quote",
         "theme": "dark",
@@ -526,7 +536,12 @@
         "#SilentOrganSpeaks"
       ],
       "cta": "Comment",
-      "note": "Add one sentence about what faith looked like for you in practice, a prayer, a verse, a community."
+      "note": "Add one sentence about what faith looked like for you in practice, a prayer, a verse, a community.",
+      "photo": {
+        "brief": "Quiet morning light through a window, a cup of tea on a table. Your own kitchen table at sunrise works beautifully. Free stock search: \"morning light window tea\".",
+        "source": "yours-or-stock",
+        "tint": 64
+      }
     },
     {
       "day": 39,
@@ -610,7 +625,7 @@
       "day": 42,
       "weekday": "Sun",
       "pillar": "Community",
-      "format": "Single image (chart)",
+      "format": "Single image with background photo",
       "card": {
         "template": "compare",
         "theme": "forest",
@@ -630,7 +645,12 @@
         "#WeightLoss",
         "#SilentOrganSpeaks"
       ],
-      "cta": "Comment"
+      "cta": "Comment",
+      "photo": {
+        "brief": "A walking path at sunrise. A photo from one of your own walks is best. Free stock search: \"park path sunrise\".",
+        "source": "yours-or-stock",
+        "tint": 64
+      }
     },
     {
       "day": 43,
@@ -688,10 +708,10 @@
       "day": 45,
       "weekday": "Wed",
       "pillar": "My story",
-      "format": "Reel (talking to camera) or quote card. Your own photo beats the card",
+      "format": "Quote card with background photo, or a Reel to camera",
       "card": {
         "template": "quote",
-        "theme": "blush",
+        "theme": "dusk",
         "eyebrow": "My story",
         "headline": "I cook my way around the world because restriction never kept me going. Curiosity did.",
         "body": "Aroosha",
@@ -708,7 +728,12 @@
         "#SilentOrganSpeaks"
       ],
       "cta": "Comment",
-      "note": "Add the first cookbook or dish that changed your mind, by name."
+      "note": "Add the first cookbook or dish that changed your mind, by name.",
+      "photo": {
+        "brief": "Colorful spices in bowls, from above. Your own spice drawer or a market photo is best. Free stock search: \"spices bowls overhead\".",
+        "source": "yours-or-stock",
+        "tint": 64
+      }
     },
     {
       "day": 46,
@@ -791,10 +816,10 @@
       "day": 49,
       "weekday": "Sun",
       "pillar": "Community",
-      "format": "Single image (editorial card)",
+      "format": "Single image with background photo",
       "card": {
         "template": "editorial",
-        "theme": "white",
+        "theme": "dark",
         "eyebrow": "",
         "headline": "Coffee and the liver *get along*.",
         "body": "Across several large studies, regular coffee drinkers tend to have *less liver scarring*. The catch: the studies are about coffee, not the syrup.",
@@ -811,7 +836,12 @@
         "#HealthyHabits",
         "#SilentOrganSpeaks"
       ],
-      "cta": "Comment"
+      "cta": "Comment",
+      "photo": {
+        "brief": "A cup of black coffee in morning light. Take it with your phone tomorrow morning. Free stock search: \"black coffee cup morning light\".",
+        "source": "yours-or-stock",
+        "tint": 64
+      }
     },
     {
       "day": 50,
@@ -869,7 +899,7 @@
       "day": 52,
       "weekday": "Wed",
       "pillar": "My story",
-      "format": "Reel (talking to camera) or quote card. Your own photo beats the card",
+      "format": "Quote card with background photo, or a Reel to camera",
       "card": {
         "template": "quote",
         "theme": "forest",
@@ -889,7 +919,12 @@
         "#SilentOrganSpeaks"
       ],
       "cta": "Comment",
-      "note": "Use the bridge photo of you and the dogs as the image. Add their names."
+      "note": "Use the bridge photo of you and the dogs as the image. Add their names.",
+      "photo": {
+        "brief": "Your bridge photo with the dogs.",
+        "source": "yours",
+        "tint": 64
+      }
     },
     {
       "day": 53,
@@ -972,7 +1007,7 @@
       "day": 56,
       "weekday": "Sun",
       "pillar": "Community",
-      "format": "Single image (chart)",
+      "format": "Single image with background photo",
       "card": {
         "template": "donut",
         "theme": "dark",
@@ -992,7 +1027,12 @@
         "#TagAFriend",
         "#SilentOrganSpeaks"
       ],
-      "cta": "Tag two people"
+      "cta": "Tag two people",
+      "photo": {
+        "brief": "A dinner table from above with many plates and hands reaching in. A photo of your own family table is best. Free stock search: \"dinner table overhead hands\".",
+        "source": "yours-or-stock",
+        "tint": 64
+      }
     },
     {
       "day": 57,
@@ -1050,7 +1090,7 @@
       "day": 59,
       "weekday": "Wed",
       "pillar": "My story",
-      "format": "Reel (talking to camera) or quote card. Your own photo beats the card",
+      "format": "Quote card with background photo, or a Reel to camera",
       "card": {
         "template": "quote",
         "theme": "plum",
@@ -1070,7 +1110,12 @@
         "#SilentOrganSpeaks"
       ],
       "cta": "Comment",
-      "note": "Film this one to camera if you can. It is the strongest story post of the set."
+      "note": "Film this one to camera if you can. It is the strongest story post of the set.",
+      "photo": {
+        "brief": "A recent photo of you. Your speaking-event photo works well.",
+        "source": "yours",
+        "tint": 64
+      }
     },
     {
       "day": 60,

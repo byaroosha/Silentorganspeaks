@@ -370,7 +370,7 @@ General healthy-eating ideas, not personalized nutrition advice.
 
 ### Day 31 · Wed · My story
 
-**Format:** Reel (talking to camera) or quote card. Your own photo beats the card  
+**Format:** Quote card with background photo, or a Reel to camera  
 **Goal / CTA:** Comment
 
 **Image (template: quote, plum):**
@@ -378,6 +378,8 @@ General healthy-eating ideas, not personalized nutrition advice.
 - Eyebrow: My story
 - Headline: I told my students mindset is everything. Then I had to prove it to myself.
 - Body: Aroosha
+
+**Background photo:** An empty lecture hall or classroom in soft light, for your teaching years. Free stock search: "empty lecture hall". Add it in the card maker under Background photo.
 
 **Before posting:** Add one real detail: what was actually on your first list?
 
@@ -498,10 +500,10 @@ General healthy-eating ideas, not personalized nutrition advice.
 
 ### Day 35 · Sun · Community
 
-**Format:** Single image (chart)  
+**Format:** Single image with background photo  
 **Goal / CTA:** Share
 
-**Image (template: donut, blush):**
+**Image (template: donut, dark):**
 
 - Eyebrow: The silent scale
 - Headline: Most people with fatty liver have never been told.
@@ -509,6 +511,8 @@ General healthy-eating ideas, not personalized nutrition advice.
 - Data (one row per line):
   - 96% | had never been told they had it
 - Footnote: Source: Alqahtani et al., Hepatology Communications 2021 (US NHANES data)
+
+**Background photo:** A busy street or crosswalk from above, people blurred in motion. Free stock search: "crowd crosswalk aerial". Add it in the card maker under Background photo.
 
 **Caption:**
 
@@ -596,7 +600,7 @@ General healthy-eating ideas, not personalized nutrition advice.
 
 ### Day 38 · Wed · My story
 
-**Format:** Reel (talking to camera) or quote card. Your own photo beats the card  
+**Format:** Quote card with background photo, or a Reel to camera  
 **Goal / CTA:** Comment
 
 **Image (template: quote, dark):**
@@ -604,6 +608,8 @@ General healthy-eating ideas, not personalized nutrition advice.
 - Eyebrow: My story
 - Headline: Action, faith, and taking charge. Not fear.
 - Body: Aroosha
+
+**Background photo:** Quiet morning light through a window, a cup of tea on a table. Your own kitchen table at sunrise works beautifully. Free stock search: "morning light window tea". Add it in the card maker under Background photo.
 
 **Before posting:** Add one sentence about what faith looked like for you in practice, a prayer, a verse, a community.
 
@@ -729,7 +735,7 @@ General healthy-eating ideas, not personalized nutrition advice.
 
 ### Day 42 · Sun · Community
 
-**Format:** Single image (chart)  
+**Format:** Single image with background photo  
 **Goal / CTA:** Comment
 
 **Image (template: compare, forest):**
@@ -741,6 +747,8 @@ General healthy-eating ideas, not personalized nutrition advice.
   - 9 in 10 | saw their MASH resolve
   - 45% | saw scarring improve
 - Footnote: Source: Vilar-Gomez et al., Gastroenterology 2015. My experience, not a prescription
+
+**Background photo:** A walking path at sunrise. A photo from one of your own walks is best. Free stock search: "park path sunrise". Add it in the card maker under Background photo.
 
 **Caption:**
 
@@ -828,14 +836,16 @@ General healthy-eating ideas, not personalized nutrition advice.
 
 ### Day 45 · Wed · My story
 
-**Format:** Reel (talking to camera) or quote card. Your own photo beats the card  
+**Format:** Quote card with background photo, or a Reel to camera  
 **Goal / CTA:** Comment
 
-**Image (template: quote, blush):**
+**Image (template: quote, dusk):**
 
 - Eyebrow: My story
 - Headline: I cook my way around the world because restriction never kept me going. Curiosity did.
 - Body: Aroosha
+
+**Background photo:** Colorful spices in bowls, from above. Your own spice drawer or a market photo is best. Free stock search: "spices bowls overhead". Add it in the card maker under Background photo.
 
 **Before posting:** Add the first cookbook or dish that changed your mind, by name.
 
@@ -947,14 +957,16 @@ General healthy-eating ideas, not personalized nutrition advice.
 
 ### Day 49 · Sun · Community
 
-**Format:** Single image (editorial card)  
+**Format:** Single image with background photo  
 **Goal / CTA:** Comment
 
-**Image (template: editorial, white):**
+**Image (template: editorial, dark):**
 
 - Headline: Coffee and the liver *get along*.
 - Body: Across several large studies, regular coffee drinkers tend to have *less liver scarring*. The catch: the studies are about coffee, not the syrup.
 - Footnote: Source: AASLD practice guidance on MASLD, 2023. Educational, not medical advice
+
+**Background photo:** A cup of black coffee in morning light. Take it with your phone tomorrow morning. Free stock search: "black coffee cup morning light". Add it in the card maker under Background photo.
 
 **Caption:**
 
@@ -1044,7 +1056,7 @@ General healthy-eating ideas, not personalized nutrition advice.
 
 ### Day 52 · Wed · My story
 
-**Format:** Reel (talking to camera) or quote card. Your own photo beats the card  
+**Format:** Quote card with background photo, or a Reel to camera  
 **Goal / CTA:** Comment
 
 **Image (template: quote, forest):**
@@ -1052,6 +1064,8 @@ General healthy-eating ideas, not personalized nutrition advice.
 - Eyebrow: My story
 - Headline: My walking partners never ask how my numbers are. They just show up at the door.
 - Body: Aroosha
+
+**Background photo:** Your bridge photo with the dogs. Add it in the card maker under Background photo.
 
 **Before posting:** Use the bridge photo of you and the dogs as the image. Add their names.
 
@@ -1171,7 +1185,7 @@ General healthy-eating ideas, not personalized nutrition advice.
 
 ### Day 56 · Sun · Community
 
-**Format:** Single image (chart)  
+**Format:** Single image with background photo  
 **Goal / CTA:** Tag two people
 
 **Image (template: donut, dark):**
@@ -1182,6 +1196,8 @@ General healthy-eating ideas, not personalized nutrition advice.
 - Data (one row per line):
   - 30% | of adults worldwide
 - Footnote: Source: Younossi et al., Hepatology 2023 (meta-analysis). Approximate, for awareness, not diagnosis
+
+**Background photo:** A dinner table from above with many plates and hands reaching in. A photo of your own family table is best. Free stock search: "dinner table overhead hands". Add it in the card maker under Background photo.
 
 **Caption:**
 
@@ -1269,7 +1285,7 @@ General healthy-eating ideas, not personalized nutrition advice.
 
 ### Day 59 · Wed · My story
 
-**Format:** Reel (talking to camera) or quote card. Your own photo beats the card  
+**Format:** Quote card with background photo, or a Reel to camera  
 **Goal / CTA:** Comment
 
 **Image (template: quote, plum):**
@@ -1277,6 +1293,8 @@ General healthy-eating ideas, not personalized nutrition advice.
 - Eyebrow: My story
 - Headline: To the woman in the exam room with her head down: your liver is going to heal more than you think. So are you.
 - Body: Aroosha
+
+**Background photo:** A recent photo of you. Your speaking-event photo works well. Add it in the card maker under Background photo.
 
 **Before posting:** Film this one to camera if you can. It is the strongest story post of the set.
 

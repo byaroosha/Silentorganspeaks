@@ -50,6 +50,8 @@ for p in data["posts"]:
             out.append(f"  - {row}")
     if c.get("footnote"):
         out.append(f"- Footnote: {c['footnote']}")
+    if p.get("photo"):
+        out.append(f"\n**Background photo:** {p['photo']['brief']} Add it in the card maker under Background photo.")
     if p.get("note"):
         out.append(f"\n**Before posting:** {p['note']}")
     out.append("\n**Caption:**\n")
